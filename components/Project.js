@@ -5,8 +5,8 @@ export default function Project({
   tags,
   largeImage,
   imageLink,
-  imageUrl,
-  imageUrl2x,
+  imageSrc,
+  imageSrc2x,
   imageAlt,
   buttonLink,
   buttonText,
@@ -17,9 +17,9 @@ export default function Project({
         <div className={`lg:w-1/2 ${switchLayout && "lg:order-2"}`}>
           <a rel="nofollow" tabIndex="-1" target="_blank" href={imageLink}>
             <img
-              src={imageUrl}
+              src={imageSrc}
               alt={imageAlt}
-              srcSet={imageUrl2x}
+              srcSet={imageSrc2x}
               className={`w-64 md:w-full md:max-w-lg mx-auto mb-8 lg:mb-0 relative z-20 ${
                 largeImage && "lg:max-w-none lg:w-228"
               }`}
