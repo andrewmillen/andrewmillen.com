@@ -3,13 +3,21 @@ import Project from "@/components/Project.js";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Head>
-        <title>Create Next App</title>
+        <title>Andrew Millen | Product Designer</title>
+        <meta
+          name="description"
+          content="Hi! I’m a user interface designer from Memphis, TN. I specialize in product design, animation, and interactive prototyping."
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="pt-12 pb-4 text-center md:pt-16">
+      <header className="pt-12 pb-4 text-center md:pt-16 lg:pt-24">
         <div className="container">
           <h1 className="font-semibold text-4xl mb-2 md:text-5xl">
             Andrew Millen
@@ -89,25 +97,26 @@ export default function Home() {
             <p className="text-lg lg:text-2xl">
               I also dabble in{" "}
               <a
-                className="font-semibold"
+                className="font-semibold underline-thin"
                 href="https://www.behance.net/gallery/13309373/3D-Renderings"
               >
                 3D
               </a>
               ,{" "}
               <a
-                className="font-semibold"
+                className="font-semibold underline-thin"
                 href="https://www.andrewmillen.com/casino-type-specimen/"
               >
                 type design
               </a>
               , and{" "}
               <a
-                className="font-semibold"
+                className="font-semibold underline-thin"
                 href="https://codepen.io/andrewmillen/pen/QBObNG"
               >
                 front-end development
               </a>
+              .
             </p>
           </div>
         </section>
@@ -167,6 +176,6 @@ export default function Home() {
           </ul>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

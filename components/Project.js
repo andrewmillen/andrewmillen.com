@@ -20,7 +20,7 @@ export default function Project({
               src={imageSrc}
               alt={imageAlt}
               srcSet={imageSrc2x}
-              className={`w-64 md:w-full md:max-w-lg mx-auto mb-8 lg:mb-0 relative z-20 ${
+              className={`relative z-20 mx-auto w-64 mb-8 md:w-full md:max-w-md lg:mb-0 ${
                 largeImage && "lg:max-w-none lg:w-228"
               }`}
             />
