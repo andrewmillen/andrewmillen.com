@@ -11,11 +11,13 @@
         @apply bg-gray-400;
     }
 
-    button {
+    button,
+    .button {
         @apply relative bg-gray-900 text-white px-10 py-4 rounded-full inline-block transform scale-100 font-semibold transition duration-100 ease-in-out shadow-lg
     }
 
-    button:hover {
+    button:hover,
+    .button:hover {
         @apply bg-gray-800 transform scale-105
     }
 }
