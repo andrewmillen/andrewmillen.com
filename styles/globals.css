@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+
+    hr {
+        @apply bg-gray-400;
+    }
+
+    button {
+        @apply relative bg-gray-900 text-white px-10 py-4 rounded-full inline-block transform scale-100 font-semibold transition duration-100 ease-in-out shadow-lg
+    }
+
+    button:hover {
+        @apply bg-gray-800 transform scale-105
+    }
+}
+
+@layer components {
+    .container {
+        @apply px-6 mx-auto
+    }
+}
