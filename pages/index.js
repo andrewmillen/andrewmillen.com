@@ -1,9 +1,10 @@
+import Layout from "@/components/global/Layout";
 import Head from "next/head";
 import Project from "@/components/Project.js";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <Layout>
       <Head>
         <title>Andrew Millen | Product Designer</title>
         <meta
@@ -176,6 +177,6 @@ export default function Home() {
           </ul>
         </div>
       </footer>
-    </div>
+    </Layout>
   );
 }
