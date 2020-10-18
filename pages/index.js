@@ -123,7 +123,7 @@ export default function Home() {
         </section>
       </main>
       <footer>
-        <div class="container text-center">
+        <div className="container text-center">
           <hr className="absolute mt-6 left-0 w-screen transform translate-y-1" />
 
           <button
