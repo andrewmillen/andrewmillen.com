@@ -5,7 +5,24 @@ module.exports = {
   },
   purge: [],
   theme: {
+    typography: {
+      default: {
+        css: {
+          color: "#333",
+          p: {
+            lineHeight: "1.6",
+            fontFamily: "karmina",
+          },
+          h2: {
+            fontSize: "1.8em",
+          },
+        },
+      },
+    },
     extend: {
+      fontFamily: {
+        karmina: ["karmina"],
+      },
       spacing: {
         72: "18rem",
         84: "21rem",
@@ -25,5 +42,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
