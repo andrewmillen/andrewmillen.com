@@ -14,7 +14,6 @@ export default function Post({ data }) {
     const formattedDate = Moment(date).format("LL");
     return formattedDate;
   }
-  console.log(data);
   return (
     <Layout>
       <Head>

@@ -26,7 +26,6 @@ export default function BlogIndex({ posts }) {
       <main className="max-w-2xl mx-auto my-4 md:my-12 lg:my-24">
         <div className="container">
           {posts.map((post, index) => {
-            console.log(post);
             return (
               <article key={index} className="max-w-2xl my-8">
                 <NextLink as={linkResolver(post)} href={hrefResolver(post)}>
