@@ -1,12 +1,12 @@
 import Layout from "@/components/global/Layout";
-import { PrismicClient } from "@/lib/api.js";
-import Prismic from "prismic-javascript";
+import Footer from "@/components/global/Footer";
 import Head from "next/head";
+import Link from "next/link";
+import Prismic from "prismic-javascript";
 import { RichText } from "prismic-reactjs";
+import { PrismicClient } from "@/lib/api.js";
 import { linkResolver } from "@/lib/linkResolver";
 import Moment from "moment";
-import Link from "next/link";
-import Footer from "@/components/global/Footer";
 
 export default function Post({ data }) {
   function formatDate(publicationDate) {
@@ -14,6 +14,7 @@ export default function Post({ data }) {
     const formattedDate = Moment(date).format("LL");
     return formattedDate;
   }
+  console.log(data);
   return (
     <Layout>
       <Head>
