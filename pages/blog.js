@@ -1,43 +1,50 @@
 import Layout from "@/components/global/Layout";
 import { getBlogPosts } from "@/lib/api";
-import { linkResolver, hrefResolver } from "@/lib/linkResolver";
+import { linkResolver } from "@/lib/linkResolver";
 import Head from "next/head";
 import { default as NextLink } from "next/link";
+import Moment from "moment";
+import Footer from "@/components/global/Footer";
 
 export default function BlogIndex({ posts }) {
-  console.log(posts);
+  function formatDate(publicationDate) {
+    const date = Date(publicationDate);
+    const formattedDate = Moment(date).format("LL");
+    return formattedDate;
+  }
+
   return (
     <Layout>
-      <header className="pt-12 pb-4 md:pt-16 lg:pt-24">
+      <header className="pt-12 md:pt-16 lg:pt-24 max-w-5xl mx-auto md:text-center">
         <div className="container">
-          <h1 className="font-semibold text-4xl mb-2 md:text-5xl">
+          <h1 className="font-bold text-4xl mb-2 md:text-5xl">
             Andrew Millen Blog
           </h1>
           <p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
         </div>
       </header>
-      <main>
+      <main className="max-w-2xl mx-auto my-4 md:my-12 lg:my-24">
         <div className="container">
           {posts.map((post, index) => {
-            console.log(post);
             return (
               <article key={index} className="max-w-2xl my-8">
                 <NextLink href={linkResolver(post)}>
-                  <a>
+                  <a className="inline-block underline-thin text-blue-600">
                     <h2 className="text-lg md:text-2xl font-semibold">
                       {post.title}
                     </h2>
                   </a>
                 </NextLink>
-                <div className="uppercase tracking-widest font-semibold text-gray-700 text-xs my-2">
-                  {post._meta.firstPublicationDate}
-                </div>
+                <date className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4">
+                  {formatDate(post._meta.firstPublicationDate)}
+                </date>
                 <p>{post.blurb}</p>
               </article>
             );
           })}
         </div>
       </main>
+      <Footer />
     </Layout>
   );
 }
