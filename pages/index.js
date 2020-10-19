@@ -1,7 +1,6 @@
 import Layout from "@/components/global/Layout";
 import Head from "next/head";
 import Project from "@/components/Project.js";
-import Footer from "@/components/global/Footer.js";
 
 export default function Home() {
   return (
@@ -99,21 +98,21 @@ export default function Home() {
             <p className="text-lg lg:text-2xl">
               I also dabble in{" "}
               <a
-                className="inline-block font-semibold underline-thin"
+                className="font-semibold underline-thin"
                 href="https://www.behance.net/gallery/13309373/3D-Renderings"
               >
                 3D
               </a>
               ,{" "}
               <a
-                className="inline-block font-semibold underline-thin"
+                className="font-semibold underline-thin"
                 href="https://www.andrewmillen.com/casino-type-specimen/"
               >
                 type design
               </a>
               , and{" "}
               <a
-                className="inline-block font-semibold underline-thin"
+                className="font-semibold underline-thin"
                 href="https://codepen.io/andrewmillen/pen/QBObNG"
               >
                 front-end development
@@ -123,7 +122,61 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
+      <footer>
+        <div className="container text-center">
+          <hr className="absolute mt-6 left-0 w-screen transform translate-y-1" />
+
+          <button
+            className="z-10"
+            onClick={() => (window.location = "mailto:andrewmillen1@gmail.com")}
+          >
+            Let's Chat
+          </button>
+
+          <ul className="flex flex-col justify-center md:flex-row py-12">
+            <li>
+              <a
+                href="https://dribbble.com/andrewmillen"
+                rel="nofollow"
+                target="_blank"
+                className="font-semibold tracking-widest py-4 px-8 lg:px-6 text-xs uppercase hover:opacity-50 block"
+              >
+                Dribbble
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://codepen.io/andrewmillen/"
+                rel="nofollow"
+                target="_blank"
+                className="font-semibold tracking-widest py-4 px-8 lg:px-6 text-xs uppercase hover:opacity-50 block"
+              >
+                Codepen
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@andrewmillen"
+                rel="nofollow"
+                target="_blank"
+                className="font-semibold tracking-widest py-4 px-8 lg:px-6 text-xs uppercase hover:opacity-50 block"
+              >
+                Medium
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/andrewsmillen"
+                rel="nofollow"
+                target="_blank"
+                className="font-semibold tracking-widest py-4 px-8 lg:px-6 text-xs uppercase hover:opacity-50 block"
+              >
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </Layout>
   );
 }
