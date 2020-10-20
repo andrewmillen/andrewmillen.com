@@ -35,9 +35,9 @@ export default function BlogIndex({ posts }) {
                     </h2>
                   </a>
                 </NextLink>
-                <date className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4">
+                <div className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4">
                   {formatDate(post._meta.firstPublicationDate)}
-                </date>
+                </div>
                 <p>{post.blurb}</p>
               </article>
             );
