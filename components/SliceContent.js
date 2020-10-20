@@ -23,7 +23,7 @@ export default function SliceContent({ data }) {
     } else if (slice.slice_type === "image") {
       return (
         <div className="container mx-auto">
-          <figure>
+          <figure className="mt-16 md:mt-24 lg:mt-32">
             <img src={slice.primary.image.url} alt="" />
             <figcaption className="text-gray-600 mt-4">
               {slice.primary.caption}

@@ -28,8 +28,8 @@ export default function Post({ data }) {
       <main className="py-12 md:py-24">
         <article>
           <div className="container">
-            <h1 className="font-bold text-3xl mb-2 md:text-4xl md:text-center max-w-lg lg:max-w-5xl mx-auto">
-              {data.title}
+            <h1 className="font-bold text-3xl mb-2 md:text-4xl lg:text-5xl md:text-center max-w-lg lg:max-w-5xl mx-auto">
+              {RichText.asText(data.title)}
             </h1>
             <div className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4 mx-auto max-w-lg lg:max-w-5xl md:text-center">
               {formatDate(data.firstPublicationDate)}
@@ -41,7 +41,7 @@ export default function Post({ data }) {
           </div>
           <SliceContent data={data} />
         </article>
-        <aside className="text-center mt-4 md:mt-12 lg:mt-24 container">
+        <aside className="text-center mt-16 md:mt-24 lg:mt-32 container">
           <img
             src="/andrew-millen.jpg"
             alt="Headshot of Andrew looking suave in a leather jacket"
@@ -51,7 +51,7 @@ export default function Post({ data }) {
             Andrew Millen is a product designer specializing in user interface
             design, animation, and prototyping.{" "}
             <Link href="/">
-              <a className="underline-thin font-semibold text-blue-600 leading-relaxed">
+              <a className="underline text-blue-600 visited:text-purple-900 leading-relaxed">
                 See some of his work
               </a>
             </Link>
@@ -63,23 +63,6 @@ export default function Post({ data }) {
     </Layout>
   );
 }
-
-// const PrismicDOM = require('prismic-dom');
-
-// const content = document.body.map((slice) => {
-//   // Render the right markup for a given slice type
-//   switch (slice.type) {
-//     // Text Slice
-//     case "text":
-//       return PrismicDOM.RichText.asHtml(slice.primary.rich_text);
-
-//     // Image Gallery Slice
-//     case "image-gallery":
-//       return slice.fields.map((image) => {
-//         return image.gallery_image.url;
-//       });
-//   }
-// });
 
 export async function getStaticProps({ params }) {
   const { uid } = params;

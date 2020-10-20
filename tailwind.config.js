@@ -16,6 +16,9 @@ module.exports = {
           h2: {
             fontSize: "1.8em",
           },
+          ul: {
+            fontFamily: "karmina",
+          },
         },
       },
     },
@@ -41,6 +44,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    textColor: ["responsive", "hover", "focus", "visited"],
+  },
   plugins: [require("@tailwindcss/typography")],
 };
