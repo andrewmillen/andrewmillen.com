@@ -2,20 +2,14 @@ import Layout from "@/components/global/Layout";
 import { PrismicClient } from "@/lib/api.js";
 import Prismic from "prismic-javascript";
 import Head from "next/head";
-import { RichText } from "prismic-reactjs";
-import { linkResolver } from "@/lib/linkResolver";
-import Moment from "moment";
+import { RichText, Date } from "prismic-reactjs";
 import Link from "next/link";
 import Footer from "@/components/global/Footer";
 import SliceContent from "@/components/SliceContent";
+import PostDate from "@/components/PostDate";
 
 export default function Post({ data }) {
-  function formatDate(publicationDate) {
-    const date = Date(publicationDate);
-    const formattedDate = Moment(date).format("LL");
-    return formattedDate;
-  }
-
+  console.log(data);
   return (
     <Layout>
       <Head>
@@ -32,7 +26,7 @@ export default function Post({ data }) {
               {RichText.asText(data.title)}
             </h1>
             <div className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4 mx-auto max-w-lg lg:max-w-5xl md:text-center">
-              {formatDate(data.firstPublicationDate)}
+              <PostDate date={data.publish_date} />
             </div>
             {/* <p className="italic font-karmina md:text-center max-w-lg lg:max-w-5xl mx-auto text-lg lg:text-2xl mt-12 lg:mt-24">
               {data.blurb}
