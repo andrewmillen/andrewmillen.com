@@ -9,13 +9,18 @@ import SliceContent from "@/components/SliceContent";
 import PostDate from "@/components/PostDate";
 
 export default function Post({ data }) {
+  console.log(data);
   return (
     <Layout>
       <Head>
         <title>{data.meta_title} | Andrew Millen Blog</title>
         <meta name="description" content={data.meta_description} />
+
         <meta property="og:title" content={data.meta_title} />
+        <meta property="og:description" content={data.meta_description} />
         <meta property="og:image" content={data.open_graph_image.url} />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <link rel="stylesheet" href="https://use.typekit.net/mqf8sev.css" />
       </Head>
       <main className="py-12 md:py-24">
