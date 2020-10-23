@@ -108,7 +108,7 @@ export default function Home() {
               ,{" "}
               <a
                 className="inline-block font-semibold underline-thin"
-                href="https://www.andrewmillen.com/casino-type-specimen/"
+                href="https://andrewmillen.github.io/casino-type-specimen/"
                 href="nofollow noreferrer"
               >
                 type design
