@@ -49,8 +49,8 @@ export default function Home() {
           asset-deprived easy and convenient."
           largeImage={false}
           imageLink="https://projects.invisionapp.com/prototype/HLPR-Demo-cjnuq2lp300j6xq01nfletzm9"
-          imageSrc="/work-hlpr.webp"
-          imageSrc2x="/work-hlpr@2x.webp"
+          imageSrc="/work-hlpr.png"
+          imageSrc2x="/work-hlpr@2x.png"
           imageAlt="Helper app home screen."
           buttonLink="https://medium.com/@andrewmillen/designing-a-better-way-to-give-76ffeaf53f89"
           buttonText="Read the Case Study"
@@ -62,8 +62,8 @@ export default function Home() {
           description="An end-to-end real estate selling experience. Sellers can track their progress from list to close, sign documents, and find home services."
           largeImage={true}
           imageLink="http://hellohome.co/"
-          imageSrc="/work-hellohome.webp"
-          imageSrc2x="/work-hellohome@2x.webp"
+          imageSrc="/work-hellohome.png"
+          imageSrc2x="/work-hellohome@2x.png"
           imageAlt="Visit hellohome.com"
           buttonLink="http://hellohome.co/"
           buttonText="Visit"
@@ -75,8 +75,8 @@ export default function Home() {
           description="An app that would store recipes, track meals against calorie goals, and plan grocery trips—all in one."
           largeImage={false}
           imageLink="https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept"
-          imageSrc="/work-mealplanner.webp"
-          imageSrc2x="/work-mealplanner@2x.webp"
+          imageSrc="/work-mealplanner.png"
+          imageSrc2x="/work-mealplanner@2x.png"
           imageAlt="Meal Planner app home screen."
           buttonLink="https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept"
           buttonText="More on Dribbble"
@@ -88,8 +88,8 @@ export default function Home() {
           description="A robust store management app with scheduling, forecasting, reporting, and employee management."
           largeImage={true}
           imageLink="http://www.zignyl.com/"
-          imageSrc="/work-zignyl.webp"
-          imageSrc2x="/work-zignyl@2x.webp"
+          imageSrc="/work-zignyl.png"
+          imageSrc2x="/work-zignyl@2x.png"
           imageAlt="Visit zignyl.com"
           buttonLink="http://www.zignyl.com/"
           buttonText="Visit"
