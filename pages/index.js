@@ -24,7 +24,7 @@ export default function Home() {
           <h1 className="font-semibold text-4xl mb-2 md:text-5xl">
             Andrew Millen
           </h1>
-          <p className="text-lg mb-6 max-w-lg mx-auto">
+          <p className="text-lg mb-6 max-w-lg mx-auto lg:text-xl leading-relaxed lg:max-w-2xl lg:mb-12">
             Hi! I’m a user&nbsp;interface designer from Memphis,&nbsp;TN. I
             specialize in product&nbsp;design, animation, and
             interactive&nbsp;prototyping.

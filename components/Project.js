@@ -30,7 +30,7 @@ export default function Project({
         <div className={`text-center lg:text-left lg:pl-8 lg:w-1/2`}>
           <h2 className="text-3xl mb-2 font-semibold">
             <a
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
               href="https://medium.com/@andrewmillen/designing-a-better-way-to-give-76ffeaf53f89"
             >
@@ -56,7 +56,12 @@ export default function Project({
           </p>
 
           <hr className="absolute mt-6 left-0 w-screen transform translate-y-1 z-0" />
-          <a className="button" target="_blank" href={buttonLink}>
+          <a
+            className="button"
+            target="_blank"
+            rel="nofollow noreferrer"
+            href={buttonLink}
+          >
             {buttonText}
           </a>
         </div>

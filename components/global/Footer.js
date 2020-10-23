@@ -31,7 +31,7 @@ export default function Footer() {
           <li>
             <a
               href="https://dribbble.com/andrewmillen"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
               className="py-4 px-8 lg:px-6 text-base font-semibold hover:opacity-50 block"
             >
@@ -41,7 +41,7 @@ export default function Footer() {
           <li>
             <a
               href="https://codepen.io/andrewmillen/"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
               className="py-4 px-8 lg:px-6 text-base font-semibold hover:opacity-50 block"
             >
@@ -51,7 +51,7 @@ export default function Footer() {
           <li>
             <a
               href="https://twitter.com/andrewsmillen"
-              rel="nofollow"
+              rel="nofollow noreferrer"
               target="_blank"
               className="py-4 px-8 lg:px-6 text-base font-semibold hover:opacity-50 block"
             >
