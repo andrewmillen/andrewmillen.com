@@ -28,6 +28,10 @@
     .button:hover {
         @apply bg-gray-800 transform scale-105
     }
+
+    h3 {
+      @apply mb-4 !important;
+    }
 }
 
 @layer components {

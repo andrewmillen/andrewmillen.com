@@ -21,7 +21,7 @@ export default function Post({ data }) {
       <main className="py-12 md:py-24">
         <article>
           <div className="container">
-            <h1 className="font-bold text-3xl mb-2 md:text-4xl lg:text-5xl md:text-center max-w-lg lg:max-w-5xl mx-auto">
+            <h1 className="font-bold text-3xl mb-2 md:text-4xl lg:text-5xl md:text-center max-w-lg lg:max-w-5xl mx-auto leading-tight">
               {RichText.asText(data.title)}
             </h1>
             <div className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4 mx-auto max-w-lg lg:max-w-5xl md:text-center">

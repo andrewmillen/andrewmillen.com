@@ -37,7 +37,7 @@ export default function BlogIndex({ posts }) {
                       href={post.link}
                       className="flex items-center font-karmina visited:text-purple-900"
                     >
-                      <h2 className="text-2xl lg:text-3xl font-semibold">
+                      <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1">
                         {RichText.asText(post.title)}
                       </h2>
                       <span className="text-lg inline md:text-2xl ml-2">↗</span>
@@ -55,7 +55,7 @@ export default function BlogIndex({ posts }) {
                 ) : (
                   <NextLink href={linkResolver(post)}>
                     <a className="inline-block font-karmina visited:text-gray-600">
-                      <h2 className="text-2xl lg:text-3xl font-semibold">
+                      <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1">
                         {RichText.asText(post.title)}
                       </h2>
                     </a>
