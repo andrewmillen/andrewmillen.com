@@ -15,7 +15,12 @@ export default function Project({
     <section className="py-8">
       <div className="container lg:flex lg:items-center">
         <div className={`lg:w-1/2 ${switchLayout && "lg:order-2"}`}>
-          <a rel="nofollow" tabIndex="-1" target="_blank" href={imageLink}>
+          <a
+            rel="nofollow noreferrer"
+            tabIndex="-1"
+            target="_blank"
+            href={imageLink}
+          >
             <img
               src={imageSrc}
               alt={imageAlt}
