@@ -38,6 +38,19 @@
     .container {
         @apply px-6 mx-auto
     }
+    .portfolio-image {
+        width: 500px;
+        max-width: 100%;
+    }
+    .portfolio-image-large {
+        width: 1000px;
+        max-width: 100%;
+    }
+    @screen lg {
+        .portfolio-image-large {
+            max-width: none;
+        }
+    }
 }
 
 @layer utilities {
