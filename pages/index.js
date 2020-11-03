@@ -101,7 +101,7 @@ export default function Home() {
               <a
                 className="inline-block font-semibold underline-thin"
                 href="https://www.behance.net/gallery/13309373/3D-Renderings"
-                href="nofollow noreferrer"
+                rel="nofollow noreferrer"
               >
                 3D
               </a>
@@ -109,7 +109,7 @@ export default function Home() {
               <a
                 className="inline-block font-semibold underline-thin"
                 href="https://andrewmillen.github.io/casino-type-specimen/"
-                href="nofollow noreferrer"
+                rel="nofollow noreferrer"
               >
                 type design
               </a>
@@ -117,7 +117,7 @@ export default function Home() {
               <a
                 className="inline-block font-semibold underline-thin"
                 href="https://codepen.io/andrewmillen/pen/QBObNG"
-                href="nofollow noreferrer"
+                rel="nofollow noreferrer"
               >
                 front-end development
               </a>
