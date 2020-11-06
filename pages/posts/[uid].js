@@ -67,6 +67,7 @@ export async function getStaticProps({ params }) {
   const { data } = await PrismicClient.getByUID("blog_post", uid);
   return {
     props: { data },
+    revalidate: 1,
   };
 }
 
