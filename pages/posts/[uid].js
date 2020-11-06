@@ -9,7 +9,6 @@ import SliceContent from "@/components/SliceContent";
 import PostDate from "@/components/PostDate";
 
 export default function Post({ data }) {
-  console.log(data);
   return (
     <Layout>
       <Head>
