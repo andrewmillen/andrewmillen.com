@@ -66,7 +66,7 @@ export default function Home() {
           imageSrc2x="/work-hellohome@2x.png"
           imageAlt="Hello Home marketing website homepage"
           buttonLink="https://andrewmillen.com/posts/hellohome-ux-ui-case-study"
-          buttonText="Read the Case study"
+          buttonText="Read the Case Study"
         />
         <Project
           switchLayout={false}
