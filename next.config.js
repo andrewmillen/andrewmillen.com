@@ -10,6 +10,9 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    domains: ["images.prismic.io"],
+  },
   webpack(config) {
     config.resolve.alias["@"] = path.resolve(__dirname);
     config.module.rules.push({

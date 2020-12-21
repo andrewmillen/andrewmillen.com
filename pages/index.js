@@ -61,12 +61,12 @@ export default function Home() {
           tags={["UX", "UI"]}
           description="An end-to-end real estate selling experience. Sellers can track their progress from list to close, sign documents, and find home services."
           largeImage={true}
-          imageLink="http://hellohome.co/"
+          imageLink="https://andrewmillen.com/posts/hellohome-ux-ui-case-study"
           imageSrc="/work-hellohome.png"
           imageSrc2x="/work-hellohome@2x.png"
-          imageAlt="Visit hellohome.com"
-          buttonLink="http://hellohome.co/"
-          buttonText="Visit"
+          imageAlt="Hello Home marketing website homepage"
+          buttonLink="https://andrewmillen.com/posts/hellohome-ux-ui-case-study"
+          buttonText="Read the Case study"
         />
         <Project
           switchLayout={false}

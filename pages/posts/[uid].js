@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "@/components/global/Layout";
 import { PrismicClient } from "@/lib/api.js";
 import Prismic from "prismic-javascript";
@@ -39,10 +40,12 @@ export default function Post({ data }) {
           <SliceContent data={data} />
         </article>
         <aside className="text-center mt-16 md:mt-24 lg:mt-32 container">
-          <img
+          <Image
             src="/andrew-millen.jpg"
+            width={100}
+            height={100}
             alt="Headshot of Andrew looking suave in a leather jacket"
-            className="rounded-full w-24 h-24 mb-4 mx-auto"
+            className="rounded-full mb-4 mx-auto"
           />
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
             Andrew Millen is a product designer specializing in user interface
