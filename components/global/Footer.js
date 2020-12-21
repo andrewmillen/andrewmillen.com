@@ -22,7 +22,7 @@ export default function Footer() {
             </Link>
           </li>
           <li>
-            <Link href="/blog">
+            <Link href="/posts">
               <a className="py-4 px-8 lg:px-6 text-base font-semibold hover:opacity-50 block">
                 Blog
               </a>
