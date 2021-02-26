@@ -6,12 +6,9 @@ export default function Footer() {
       <div className="container text-center">
         <hr className="absolute mt-6 left-0 w-screen transform translate-y-1" />
 
-        <button
-          className="z-10"
-          onClick={() => (window.location = "mailto:andrewmillen1@gmail.com")}
-        >
+        <a href="mailto:andrewmillen1@gmail.com" className="button z-10">
           Let's Chat
-        </button>
+        </a>
 
         <ul className="flex flex-col justify-center md:flex-row py-12">
           <li>

@@ -31,12 +31,9 @@ export default function Home() {
           </p>
           <hr className="absolute mt-6 left-0 w-screen transform translate-y-1" />
 
-          <button
-            className="z-10"
-            onClick={() => (window.location = "mailto:andrewmillen1@gmail.com")}
-          >
+          <a href="mailto:andrewmillen1@gmail.com" className="button z-10">
             Let's Chat
-          </button>
+          </a>
         </div>
       </header>
 
