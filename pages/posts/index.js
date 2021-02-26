@@ -19,7 +19,20 @@ export default function BlogIndex({ posts }) {
 
       <header className="pt-12 md:pt-16 lg:pt-24 max-w-5xl mx-auto md:text-center">
         <div className="container">
-          <h1 className="font-bold text-4xl mb-2 md:text-5xl">Recent Posts</h1>
+          <NextLink href="/">
+            <a>
+              <svg viewBox="0 0 172 172" className="w-10 h-10 mb-8 mx-auto">
+                <path
+                  class="st0"
+                  d="M86,0C38.5,0,0,38.5,0,86s38.5,86,86,86c47.5,0,86-38.5,86-86S133.5,0,86,0z M53.7,126L37.1,79l8.5-33l28.1,80
+	H53.7z M89.7,126L61.6,46h20l16.5,47L89.7,126z M128.9,126h-18.6V46h18.6V126z"
+                />
+              </svg>
+            </a>
+          </NextLink>
+          <h1 className="font-bold font-karmina text-4xl mb-2 md:text-5xl">
+            Recent Posts
+          </h1>
         </div>
       </header>
 
@@ -35,7 +48,7 @@ export default function BlogIndex({ posts }) {
                   <>
                     <a
                       href={post.link}
-                      className="flex items-center font-karmina visited:text-purple-900"
+                      className="flex items-center visited:text-purple-900"
                     >
                       <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1">
                         {RichText.asText(post.title)}
@@ -54,7 +67,7 @@ export default function BlogIndex({ posts }) {
                   </>
                 ) : (
                   <NextLink href={linkResolver(post)}>
-                    <a className="inline-block font-karmina visited:text-gray-600">
+                    <a className="inline-block visited:text-gray-600">
                       <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1">
                         {RichText.asText(post.title)}
                       </h2>

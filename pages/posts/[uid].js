@@ -26,7 +26,18 @@ export default function Post({ data }) {
       <main className="py-12 md:py-24">
         <article>
           <div className="container">
-            <h1 className="font-bold text-3xl mb-2 md:text-4xl lg:text-5xl md:text-center max-w-lg lg:max-w-5xl mx-auto leading-tight">
+            <Link href="/">
+              <a>
+                <svg viewBox="0 0 172 172" className="w-10 h-10 mb-8 mx-auto">
+                  <path
+                    class="st0"
+                    d="M86,0C38.5,0,0,38.5,0,86s38.5,86,86,86c47.5,0,86-38.5,86-86S133.5,0,86,0z M53.7,126L37.1,79l8.5-33l28.1,80
+	H53.7z M89.7,126L61.6,46h20l16.5,47L89.7,126z M128.9,126h-18.6V46h18.6V126z"
+                  />
+                </svg>
+              </a>
+            </Link>
+            <h1 className="font-bold font-karmina text-3xl mb-2 md:text-4xl lg:text-5xl md:text-center max-w-lg lg:max-w-5xl mx-auto leading-tight">
               {RichText.asText(data.title)}
             </h1>
             <div className="block uppercase tracking-widest font-semibold text-gray-600 text-xs mt-2 mb-4 mx-auto max-w-lg lg:max-w-5xl md:text-center">
