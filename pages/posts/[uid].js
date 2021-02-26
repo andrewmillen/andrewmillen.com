@@ -44,7 +44,7 @@ export default function Post({ data }) {
             src="/andrew-millen.jpg"
             width={100}
             height={100}
-            alt="Headshot of Andrew looking suave in a leather jacket"
+            alt="Andrew looking suave in a leather jacket"
             className="rounded-full mb-4 mx-auto"
           />
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -64,27 +64,26 @@ export default function Post({ data }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { uid } = params;
   const { data } = await PrismicClient.getByUID("blog_post", uid);
   return {
     props: { data },
-    revalidate: 1,
   };
 }
 
-export async function getStaticPaths() {
-  const { results } = await PrismicClient.query(
-    Prismic.Predicates.at("document.type", "blog_post")
-  );
+// export async function getStaticPaths() {
+//   const { results } = await PrismicClient.query(
+//     Prismic.Predicates.at("document.type", "blog_post")
+//   );
 
-  const paths = results.map((post) => ({
-    params: {
-      uid: post.uid,
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   const paths = results.map((post) => ({
+//     params: {
+//       uid: post.uid,
+//     },
+//   }));
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
