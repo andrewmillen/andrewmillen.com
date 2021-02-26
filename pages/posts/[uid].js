@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Layout from "@/components/global/Layout";
 import { PrismicClient } from "@/lib/api.js";
+import Prismic from "prismic-javascript";
 import Head from "next/head";
 import { RichText } from "prismic-reactjs";
 import Link from "next/link";
@@ -65,33 +66,43 @@ export default function Post({ data }) {
   );
 }
 
-export async function getServerSideProps({ params }) {
-  const { uid } = params;
-  const { data } = (await PrismicClient.getByUID("blog_post", uid)) || {};
+// export async function getServerSideProps({ params }) {
+//   const { uid } = params;
+//   const { data } = (await PrismicClient.getByUID("blog_post", uid)) || {};
 
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
+//   if (!data) {
+//     return {
+//       notFound: true,
+//     };
+//   }
+
+//   return {
+//     props: { data },
+//   };
+// }
+
+export async function getStaticProps({ params }) {
+  const { uid } = params;
+  const { data } = await PrismicClient.getByUID("blog_post", uid);
 
   return {
     props: { data },
+    revalidate: 1,
   };
 }
 
-// export async function getStaticPaths() {
-//   const { results } = await PrismicClient.query(
-//     Prismic.Predicates.at("document.type", "blog_post")
-//   );
+export async function getStaticPaths() {
+  const { results } = await PrismicClient.query(
+    Prismic.Predicates.at("document.type", "blog_post")
+  );
 
-//   const paths = results.map((post) => ({
-//     params: {
-//       uid: post.uid,
-//     },
-//   }));
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
+  const paths = results.map((post) => ({
+    params: {
+      uid: post.uid,
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+}
