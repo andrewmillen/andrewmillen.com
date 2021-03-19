@@ -1,20 +1,22 @@
-import Layout from "@/components/global/Layout";
+import Layout from "@/components/Layout";
 import { getBlogPosts } from "@/lib/api";
 import { linkResolver } from "@/lib/linkResolver";
 import Head from "next/head";
 import { default as NextLink } from "next/link";
-import Footer from "@/components/global/Footer";
+import Footer from "@/components/Footer";
 import { RichText } from "prismic-reactjs";
 import PostDate from "@/components/PostDate";
-import Breadcrumb from "@/components/global/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function BlogIndex({ posts }) {
   return (
     <Layout>
       <Head>
         <title>Blog | Andrew Millen</title>
-        <meta name="description" content="" />
-        <meta property="og:title" content="" />
+        <meta
+          name="description"
+          content="Hi! I’m a product designer from Memphis, TN. I specialize in UI design, animation, and interactive prototyping."
+        />
         <link rel="stylesheet" href="https://use.typekit.net/mqf8sev.css" />
       </Head>
 

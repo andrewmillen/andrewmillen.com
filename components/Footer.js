@@ -1,13 +1,14 @@
 import Link from "next/link";
+import DividerLine from "@/components/DividerLine.js";
 
-export default function Footer() {
+export default function Footer({ cta }) {
   return (
     <footer>
       <div className="container text-center">
-        <hr className="absolute mt-6 left-0 w-screen transform translate-y-1" />
+        <DividerLine />
 
-        <a href="mailto:andrewmillen1@gmail.com" className="button z-10">
-          Let's Chat
+        <a href={`mailto:${cta.email}`} className="button z-10">
+          {cta.text}
         </a>
 
         <ul className="flex flex-col justify-center md:flex-row py-12">

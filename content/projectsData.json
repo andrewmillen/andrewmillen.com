@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "id": "hlpr",
+      "layout": "standard",
+      "content": {
+        "name": "HLPR",
+        "tags": ["UX", "UI", "Prototyping"],
+        "description": "Proof of concept for an app designed to make giving to the asset-deprived easy and convenient.",
+        "largeImage": false,
+        "imageLink": "https://projects.invisionapp.com/prototype/HLPR-Demo-cjnuq2lp300j6xq01nfletzm9",
+        "imageSrc": "/work-hlpr.png",
+        "imageSrc2x": "/work-hlpr@2x.png",
+        "imageAlt": "Helper app home screen",
+        "buttonLink": "https://medium.com/@andrewmillen/designing-a-better-way-to-give-76ffeaf53f89",
+        "buttonText": "Read the Case Study"
+      }
+    },
+    {
+      "id": "hello-home",
+      "layout": "reverse",
+      "content": {
+        "name": "Hello Home",
+        "tags": ["UX", "UI"],
+        "description": "An end-to-end real estate selling experience. Sellers can track their progress from list to close, sign documents, and find home services.",
+        "largeImage": true,
+        "imageLink": "https://andrewmillen.com/posts/hellohome-ux-ui-case-study",
+        "imageSrc": "/work-hellohome.png",
+        "imageSrc2x": "/work-hellohome@2x.png",
+        "imageAlt": "Hello Home marketing website homepage",
+        "buttonLink": "https://andrewmillen.com/posts/hellohome-ux-ui-case-study",
+        "buttonText": "Read the Case Study"
+      }
+    },
+    {
+      "id": "meal-planner",
+      "layout": "standard",
+      "content": {
+        "name": "Meal Planner App Concept",
+        "tags": ["UX", "UI", "Interaction Design"],
+        "description": "An app that would store recipes, track meals against calorie goals, and plan grocery trips—all in one.",
+        "largeImage": false,
+        "imageLink": "https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept",
+        "imageSrc": "/work-mealplanner.png",
+        "imageSrc2x": "/work-mealplanner@2x.png",
+        "imageAlt": "Meal Planner app home screen",
+        "buttonLink": "https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept",
+        "buttonText": "More on Dribbble"
+      }
+    },
+    {
+      "id": "zignyl",
+      "layout": "reverse",
+      "content": {
+        "name": "Zignyl",
+        "tags": ["Research", "UX", "UI"],
+        "description": "A robust store management app with scheduling, forecasting, reporting, and employee management.",
+        "largeImage": true,
+        "imageLink": "http://www.zignyl.com/",
+        "imageSrc": "/work-zignyl.png",
+        "imageSrc2x": "/work-zignyl@2x.png",
+        "imageAlt": "Screenshot of zignyl website",
+        "buttonLink": "http://www.zignyl.com/",
+        "buttonText": "Visit"
+      }
+    }
+  ]
+}

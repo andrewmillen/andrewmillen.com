@@ -7,10 +7,6 @@
         @apply font-sans;
     }
 
-    hr {
-        @apply bg-gray-500;
-    }
-
     button,
     .button {
         @apply relative bg-gray-900 text-white px-10 py-4 rounded-full inline-block transform scale-100 font-semibold transition duration-100 ease-out shadow-lg

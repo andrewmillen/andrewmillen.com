@@ -1,8 +1,8 @@
-import Layout from "@/components/global/Layout";
+import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Breadcrumb from "@/components/global/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function Home() {
   return (
