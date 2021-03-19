@@ -1,16 +1,17 @@
-import Image from "next/image";
-import Layout from "@/components/global/Layout";
-import { PrismicClient } from "@/lib/api.js";
-import Prismic from "prismic-javascript";
+import Breadcrumb from "@/components/Breadcrumb";
+import Footer from "@/components/Footer";
 import Head from "next/head";
-import { RichText } from "prismic-reactjs";
+import Image from "next/image";
+import Layout from "@/components/Layout";
 import Link from "next/link";
-import Footer from "@/components/global/Footer";
-import SliceContent from "@/components/SliceContent";
 import PostDate from "@/components/PostDate";
-import Breadcrumb from "@/components/global/Breadcrumb";
+import Prismic from "prismic-javascript";
+import { PrismicClient } from "@/lib/api.js";
+import { RichText } from "prismic-reactjs";
+import SliceContent from "@/components/SliceContent";
+import globalData from "@/content/globalData.json";
 
-export default function Post({ data }) {
+export default function Post({ data, cta }) {
   return (
     <Layout>
       <Head>
@@ -61,7 +62,7 @@ export default function Post({ data }) {
           </p>
         </aside>
       </main>
-      <Footer />
+      <Footer cta={cta} />
     </Layout>
   );
 }
@@ -84,9 +85,10 @@ export default function Post({ data }) {
 export async function getStaticProps({ params }) {
   const { uid } = params;
   const { data } = await PrismicClient.getByUID("blog_post", uid);
+  const cta = globalData.cta;
 
   return {
-    props: { data },
+    props: { data, cta },
     revalidate: 1,
   };
 }

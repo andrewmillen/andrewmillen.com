@@ -1,22 +1,20 @@
-import Layout from "@/components/Layout";
-import { getBlogPosts } from "@/lib/api";
-import { linkResolver } from "@/lib/linkResolver";
-import Head from "next/head";
-import { default as NextLink } from "next/link";
-import Footer from "@/components/Footer";
-import { RichText } from "prismic-reactjs";
-import PostDate from "@/components/PostDate";
 import Breadcrumb from "@/components/Breadcrumb";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import Layout from "@/components/Layout";
+import { default as NextLink } from "next/link";
+import PostDate from "@/components/PostDate";
+import { RichText } from "prismic-reactjs";
+import { getBlogPosts } from "@/lib/api";
+import globalData from "@/content/globalData.json";
+import { linkResolver } from "@/lib/linkResolver";
 
-export default function BlogIndex({ posts }) {
+export default function BlogIndex({ posts, meta, cta }) {
   return (
     <Layout>
       <Head>
         <title>Blog | Andrew Millen</title>
-        <meta
-          name="description"
-          content="Hi! I’m a product designer from Memphis, TN. I specialize in UI design, animation, and interactive prototyping."
-        />
+        <meta name="description" content={meta.description} />
         <link rel="stylesheet" href="https://use.typekit.net/mqf8sev.css" />
       </Head>
 
@@ -73,18 +71,23 @@ export default function BlogIndex({ posts }) {
           })}
         </div>
       </main>
-      <Footer />
+      <Footer cta={cta} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
   const data = await getBlogPosts();
+
   const posts = data.allBlog_posts.edges.map((edge) => edge.node);
+  const meta = globalData.meta;
+  const cta = globalData.cta;
 
   return {
     props: {
       posts,
+      meta,
+      cta,
     },
     revalidate: 1,
   };
