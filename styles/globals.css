@@ -56,4 +56,8 @@
         background-repeat: repeat-x;
         background-size: 1px 1px;
     }
+
+    .aspect-16x9 {
+        padding-bottom: 56.25%
+    }
 }

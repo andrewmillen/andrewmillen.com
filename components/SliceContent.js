@@ -42,18 +42,30 @@ export default function SliceContent({ data }) {
         </div>
       );
     } else if (slice.slice_type === "hr") {
-      return <hr />;
+      return (
+        <div
+          key={index}
+          className="container mx-auto mt-16 md:mt-24 lg:mt-32 max-w-xl md:max-w-2xl lg:max-w-4xl"
+        >
+          <hr />
+        </div>
+      );
     } else if (slice.slice_type === "video_embed") {
       return (
-        <div className="relative h-0" style="padding-bottom: 56.25%">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src={`https://www.youtube.com/embed/HiT9owEANDI${slice.primary.video_id}`}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div
+          key={index}
+          className="container mx-auto mt-16 md:mt-24 lg:mt-32 max-w-xl md:max-w-2xl lg:max-w-4xl"
+        >
+          <div className="relative h-0 aspect-16x9">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${slice.primary.video_id}`}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       );
     } else {
