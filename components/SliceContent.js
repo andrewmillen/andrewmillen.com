@@ -41,6 +41,21 @@ export default function SliceContent({ data }) {
           </figure>
         </div>
       );
+    } else if (slice.slice_type === "hr") {
+      return <hr />;
+    } else if (slice.slice_type === "video_embed") {
+      return (
+        <div className="relative h-0" style="padding-bottom: 56.25%">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src={`https://www.youtube.com/embed/HiT9owEANDI${slice.primary.video_id}`}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      );
     } else {
       return "There is no slice content to display.";
     }
