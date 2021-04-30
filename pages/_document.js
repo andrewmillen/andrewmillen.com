@@ -9,13 +9,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <script
-            async
-            defer
-            src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${process.env.PRISMIC_REPOSITORY_NAME}`}
-          ></script>
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
