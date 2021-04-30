@@ -11,6 +11,8 @@ export default async (req, res) => {
     return res.status(401).json({ message: "Invalid token" });
   }
 
+  console.log(redirectUrl);
+
   res.setPreviewData({ ref });
 
   res.write(
