@@ -1,9 +1,24 @@
-import { PrismicClient } from "@/lib/api.js";
+import { REF_API_URL, API_TOKEN } from "@/lib/api.js";
+import Prismic from "prismic-javascript";
 import { linkResolver } from "@/lib/linkResolver.js";
 
-export default async (req, res) => {
+const Client = (req = null) =>
+  Prismic.client(REF_API_URL, createClientOptions(req, API_TOKEN));
+
+const createClientOptions = (req = null, prismicAccessToken = null) => {
+  const reqOption = req ? { req } : {};
+  const accessTokenOption = prismicAccessToken
+    ? { API_TOKEN: prismicAccessToken }
+    : {};
+  return {
+    ...reqOption,
+    ...accessTokenOption,
+  };
+};
+
+const Preview = async (req, res) => {
   const { token: ref, documentId } = req.query;
-  const redirectUrl = await PrismicClient(req)
+  const redirectUrl = await Client(req)
     .getPreviewResolver(ref, documentId)
     .resolve(linkResolver, "/");
 
@@ -11,10 +26,7 @@ export default async (req, res) => {
     return res.status(401).json({ message: "Invalid token" });
   }
 
-  console.log(redirectUrl);
-
   res.setPreviewData({ ref });
-
   res.write(
     `<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=${redirectUrl}" />
     <script>window.location.href = '${redirectUrl}'</script>
@@ -22,3 +34,5 @@ export default async (req, res) => {
   );
   res.end();
 };
+
+export default Preview;
