@@ -2,13 +2,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import Link from "next/link";
+import globalData from "@/content/globalData.json";
 
-export default function Home() {
+export default function ErrorPage({ errorPageContent }) {
   return (
     <Layout>
       <Head>
-        <title>Andrew Millen | Page Not Found</title>
+        <title>{errorPageContent.title}</title>
         <meta
           name="description"
           content="Hi! I’m a user interface designer from Memphis, TN. I specialize in product design, animation, and interactive prototyping."
@@ -23,15 +23,11 @@ export default function Home() {
       <main className="pt-12 pb-4 text-center md:pt-16 lg:pt-24">
         <div className="container">
           <Breadcrumb url="/" />
-          <h1 className="font-semibold font-karmina text-4xl mb-2 md:text-5xl">
-            404: Page Not Found
+          <h1 className="font-bold font-karmina text-4xl mb-2 md:text-5xl">
+            {errorPageContent.heading}
           </h1>
           <p className="text-lg mb-6 max-w-lg mx-auto lg:text-xl leading-relaxed lg:max-w-2xl lg:mb-12">
-            The page you're looking for doesn't exist. Try going back to the{" "}
-            <Link href="/">
-              <a class="underline">homepage</a>
-            </Link>
-            .
+            {errorPageContent.content}
           </p>
           <Image
             src="/nedry.jpg"
@@ -44,4 +40,14 @@ export default function Home() {
       </main>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const errorPageContent = globalData.errorPage;
+
+  return {
+    props: {
+      errorPageContent,
+    },
+  };
 }
