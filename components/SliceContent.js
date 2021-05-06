@@ -31,9 +31,9 @@ export default function SliceContent({ data }) {
           <figure className="mt-16 md:mt-24 lg:mt-32">
             <Image
               src={slice.primary.image.url}
-              alt=""
-              width={1400}
-              height={900}
+              alt={slice.primary.image.alt}
+              width={slice.primary.image_width}
+              height={slice.primary.image_height}
             />
             <figcaption className="text-gray-600 mt-4">
               {slice.primary.caption}
