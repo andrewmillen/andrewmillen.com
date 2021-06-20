@@ -17,11 +17,11 @@ export default function SliceContent({ data }) {
       return (
         <div
           key={index}
-          className="prose prose-lg sm:prose-xl md:prose-2xl my-12 lg:my-24 container mx-auto max-w-xl md:max-w-2xl lg:max-w-4xl lg:px-16"
+          className="prose prose-md md:prose-lg lg:prose-xl xl:prose-2xl my-12 lg:my-24 container mx-auto max-w-xl md:max-w-2xl lg:max-w-4xl lg:px-16"
         >
-          <blockquote className="lg:text-2xl">
+          <blockquote className="blockquote opacity-75">
             {RichText.render(slice.primary.quote, linkResolver)}
-            <cite>{slice.primary.citation}</cite>
+            {slice.primary.citation && <cite>{slice.primary.citation}</cite>}
           </blockquote>
         </div>
       );

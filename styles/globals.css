@@ -28,6 +28,11 @@
     h3 {
       @apply mb-4 !important;
     }
+
+    .blockquote p {
+        @apply font-sans not-italic font-normal !important;
+    }
+
 }
 
 @layer components {
