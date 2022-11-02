@@ -23,7 +23,9 @@ export default function Home({ meta, homepage, projects, cta }) {
       <header className="text-center pb-4 pt-12 md:pt-16 lg:pt-24">
         <div className="container">
           <h1 className="font-semibold text-4xl mb-2 md:text-5xl">
-            {homepage.title}
+            {homepage.name}
+            <span className="hidden">|</span>
+            <span>{homepage.title}</span>
           </h1>
           <p className="text-lg lg:text-xl leading-relaxed mb-6 lg:mb-12 max-w-lg lg:max-w-2xl mx-auto">
             {homepage.intro}

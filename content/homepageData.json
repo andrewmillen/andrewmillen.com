@@ -1,7 +1,9 @@
 {
   "content": {
-    "title": "Andrew Millen",
-    "intro": "Hi! I’m a product designer from Memphis, TN. I specialize in design systems, interaction design, and rapid prototyping.",
-    "aside": "I also dabble in <a class=\"inline-block font-semibold underline-thin\" href=\"https://www.behance.net/gallery/13309373/3D-Renderings\" rel=\"nofollow noreferrer\">3D</a>, <a class=\"inline-block font-semibold underline-thin\" href=\"https://andrewmillen.github.io/casino-type-specimen/\" rel=\"nofollow noreferrer\">type design</a>, and <a class=\"inline-block font-semibold underline-thin\" href=\"https://www.instagram.com/millen_woodworking/\" rel=\"nofollow noreferrer\">woodworking</a>."
+    "name": "Andrew Millen",
+    "title": "Sr. Product Designer",
+    "intro": "Hello! I’m a hybrid UI/UX designer with a background in copywriting and front-end development. I’ve done a little bit of everything, but my passion is building precise yet flexible design systems for digital products. Recently, I’ve also been exploring augmented reality interfaces.",
+    "aside": "I also dabble in <a class=\"inline-block font-semibold underline-thin\" href=\"https://www.behance.net/gallery/13309373/3D-Renderings\" rel=\"nofollow noreferrer\">3D</a>, <a class=\"inline-block font-semibold underline-thin\" href=\"https://andrewmillen.github.io/casino-type-specimen/\" rel=\"nofollow noreferrer\">type design</a>, and <a class=\"inline-block font-semibold underline-thin\" href=\"https://www.instagram.com/millen_woodworking/\" rel=\"nofollow noreferrer\">woodworking</a>.",
+    "cta": "Shoot me an email or visit me on Dribbble, Codepen, or my blog."
   }
 }
