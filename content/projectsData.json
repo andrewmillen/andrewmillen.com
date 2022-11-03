@@ -1,67 +1,33 @@
 {
   "projects": [
     {
-      "id": "hlpr",
-      "layout": "standard",
+      "id": "smashingArticle",
       "content": {
-        "name": "HLPR",
-        "tags": ["UX", "UI", "Prototyping"],
-        "description": "Proof of concept for an app designed to make giving to the asset-deprived easy and convenient.",
-        "largeImage": false,
-        "imageLink": "https://projects.invisionapp.com/prototype/HLPR-Demo-cjnuq2lp300j6xq01nfletzm9",
-        "imageSrc": "/work-hlpr.png",
-        "imageSrc2x": "/work-hlpr@2x.png",
-        "imageAlt": "Helper app home screen",
-        "buttonLink": "https://medium.com/@andrewmillen/designing-a-better-way-to-give-76ffeaf53f89",
-        "buttonText": "Read the Case Study"
+        "name": "Better Search UX Through Microcopy",
+        "label": "Article",
+        "description": "I wrote about how good copy and a little thoughtfulness can improve the all-important search experience.",
+        "link": "https://www.smashingmagazine.com/2019/06/better-search-ux-microcopy/",
+        "linkLabel": "Read Article in Smashing Magazine"
       }
     },
     {
-      "id": "hello-home",
-      "layout": "reverse",
+      "id": "flags",
       "content": {
-        "name": "Hello Home",
-        "tags": ["UX", "UI"],
-        "description": "An end-to-end real estate selling experience. Sellers can track their progress from list to close, sign documents, and find home services.",
-        "largeImage": true,
-        "imageLink": "https://andrewmillen.com/posts/hellohome-ux-ui-case-study",
-        "imageSrc": "/work-hellohome.png",
-        "imageSrc2x": "/work-hellohome@2x.png",
-        "imageAlt": "Hello Home marketing website homepage",
-        "buttonLink": "https://andrewmillen.com/posts/hellohome-ux-ui-case-study",
-        "buttonText": "Read the Case Study"
+        "name": "Flags in Code",
+        "label": "Side Project",
+        "description": "What’s nerdier, loving vexillology or learning clip-path so you can code the flag of the Republic of Seychelles?",
+        "link": "https://codepen.io/collection/XOWYvZ",
+        "linkLabel": "View on CodePen"
       }
     },
     {
-      "id": "meal-planner",
-      "layout": "standard",
+      "id": "mobileCursor",
       "content": {
-        "name": "Meal Planner App Concept",
-        "tags": ["UX", "UI", "Interaction Design"],
-        "description": "An app that would store recipes, track meals against calorie goals, and plan grocery trips—all in one.",
-        "largeImage": false,
-        "imageLink": "https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept",
-        "imageSrc": "/work-mealplanner.png",
-        "imageSrc2x": "/work-mealplanner@2x.png",
-        "imageAlt": "Meal Planner app home screen",
-        "buttonLink": "https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept",
-        "buttonText": "More on Dribbble"
-      }
-    },
-    {
-      "id": "zignyl",
-      "layout": "reverse",
-      "content": {
-        "name": "Zignyl",
-        "tags": ["Research", "UX", "UI"],
-        "description": "A robust store management app with scheduling, forecasting, reporting, and employee management.",
-        "largeImage": true,
-        "imageLink": "http://www.zignyl.com/",
-        "imageSrc": "/work-zignyl.png",
-        "imageSrc2x": "/work-zignyl@2x.png",
-        "imageAlt": "Screenshot of zignyl website",
-        "buttonLink": "http://www.zignyl.com/",
-        "buttonText": "Visit"
+        "name": "Mobile Cursor for AfterEffects",
+        "label": "Resource",
+        "description": "I built a template in AE that designers can use to overlay a mobile “cursor” over their prototypes. The effect is fully parametric and powered by a script I modified from one found on StackOverflow.",
+        "link": "https://dribbble.com/andrewmillen/projects/1035886-Meal-Planner-App-Concept",
+        "linkLabel": "View on Medium"
       }
     }
   ]

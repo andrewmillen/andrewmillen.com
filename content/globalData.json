@@ -1,11 +1,10 @@
 {
   "meta": {
-    "title": "Andrew Millen | Product Designer",
-    "description": "Hi! I’m a product designer from Memphis, TN. I specialize in UI design, animation, and interactive prototyping."
+    "title": "Andrew Millen | Sr. Product Designer",
+    "description": "Hybrid UI/UX designer with a background in copywriting and front-end development."
   },
-  "cta": {
-    "text": "Get in Touch",
-    "email": "andrewmillen1+website@gmail.com"
+  "colophon": {
+    "text": "I built this site using React.js, Prismic (for the blog), and TailwindCSS. The typefaces are Degular, Karmina, and Cartograph CF."
   },
   "errorPage": {
     "title": "Andrew Millen | 404",

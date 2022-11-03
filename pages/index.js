@@ -1,4 +1,3 @@
-import DividerLine from "@/components/DividerLine.js";
 import Footer from "@/components/Footer.js";
 import Head from "next/head";
 import Layout from "@/components/Layout";
@@ -7,7 +6,7 @@ import globalData from "@/content/globalData.json";
 import homepageData from "@/content/homepageData.json";
 import projectsData from "@/content/projectsData.json";
 
-export default function Home({ meta, homepage, projects, cta }) {
+export default function Home({ meta, homepage, projects, colophon }) {
   return (
     <Layout>
       <Head>
@@ -20,46 +19,34 @@ export default function Home({ meta, homepage, projects, cta }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="text-center pb-4 pt-12 md:pt-16 lg:pt-24">
+      <header className="pb-4 pt-12 md:pt-16 lg:pt-24">
         <div className="container">
-          <h1 className="font-semibold text-4xl mb-2 md:text-5xl">
+          <h1 className="font-semibold leading-tight text-4xl mb-20 md:text-5xl">
             {homepage.name}
             <span className="hidden">|</span>
-            <span>{homepage.title}</span>
+            <span className="block">{homepage.title}</span>
           </h1>
-          <p className="text-lg lg:text-xl leading-relaxed mb-6 lg:mb-12 max-w-lg lg:max-w-2xl mx-auto">
-            {homepage.intro}
-          </p>
-          <DividerLine />
-          <a href={`mailto:${cta.email}`} className="button z-10">
-            {cta.text}
-          </a>
+          <p
+            className="text-lg lg:text-xl leading-relaxed mb-6 lg:mb-12 max-w-lg lg:max-w-2xl"
+            dangerouslySetInnerHTML={{ __html: homepage.intro }}
+          ></p>
+          <p
+            className="text-lg lg:text-xl leading-relaxed mb-6 lg:mb-12 max-w-lg lg:max-w-2xl"
+            dangerouslySetInnerHTML={{ __html: homepage.cta }}
+          ></p>
         </div>
       </header>
 
       <main>
-        <section className="py-8">
-          <ul>
-            {projects.map((project) => (
-              <Project
-                key={project.id}
-                content={project.content}
-                layout={project.layout}
-              />
-            ))}
-          </ul>
-        </section>
-
-        <aside className="py-12 lg:py-32">
-          <div className="container text-center">
-            <p
-              className="text-lg lg:text-2xl"
-              dangerouslySetInnerHTML={{ __html: homepage.aside }}
-            ></p>
-          </div>
-        </aside>
+        {projects.map((project) => (
+          <Project
+            key={project.id}
+            content={project.content}
+            layout={project.layout}
+          />
+        ))}
       </main>
-      <Footer cta={cta} />
+      <Footer text={colophon.text} />
     </Layout>
   );
 }
@@ -68,14 +55,14 @@ export async function getStaticProps() {
   const meta = globalData.meta;
   const homepage = homepageData.content;
   const projects = projectsData.projects;
-  const cta = globalData.cta;
+  const colophon = globalData.colophon;
 
   return {
     props: {
       meta,
       homepage,
       projects,
-      cta,
+      colophon,
     },
   };
 }
