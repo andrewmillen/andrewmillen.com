@@ -53,10 +53,12 @@ export default function Post({ data, cta }) {
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
             Andrew Millen is a product designer specializing in user interface
             design, animation, and prototyping.{" "}
-            <Link href="/">
-              <a className="underline text-blue-600 visited:text-purple-900 leading-relaxed">
+            <Link
+              href="/"
+              className="underline text-blue-600 visited:text-purple-900 leading-relaxed">
+              
                 See some of his work
-              </a>
+              
             </Link>
             .
           </p>
