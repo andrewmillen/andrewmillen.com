@@ -11,7 +11,7 @@ import { RichText } from "prismic-reactjs";
 import SliceContent from "@/components/SliceContent";
 import globalData from "@/content/globalData.json";
 
-export default function Post({ data, cta }) {
+export default function Post({ data, footer }) {
   return (
     <Layout>
       <Head>
@@ -55,16 +55,15 @@ export default function Post({ data, cta }) {
             design, animation, and prototyping.{" "}
             <Link
               href="/"
-              className="underline text-blue-600 visited:text-purple-900 leading-relaxed">
-              
-                See some of his work
-              
+              className="underline text-blue-600 visited:text-purple-900 leading-relaxed"
+            >
+              See some of his work
             </Link>
             .
           </p>
         </aside>
       </main>
-      <Footer cta={cta} />
+      <Footer text={footer.text} />
     </Layout>
   );
 }
@@ -87,10 +86,10 @@ export default function Post({ data, cta }) {
 export async function getStaticProps({ params }) {
   const { uid } = params;
   const { data } = await PrismicClient.getByUID("blog_post", uid);
-  const cta = globalData.cta;
+  const footer = globalData.footer;
 
   return {
-    props: { data, cta },
+    props: { data, footer },
     revalidate: 1,
   };
 }

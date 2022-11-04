@@ -6,7 +6,7 @@ import globalData from "@/content/globalData.json";
 import homepageData from "@/content/homepageData.json";
 import projectsData from "@/content/projectsData.json";
 
-export default function Home({ meta, homepage, projects, colophon }) {
+export default function Home({ meta, homepage, projects, footer }) {
   return (
     <Layout>
       <Head>
@@ -49,7 +49,7 @@ export default function Home({ meta, homepage, projects, colophon }) {
           />
         ))}
       </main>
-      <Footer text={colophon.text} />
+      <Footer text={footer.text} />
     </Layout>
   );
 }
@@ -58,14 +58,14 @@ export async function getStaticProps() {
   const meta = globalData.meta;
   const homepage = homepageData.content;
   const projects = projectsData.projects;
-  const colophon = globalData.colophon;
+  const footer = globalData.footer;
 
   return {
     props: {
       meta,
       homepage,
       projects,
-      colophon,
+      footer,
     },
   };
 }

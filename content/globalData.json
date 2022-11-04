@@ -3,7 +3,7 @@
     "title": "Andrew Millen | Sr. Product Designer",
     "description": "Hybrid UI/UX designer with a background in copywriting and front-end development."
   },
-  "colophon": {
+  "footer": {
     "text": "I built this site using React.js, Prismic (for the blog), and TailwindCSS. The typefaces are Degular, Karmina, and Cartograph CF."
   },
   "errorPage": {

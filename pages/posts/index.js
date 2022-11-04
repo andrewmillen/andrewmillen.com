@@ -9,7 +9,7 @@ import { getBlogPosts } from "@/lib/api";
 import globalData from "@/content/globalData.json";
 import { linkResolver } from "@/lib/linkResolver";
 
-export default function BlogIndex({ posts, meta, cta }) {
+export default function BlogIndex({ posts, meta, footer }) {
   return (
     <Layout>
       <Head>
@@ -71,7 +71,7 @@ export default function BlogIndex({ posts, meta, cta }) {
           })}
         </div>
       </main>
-      <Footer cta={cta} />
+      <Footer text={footer.text} />
     </Layout>
   );
 }
@@ -81,13 +81,13 @@ export async function getStaticProps() {
 
   const posts = data.allBlog_posts.edges.map((edge) => edge.node);
   const meta = globalData.meta;
-  const cta = globalData.cta;
+  const footer = globalData.footer;
 
   return {
     props: {
       posts,
       meta,
-      cta,
+      footer,
     },
     revalidate: 1,
   };
