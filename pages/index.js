@@ -19,19 +19,22 @@ export default function Home({ meta, homepage, projects, colophon }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="pb-4 pt-12 md:pt-16 lg:pt-24">
+      <header className="pb-4 pt-12 md:pt-16 lg:pt-24 border-b border-neutral-200">
         <div className="container">
-          <h1 className="font-semibold leading-tight text-4xl mb-20 md:text-5xl">
+          <h1 className="font-bold leading-tight text-4xl mb-20 md:text-7xl">
             {homepage.name}
             <span className="hidden">|</span>
             <span className="block">{homepage.title}</span>
           </h1>
+          <p className="text-2xl lg:text-4xl leading-relaxed mb-4">👋</p>
+          <p className="text-lg lg:text-2xl leading-relaxed mb-6 lg:mb-12 text-neutral-500">
+            <span className="text-neutral-800 font-bold">
+              {homepage.greeting}
+            </span>{" "}
+            {homepage.intro}
+          </p>
           <p
-            className="text-lg lg:text-xl leading-relaxed mb-6 lg:mb-12 max-w-lg lg:max-w-2xl"
-            dangerouslySetInnerHTML={{ __html: homepage.intro }}
-          ></p>
-          <p
-            className="text-lg lg:text-xl leading-relaxed mb-6 lg:mb-12 max-w-lg lg:max-w-2xl"
+            className="text-lg lg:text-2xl leading-relaxed mb-6 lg:mb-12 font-semibold"
             dangerouslySetInnerHTML={{ __html: homepage.cta }}
           ></p>
         </div>

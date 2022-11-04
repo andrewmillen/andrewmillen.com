@@ -4,29 +4,12 @@
 
 @layer base {
     body {
-        @apply font-sans bg-neutral-50;
-    }
-
-    button,
-    .button {
-        @apply relative bg-gray-900 text-white px-10 py-4 rounded-full inline-block transform scale-100 font-semibold transition duration-100 ease-out shadow-lg
-    }
-
-    a:not(.button) {
-        @apply transition duration-100 ease-out
-    }
-
-    a:not(.button):hover {
-        @apply opacity-50
+        @apply font-degular bg-neutral-50 text-neutral-800;
     }
 
     button:hover,
     .button:hover {
         @apply bg-gray-800 transform scale-105
-    }
-
-    h3 {
-      @apply mb-4 !important;
     }
 
     .blockquote p {
@@ -37,31 +20,19 @@
 
 @layer components {
     .container {
-        @apply px-6 mx-auto
+        @apply px-6 md:px-16 lg:px-40 mx-auto
     }
-    .portfolio-image {
-        width: 500px;
-        max-width: 100%;
+
+    .textLink {
+        @apply text-blue-700 underline underline-offset-4;
     }
-    .portfolio-image-large {
-        width: 1000px;
-        max-width: 100%;
-    }
-    @screen lg {
-        .portfolio-image-large {
-            max-width: none;
-        }
+
+    .textLink:hover {
+        @apply text-blue-500;
     }
 }
 
 @layer utilities {
-    .underline-thin {
-        background-image: linear-gradient(to bottom, #cbd5e0 100%, transparent 0%);
-        background-position: 0 95%;
-        background-repeat: repeat-x;
-        background-size: 1px 1px;
-    }
-
     .aspect-16x9 {
         padding-bottom: 56.25%
     }

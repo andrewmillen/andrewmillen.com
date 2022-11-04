@@ -25,6 +25,7 @@ module.exports = {
     extend: {
       fontFamily: {
         karmina: ["karmina"],
+        degular: ["degular"],
       },
       spacing: {
         72: "18rem",
