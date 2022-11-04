@@ -23,7 +23,7 @@ export default function ErrorPage({ errorPageContent }) {
       <main className="pt-12 pb-4 text-center md:pt-16 lg:pt-24">
         <div className="container">
           <Breadcrumb url="/" />
-          <h1 className="font-bold font-karmina text-4xl mb-2 md:text-5xl">
+          <h1 className="font-bold text-4xl mb-2 md:text-5xl">
             {errorPageContent.heading}
           </h1>
           <p className="text-lg mb-6 max-w-lg mx-auto lg:text-xl leading-relaxed lg:max-w-2xl lg:mb-12">
@@ -34,7 +34,7 @@ export default function ErrorPage({ errorPageContent }) {
             alt="Dennis Nedry lost in Jurassic Park."
             height={213}
             width={200}
-            className="mt-8"
+            className="mt-8 mx-auto"
           />
         </div>
       </main>
