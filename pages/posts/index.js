@@ -9,18 +9,16 @@ import globalData from "@/content/globalData.json";
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   const meta = globalData.meta;
-  const footer = globalData.footer;
   return {
     props: {
       allPostsData,
       meta,
-      footer,
     },
     revalidate: 1,
   };
 }
 
-export default function Blog({ allPostsData, meta, footer }) {
+export default function Blog({ allPostsData, meta }) {
   return (
     <Layout>
       <Head>
@@ -31,7 +29,7 @@ export default function Blog({ allPostsData, meta, footer }) {
 
       <header className="pt-12 md:pt-16 lg:pt-24">
         <div className="container">
-          <Link className="textLink" href={`/`}>
+          <Link className="textLink text-lg" href={`/`}>
             « Home
           </Link>
           <h1 className="font-bold text-4xl mt-4 mb-2 md:text-5xl">
@@ -45,7 +43,7 @@ export default function Blog({ allPostsData, meta, footer }) {
           <ul>
             {allPostsData.map(({ id, date, title, blurb }) => (
               <li key={id} className="my-8 lg:my-16">
-                <div className="block uppercase tracking-widest font-semibold text-gray-600 text-xs ">
+                <div className="block uppercase tracking-widest font-semibold text-gray-600 text-sm">
                   <PostDate dateString={date} />
                 </div>
                 <Link className="inline-block" href={`/posts/${id}`}>
@@ -53,13 +51,13 @@ export default function Blog({ allPostsData, meta, footer }) {
                     {title}
                   </h2>
                 </Link>
-                <p className="mt-1 text-neutral-500">{blurb}</p>
+                <p className="mt-1 text-neutral-500 text-lg">{blurb}</p>
               </li>
             ))}
           </ul>
         </div>
       </main>
-      <Footer text={footer.text} />
+      <Footer />
     </Layout>
   );
 }

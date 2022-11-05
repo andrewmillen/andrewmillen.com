@@ -1,4 +1,8 @@
-export default function Footer({ text }) {
+import { format } from "date-fns";
+
+const currentYear = format(new Date(), "yyyy");
+
+export default function Footer() {
   return (
     <footer className="py-4 md:py-8 lg:py-12">
       <div className="container">
@@ -9,7 +13,20 @@ export default function Footer({ text }) {
   H53.7z M89.7,126L61.6,46h20l16.5,47L89.7,126z M128.9,126h-18.6V46h18.6V126z"
           />
         </svg>
-        <p>{text}</p>
+        <p>
+          This site was built with Next.js and Tailwind CSS and is hosted by
+          Vercel. The type is set in{" "}
+          <a
+            href="https://ohnotype.co/fonts/degular"
+            rel="noreferrer nofollow"
+            target="_blank"
+            className="underline underline-offset-2 font-semibold hover:text-neutral-500"
+          >
+            Degular
+          </a>{" "}
+          by Ohno type.
+        </p>
+        <p>© {currentYear} Andrew Millen. All rights reserved.</p>
       </div>
     </footer>
   );
