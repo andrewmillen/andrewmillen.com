@@ -1,0 +1,17 @@
+---
+title: "Goal Time vs. Tool Time"
+date: '2022-01-27'
+blurb: "Learning a new term from a decade-old podcast episode."
+---
+
+Via John Keane's [Biscuits for Cheese](https://biscuitsforcheese.co.uk/post/129405788696/goal-time-vs-tool-time), I came across a new UX term this week: goal time vs. tool time; essentially, the difference between a user's time spent working towards their goals, and their time spent dealing with the tool itself. You can get a sense of the ratio of one to the other by sitting in on product trainings and, obviously, interviewing users yourself. If the user is spending too much time on tool and not enough on their goals, you may have a UX problem.
+
+The observation comes from Hagan Rivers on a 10-year-old episode of the SpoolCast, along with several other smart observations that are uncannily relevant to my work at OfficeSpace today, including:
+
+-   What a user sees when they see "clutter"
+-   The value of dashboards
+-   Inconsistencies as a byproduct of multiple disconnected engineering teams -- and how to handle them
+
+Worth a listen.
+
+[The SpoolCast #147: Hagan Rivers - Simplifying Complex Applications](https://uie.fm/shows/spoolcast/hagan-rivers-simplifying-complex-applications)

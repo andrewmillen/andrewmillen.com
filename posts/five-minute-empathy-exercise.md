@@ -1,0 +1,43 @@
+---
+title: 'The Five Minute Empathy Exercise'
+date: '2021-02-23'
+blurb: "When you don't have the time, budget, or need for a full-on empathy workshop, this five minute exercise can get you in the right headspace to design a good user experience."
+---
+
+I was recently asked by a freelance client to help craft an email strategy for both trial users and paid users of their product. To get myself in the right headspace for this task, I took five minutes at the beginning to do an empathy exercise that I found extremely valuable, so I thought it'd be worth sharing.
+
+You probably already know [how important empathy is in UX design](https://uxplanet.org/empathy-in-ux-design-what-it-is-and-why-its-important-3f6a8919ef10). In this case, I found this exercise a helpful starting point because while I did lead the UX and UI design of the product itself, there are many things I'm not:
+
+-   I'm not a UX writer. I have writing skills, but it's not my primary focus.
+-   I'm not an end user of the app. I helped design it, but I don't run the kind of business that would benefit from it so I'll never experience it from that perspective.
+-   I'm not a marketing specialist. These email blasts are an important touchpoint in the marketing strategy and brand experience of the app, which I'm not directly overseeing --- although my work designing the app does make up the bulk of the brand experience.
+
+Acknowledging these shortcomings helps identify my blind spots, which is the [first step in confronting one's own bias](https://www.uxbooth.com/articles/resources-for-eliminating-bias-in-design/). The downside of this exercise is that it's self-centering; it's important to make sure you don't project your own experience onto *all* your users, as that would undermine the work you're trying to do and potentially exclude the experience of your more marginalized users. To get the fullest picture of your users' real needs, you should always lobby for [qualitative user research](https://www.interaction-design.org/literature/article/best-practices-for-qualitative-user-research) and/or [more robust empathy workshops](https://www.nngroup.com/articles/empathy-mapping/).
+
+That said, this is a low cost, high reward exercise that ensures you're approaching your design from a customer-centric perspective.
+
+The Exercise
+------------
+
+We'll call this an empathy narrative.
+
+*Put yourself in the user's shoes. Now think about what you're feeling as you go through the experience. Use these questions as a guide: What are my frustrations, my needs, my goals? How might my past experiences influence my mindset and behavior? How do I *want* to be feeling? If the experience goes badly, how will I react? What if it goes well?*
+
+Treat this prompt like a jumping off point, not guard rails; once you get started, you should let the story take you wherever it goes. The key thing here is to orient the narrative around expressive feelings. Emotions are at the root of most every human decision, so it's critical to explore those first. Once you know how your users might be feeling, you know not just *what* to design, but *how* to design it. You can work more strategically.
+
+Here's what the result of my exercise looked like:
+
+> As a trial user, I want to receive communications from this product that feel like they're designed to help me succeed. I may be feeling overwhelmed or confused by the product as a new user. I'm probably procrastinating because it's more involved than they have time for. I may be feeling ambivalent about whether it's worth it, or if it's the best option for me.
+>
+> As an active/paid user, I want to feel confident that I'm receiving notifications that I've expressly configured. I may feel empowered if I receive emails that include tips and tricks to get the most out of the product, as long as those emails aren't intrusive or spammy. I definitely want to control my email preferences easily so I don't see irrelevant emails mixed in with important notifications. There's a chance that if they receive too many notifications or unhelpful messages, I'll feel overwhelmed and want to give up on the product.
+
+In my case, my main takeaway from this exercise was that we have a fine line to tread when it comes to email strategy. We want to maintain a strong relationship with the customer to help them succeed, but can't just blast them with emails that might feel irrelevant. We have to be thoughtful and considered with our timing, our headlines, and our content strategy; speaking directly to the user's motivations and uncertainties is the key.
+
+Furthermore, this gives us a basis on which to judge the approach and success of the ensuing UX work. Outputs can be measured against the empathy narrative: "Does this headline tap into the user's mental state? Does the content of this email help nudge users who are feeling overwhelmed?"
+
+Further Reading
+---------------
+
+My first stop for further reading is almost always Neilsen Norman Group. They have a great article on [the difference between sympathy and empathy](https://www.nngroup.com/articles/sympathy-vs-empathy-ux/). To combat self-centering, give David Dylan Thomas' [Design for Cognitive Bias](https://abookapart.com/products/design-for-cognitive-bias) a read. And to learn more about more in-depth empathy workshops, [this article on Medium](https://medium.com/@harrybr/how-to-run-an-empathy-user-journey-mapping-workshop-813f3737067) is a good deep-dive.
+
+If you use this method on your projects, or have any questions or feedback, I'd love to hear from you!

@@ -2,7 +2,6 @@
 title: 'Seven Readings to Reframe How You Think About Design'
 date: '2020-10-21'
 blurb: 'Whether you’re just entering the field or are already deep into your design career, it’s always a good time to challenge your thinking about what design is and how it should be done.'
-ogimage:
 ---
 
 This short list of readings is intended to reframe how you think about design. Starting with high-level think pieces and narrowing down to more practical, focused guides, I've curated this list from the articles and books that have made the biggest impact on me personally. Hopefully they'll do the same for you.
