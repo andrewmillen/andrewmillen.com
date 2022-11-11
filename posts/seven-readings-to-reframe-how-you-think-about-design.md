@@ -1,7 +1,8 @@
 ---
-title: 'Seven Readings to Reframe How You Think About Design'
-date: '2020-10-21'
-blurb: 'Whether you’re just entering the field or are already deep into your design career, it’s always a good time to challenge your thinking about what design is and how it should be done.'
+title: "Seven Readings to Reframe How You Think About Design"
+date: "2020-10-21"
+blurb: "Whether you’re just entering the field or are already deep into your design career, it’s always a good time to challenge your thinking about what design is and how it should be done."
+ogimage: "/post-assets/og-seven-readings.jpg"
 ---
 
 This short list of readings is intended to reframe how you think about design. Starting with high-level think pieces and narrowing down to more practical, focused guides, I've curated this list from the articles and books that have made the biggest impact on me personally. Hopefully they'll do the same for you.
@@ -10,11 +11,11 @@ This short list of readings is intended to reframe how you think about design. S
 
 First, break down your perception of UI design as something that happens in a box. When you're designing for an edgeless, sprawling space like the web, don't start by drawing a box for it to fit inside. Instead, go with the grain. What is the web's grain? It's "an edgeless surface of unknown proportions comprised of small, individual, and variable elements from multiple vantages assembled into a readable whole that documents a moment."
 
-[Frank Chimero -- Blog](https://frankchimero.com/blog/2015/the-webs-grain/)
+[Frank Chimero – Blog](https://frankchimero.com/blog/2015/the-webs-grain/)
 
 ### The Best Interface is No Interface
 
-Along the same lines, challenge your belief that the solution to every problem is an app---or even a screen. In this (admittedly preachy) book, Golden Krishna walks you through three principles of thoughtful design that go beyond "slap an interface on it," and envisions a future where computers serve humans, not the other way around.
+Along the same lines, challenge your belief that the solution to every problem is an app–or even a screen. In this (admittedly preachy) book, Golden Krishna walks you through three principles of thoughtful design that go beyond "slap an interface on it," and envisions a future where computers serve humans, not the other way around.
 
 [NoInterface.com](http://www.nointerface.com/book/)
 

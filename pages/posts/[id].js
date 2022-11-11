@@ -35,7 +35,7 @@ export default function Post({ postData }) {
           <div className="container">
             <div className="text-left">
               <Link className="textLink text-lg" href={`/posts/`}>
-                « Blog
+                « All Posts
               </Link>
               <h1 className="font-bold text-3xl my-4 md:text-4xl lg:text-5xl xl:text-6xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
                 {postData.title}
@@ -45,6 +45,8 @@ export default function Post({ postData }) {
               </div>
             </div>
             <hr className="max-w-lg lg:max-w-xl mt-12" />
+          </div>
+          <div className="container">
             <div
               className="prose prose-lg md:prose-xl pt-12"
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}

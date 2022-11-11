@@ -1,7 +1,8 @@
 ---
-title: "Just Kidding, Don't Autofocus Your Inputs"
+title: "Just Kidding, Don’t Autofocus Your Inputs"
 date: '2022-06-14'
-blurb: "TFW a thing you've been recommending for years is actually an accessibility problem."
+blurb: "TFW a thing you’ve been recommending for years is actually an accessibility problem."
+ogimage: "/post-assets/og-blog-fallback.jpg"
 ---
 
 I was designing a modal experience this week, and out of habit, left a note for the developer that the first input on the form within the modal should be set to autofocus when the modal opens. (And then I [tweeted](https://twitter.com/andrewsmillen/status/1534179484911411200) about it, like a moron.)

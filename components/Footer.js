@@ -15,16 +15,7 @@ export default function Footer() {
         </svg>
         <p>
           This site was built with Next.js and Tailwind CSS and is hosted by
-          Vercel. The type is set in{" "}
-          <a
-            href="https://ohnotype.co/fonts/degular"
-            rel="noreferrer nofollow"
-            target="_blank"
-            className="underline underline-offset-2 font-semibold hover:text-neutral-500"
-          >
-            Degular
-          </a>{" "}
-          by Ohno type.
+          Vercel. The type is set in Degular by Ohno type.
         </p>
         <p>© {currentYear} Andrew Millen. All rights reserved.</p>
       </div>

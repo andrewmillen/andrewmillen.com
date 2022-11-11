@@ -2,6 +2,7 @@
 title: "Goal Time vs. Tool Time"
 date: '2022-01-27'
 blurb: "Learning a new term from a decade-old podcast episode."
+ogimage: "/post-assets/og-blog-fallback.jpg"
 ---
 
 Via John Keane's [Biscuits for Cheese](https://biscuitsforcheese.co.uk/post/129405788696/goal-time-vs-tool-time), I came across a new UX term this week: goal time vs. tool time; essentially, the difference between a user's time spent working towards their goals, and their time spent dealing with the tool itself. You can get a sense of the ratio of one to the other by sitting in on product trainings and, obviously, interviewing users yourself. If the user is spending too much time on tool and not enough on their goals, you may have a UX problem.

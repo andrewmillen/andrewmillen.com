@@ -33,18 +33,18 @@ export default function Blog({ allPostsData, meta }) {
             « Home
           </Link>
           <h1 className="font-bold text-4xl mt-4 mb-2 md:text-5xl">
-            Recent Posts
+            All Posts
           </h1>
         </div>
       </header>
 
-      <main className="mx-auto py-4 md:py-8 lg:py-12 border-b border-neutral-200">
+      <main className="pb-4 md:pb-8 lg:pb-12 border-b border-neutral-200">
         <div className="container">
           <ul>
             {allPostsData.map(({ id, date, title, blurb }) => (
               <li key={id} className="my-8 lg:my-16">
                 <div className="block uppercase tracking-widest font-semibold text-gray-600 text-sm">
-                  <PostDate dateString={date} />
+                  {/* <PostDate dateString={date} /> */}
                 </div>
                 <Link className="inline-block" href={`/posts/${id}`}>
                   <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1 underline-offset-1 hover:underline hover:underline-offset-4">
