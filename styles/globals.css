@@ -7,11 +7,6 @@
         @apply font-degular bg-neutral-100 text-neutral-800;
     }
 
-    button:hover,
-    .button:hover {
-        @apply bg-gray-800 transform scale-105
-    }
-
 }
 
 @layer components {
@@ -25,6 +20,11 @@
 
     .textLink:hover {
         @apply text-blue-500;
+    }
+
+    .slides .slick-prev {
+        left: 150px;
+        z-index: 100;
     }
 }
 

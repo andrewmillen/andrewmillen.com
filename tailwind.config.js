@@ -10,6 +10,12 @@ module.exports = {
       fontFamily: {
         degular: ["degular"],
       },
+      colors: {
+        workHlpr: "#D8CAF6",
+        workGardening: "#DAECD4",
+        workMealplanner: "#FFDCD9",
+        workOther: "#CBE9FB",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
