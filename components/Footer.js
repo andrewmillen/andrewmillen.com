@@ -4,7 +4,7 @@ const currentYear = format(new Date(), "yyyy");
 
 export default function Footer() {
   return (
-    <footer className="py-4 md:py-8 lg:py-12">
+    <footer className="py-4 md:pt-16 md:pb-8 lg:pt-24 lg:pb-12">
       <div className="container">
         <svg viewBox="0 0 172 172" className="w-10 h-10 mb-8">
           <path
