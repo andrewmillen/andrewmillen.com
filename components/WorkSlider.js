@@ -4,14 +4,8 @@ import { PrevArrow, NextArrow } from "@/components/Arrows";
 import Image from "next/image";
 
 export default function WorkSlider({ slides }) {
-  // Set default slide index and background color
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  // Set default slide background color for first slide
   const [slideBg, setSlideBg] = useState("purple-100");
-
-  // Update the slide background color by matching the index of the active slide to the index in the Slides array.
-  useEffect(() => {
-    setSlideBg(slides[activeSlideIndex].bgcolor);
-  }, [activeSlideIndex, setActiveSlideIndex]);
 
   // Slick slider settings
   const settings = {
@@ -23,8 +17,10 @@ export default function WorkSlider({ slides }) {
     nextArrow: <NextArrow />,
     dots: false,
     arrows: true,
-    // This doesn't work without "current," not sure why.
-    beforeChange: (current, next) => setActiveSlideIndex(next),
+    // Update slideBg by matching the index ("next") of the incoming slide to the object in the Slides array in homepageData.json
+    // Removing "current" breaks this entirely, not sure why
+    // The function works (the HTML updates) but the background color doesn't show, or shows randomly.
+    beforeChange: (current, next) => setSlideBg(slides[next].bgcolor),
     responsive: [
       {
         breakpoint: 1024,
