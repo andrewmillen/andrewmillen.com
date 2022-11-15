@@ -11,6 +11,10 @@ module.exports = {
         degular: ["degular"],
       },
       colors: {
+        link: {
+          normal: "#4081FF",
+          dark: "#135CEB",
+        },
         workHlpr: "#D8CAF6",
         workGardening: "#DAECD4",
         workMealplanner: "#FFDCD9",

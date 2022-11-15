@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "@/components/Arrows";
 import Image from "next/image";
@@ -22,14 +22,17 @@ const slides = [
     alt: "An app that recommends recipes based on weather patterns and other data.",
     bgcolor: "bg-workMealplanner",
   },
+  {
+    key: "other",
+    src: "/work-other.png",
+    alt: "",
+    bgcolor: "bg-workOther",
+  },
 ];
 
 export default function WorkSlider() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [slideBg, setSlideBg] = useState("work-Hlpr");
-
-  // https://github.com/akiran/react-slick/issues/136
-  // https://react-slick.neostack.com/docs/example/slide-change-hooks
 
   useEffect(() => {
     const targetIndex = activeSlide;
@@ -59,10 +62,10 @@ export default function WorkSlider() {
 
   return (
     <div
-      className={`sliderWrapper transition-colors transition-duration-1000 ${slideBg}`}
+      className={`sliderWrapper border-b border-neutral-200 transition-colors transition-duration-1000 ${slideBg}`}
     >
       <div className="container">
-        <Slider {...settings} className="workSlider">
+        <Slider {...settings} className="workSlider pt-12 pb-24 lg:pb-8">
           {slides.map((slide) => (
             <div key={slide.key}>
               <Image
@@ -72,9 +75,24 @@ export default function WorkSlider() {
                 width={1350}
                 height={932}
               />
+              {slide.key === "other" && (
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl lg:text-3xl font-bold max-w-sm md:max-w-md max-w-xl">
+                  <span className="text-[#0086D1]">
+                    Looking for something more in-depth?
+                  </span>{" "}
+                  UX work doesn’t always make good eye candy.{" "}
+                  <a
+                    href="mailto:andrewmillen1+website@gmail.com"
+                    target="_blank"
+                    className="underline underline-offset-4 hover:text-gray-600"
+                  >
+                    Email me
+                  </a>{" "}
+                  to learn more about my process.
+                </div>
+              )}
             </div>
           ))}
-          {/* <div className="bg-workOther pt-12 pb-8"></div> */}
         </Slider>
       </div>
     </div>

@@ -15,11 +15,11 @@
     }
 
     .textLink {
-        @apply text-blue-700 underline underline-offset-4;
+        @apply text-link-normal underline underline-offset-4;
     }
 
     .textLink:hover {
-        @apply text-blue-500;
+        @apply text-link-dark;
     }
 
     .workSlider .slick-dots {
