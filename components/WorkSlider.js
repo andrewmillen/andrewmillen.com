@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function WorkSlider({ slides }) {
   // Set default slide and background color
   const [activeSlide, setActiveSlide] = useState(0);
-  const [slideBg, setSlideBg] = useState("work-Hlpr");
+  const [slideBg, setSlideBg] = useState("bg-workHlpr");
 
   // Update the active slide and get the new background color on beforeChange
   useEffect(() => {
