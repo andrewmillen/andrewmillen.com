@@ -30,11 +30,11 @@ module.exports = {
               fontSize: "1.8em",
             },
             a: {
-              color: theme("colors.blue.700"),
+              color: theme("colors.link.normal"),
               fontWeight: "400",
               textUnderlineOffset: 4,
               "&:hover": {
-                color: theme("colors.blue.500"),
+                color: theme("colors.link.dark"),
               },
             },
             blockquote: {

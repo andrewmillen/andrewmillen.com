@@ -8,7 +8,7 @@ export default function WorkSlider({ slides }) {
   const [activeSlide, setActiveSlide] = useState(0);
   const [slideBg, setSlideBg] = useState("bg-workHlpr");
 
-  // Update the active slide and get the new background color on beforeChange
+  // Update the active slide and get the new background color by matching the index of the active slide to the index in the slides array.
   useEffect(() => {
     const targetIndex = activeSlide;
     setSlideBg(slides[targetIndex].bgcolor);

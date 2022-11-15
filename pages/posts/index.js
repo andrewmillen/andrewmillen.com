@@ -24,13 +24,12 @@ export default function Blog({ allPostsData, meta }) {
       <Head>
         <title>Andrew Millen | Blog</title>
         <meta name="description" content={meta.description} />
-        {/* <link rel="stylesheet" href="https://use.typekit.net/mqf8sev.css" /> */}
       </Head>
 
       <header className="pt-12 md:pt-16 lg:pt-24">
         <div className="container">
           <Link className="textLink text-lg" href={`/`}>
-            « Home
+            ← Home
           </Link>
           <h1 className="font-bold text-4xl mt-4 mb-2 md:text-5xl">
             All Posts
@@ -40,7 +39,7 @@ export default function Blog({ allPostsData, meta }) {
 
       <main className="pb-4 md:pb-8 lg:pb-12 border-b border-neutral-200">
         <div className="container">
-          <ul>
+          <ul className="max-w-4xl">
             {allPostsData.map(({ id, date, title, blurb }) => (
               <li key={id} className="my-8 lg:my-16">
                 <div className="block uppercase tracking-widest font-semibold text-gray-600 text-sm">
