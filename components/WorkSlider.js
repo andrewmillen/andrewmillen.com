@@ -4,15 +4,14 @@ import { PrevArrow, NextArrow } from "@/components/Arrows";
 import Image from "next/image";
 
 export default function WorkSlider({ slides }) {
-  // Set default slide and background color
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [slideBg, setSlideBg] = useState("bg-workHlpr");
+  // Set default slide index and background color
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [slideBg, setSlideBg] = useState("purple-100");
 
-  // Update the active slide and get the new background color by matching the index of the active slide to the index in the slides array.
+  // Update the slide background color by matching the index of the active slide to the index in the Slides array.
   useEffect(() => {
-    const targetIndex = activeSlide;
-    setSlideBg(slides[targetIndex].bgcolor);
-  }, [activeSlide, setActiveSlide]);
+    setSlideBg(slides[activeSlideIndex].bgcolor);
+  }, [activeSlideIndex, setActiveSlideIndex]);
 
   // Slick slider settings
   const settings = {
@@ -25,7 +24,7 @@ export default function WorkSlider({ slides }) {
     dots: false,
     arrows: true,
     // This doesn't work without "current," not sure why.
-    beforeChange: (current, next) => setActiveSlide(next),
+    beforeChange: (current, next) => setActiveSlideIndex(next),
     responsive: [
       {
         breakpoint: 1024,
@@ -39,7 +38,7 @@ export default function WorkSlider({ slides }) {
 
   return (
     <div
-      className={`sliderWrapper border-b border-neutral-200 transition-colors transition-duration-1000 ${slideBg}`}
+      className={`sliderWrapper border-b border-neutral-200 transition-colors transition-duration-1000 bg-${slideBg}`}
     >
       <div className="container">
         <Slider
