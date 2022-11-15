@@ -1,14 +1,13 @@
-import Footer from "@/components/Footer.js";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import HomepageHeader from "@/components/HomepageHeader";
 import WorkSlider from "@/components/WorkSlider";
 import Project from "@/components/Project.js";
+import Footer from "@/components/Footer.js";
 import globalData from "@/content/globalData.json";
 import homepageData from "@/content/homepageData.json";
-import projectsData from "@/content/projectsData.json";
 
-export default function Home({ meta, homepage, projects }) {
+export default function Home({ meta, intro, slides, projects }) {
   return (
     <Layout>
       <Head>
@@ -20,16 +19,12 @@ export default function Home({ meta, homepage, projects }) {
         />
       </Head>
 
-      <HomepageHeader content={homepage} />
+      <HomepageHeader content={intro} />
 
       <main>
-        <WorkSlider />
+        <WorkSlider slides={slides} />
         {projects.map((project) => (
-          <Project
-            key={project.id}
-            content={project.content}
-            layout={project.layout}
-          />
+          <Project key={project.id} content={project.content} />
         ))}
       </main>
       <Footer />
@@ -39,13 +34,15 @@ export default function Home({ meta, homepage, projects }) {
 
 export async function getStaticProps() {
   const meta = globalData.meta;
-  const homepage = homepageData.content;
-  const projects = projectsData.projects;
+  const intro = homepageData.intro;
+  const slides = homepageData.slides;
+  const projects = homepageData.projects;
 
   return {
     props: {
       meta,
-      homepage,
+      intro,
+      slides,
       projects,
     },
   };
