@@ -32,6 +32,24 @@
     .workSlider .slick-dots li.slick-active button:before {
         font-size: 14px;
     }
+
+    .bgSlider {
+        @apply absolute w-full h-full
+    }
+
+    .bgSlider .slick-list {
+        @apply h-full;
+    }
+
+    .bgSlider .slick-list .slick-slider {
+        @apply h-full;
+    }
+    .bgSlider .slick-list .slick-slider > div {
+        @apply h-full;
+    }
+    .bgSlider .slick-list .slick-slider > div > div {
+        @apply h-full;
+    }
 }
 
 @layer utilities {

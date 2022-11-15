@@ -25,27 +25,44 @@ const slides = [
 ];
 
 export default function WorkSlider() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [slideBg, setSlideBg] = useState("work-Hlpr");
+  function previous() {
+    // Slider.slickPrev();
+    console.log("previous");
+  }
+  function next() {
+    // Slider.slickNext();
+    console.log("next");
+  }
+
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const currentSlide = useRef(null);
+
+  // function changeBgColor(slide) {
+  //   // to do
+  // }
 
   // https://github.com/akiran/react-slick/issues/136
   // https://react-slick.neostack.com/docs/example/slide-change-hooks
 
-  useEffect(() => {
-    const targetIndex = activeSlide;
-    setSlideBg(slides[targetIndex].bgcolor);
-  }, [activeSlide, setActiveSlide]);
+  // useEffect(() => {
+  //   console.log(currentSlide);
+  // }, [currentSlide]);
+
+  // const mainSlider = useRef(null);
+  // const bgSlider = useRef(null);
+  const [nav1, setNav1] = useState();
+  const [nav2, setNav2] = useState();
 
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow onClick={previous} />,
+    nextArrow: <NextArrow onClick={next} />,
     dots: false,
     arrows: true,
-    beforeChange: (current, next) => setActiveSlide(next),
+    // beforeChange: (currentSlide) => setCurrentSlide(currentSlide),
     responsive: [
       {
         breakpoint: 1024,
@@ -57,12 +74,39 @@ export default function WorkSlider() {
     ],
   };
 
+  const bgSliderSettings = {
+    infinite: true,
+    speed: 500,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+  };
+
   return (
-    <div
-      className={`sliderWrapper transition-colors transition-duration-1000 ${slideBg}`}
-    >
+    <div className="sliderWrapper bg-white relative">
+      <Slider
+        {...bgSliderSettings}
+        asNavFor={nav1}
+        ref={(slider2) => setNav2(slider2)}
+        className="bgSlider"
+      >
+        {slides.map((slide) => (
+          <div key={slide.key}>
+            <div className={`${slide.bgcolor} absolute w-full h-full`}>
+              fdas
+            </div>
+          </div>
+        ))}
+      </Slider>
       <div className="container">
-        <Slider {...settings} className="workSlider">
+        <Slider
+          {...settings}
+          className="workSlider"
+          asNavFor={nav2}
+          ref={(slider1) => setNav1(slider1)}
+        >
           {slides.map((slide) => (
             <div key={slide.key}>
               <Image
