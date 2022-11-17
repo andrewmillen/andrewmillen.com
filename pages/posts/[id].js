@@ -34,7 +34,10 @@ export default function Post({ postData }) {
         <article>
           <div className="container">
             <div className="text-left">
-              <Link className="textLink text-lg" href={`/posts/`}>
+              <Link
+                className="textLink flex items-baseline text-lg"
+                href={`/posts/`}
+              >
                 ← All Posts
               </Link>
               <h1 className="font-bold text-3xl my-4 md:text-4xl lg:text-5xl xl:text-6xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
@@ -61,7 +64,7 @@ export default function Post({ postData }) {
             alt="Andrew looking suave in a leather jacket"
             className="rounded-full mb-4"
           />
-          <p className="text-xl text-gray-700 max-w-2xl">
+          <p className="text-lg md:text-xl leading-normal text-gray-700 max-w-2xl">
             Andrew Millen is a hybrid UI/UX designer with a background in
             copywriting and front-end development.{" "}
             <Link href="/" className="textLink">
