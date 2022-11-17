@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        degular: ["degular"],
+        degular: ["degular", "system-ui"],
       },
       colors: {
         link: {
