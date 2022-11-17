@@ -2,7 +2,7 @@ export default function HomepageHeader({ content }) {
   return (
     <header className="py-4 md:py-8 lg:py-12 xl:py-20 border-b border-neutral-200">
       <div className="container">
-        <h1 className="font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
+        <h1 className="mt-4 font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
           {content.name}
         </h1>
         <p className="inline-block font-bold text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl leading-none">
@@ -18,7 +18,7 @@ export default function HomepageHeader({ content }) {
           {content.intro}
         </p>
         <p
-          className="text-xl lg:text-2xl leading-relaxed lg:leading-relaxed mb-6 lg:mb-12 font-semibold"
+          className="text-xl lg:text-2xl leading-normal lg:leading-normal mb-6 lg:mb-12 font-semibold"
           dangerouslySetInnerHTML={{ __html: content.cta }}
         ></p>
       </div>

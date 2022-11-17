@@ -8,7 +8,7 @@ export default function Project({ content }) {
           <h2 className="font-bold text-2xl md:text-2xl lg:text-3xl xl:text-4xl">
             {content.name}
           </h2>
-          <p className="uppercase tracking-wider text-neutral-400 font-semibold">
+          <p className="uppercase tracking-wider text-neutral-400 font-normal mb-2 lg:mb-0">
             {content.label}
           </p>
         </div>
