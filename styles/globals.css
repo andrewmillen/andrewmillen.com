@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://use.typekit.net/arm2wka.css");
-
 @layer base {
     body {
         @apply font-degular bg-neutral-100 text-neutral-800;
