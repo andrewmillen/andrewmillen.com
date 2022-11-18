@@ -4,20 +4,17 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import globalData from "@/content/globalData.json";
 
-export default function ErrorPage({ errorPageContent }) {
+export default function ErrorPage({ meta, errorPageContent }) {
   return (
     <Layout>
       <Head>
         <title>{errorPageContent.title}</title>
-        <meta
-          name="description"
-          content="Hi! I’m a user interface designer from Memphis, TN. I specialize in product design, animation, and interactive prototyping."
-        />
+        <meta name="description" content={meta.description} />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/og-image.jpg" />
       </Head>
 
       <main className="pt-12 pb-4 text-center md:pt-16 lg:pt-24">
@@ -43,10 +40,12 @@ export default function ErrorPage({ errorPageContent }) {
 }
 
 export async function getStaticProps() {
+  const meta = globalData.meta;
   const errorPageContent = globalData.errorPage;
 
   return {
     props: {
+      meta,
       errorPageContent,
     },
   };
