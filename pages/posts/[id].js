@@ -27,7 +27,6 @@ export default function Post({ postData }) {
         <meta property="og:description" content={postData.description} />
         <meta property="og:image" content={postData.ogimage} />
         <meta name="twitter:card" content="summary_large_image" />
-        {/* <link rel="stylesheet" href="https://use.typekit.net/mqf8sev.css" /> */}
       </Head>
 
       <main className="py-12 md:py-24 border-b border-neutral-300">
