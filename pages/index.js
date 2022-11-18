@@ -13,6 +13,7 @@ export default function Home({ meta, intro, slides, projects }) {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:image" content="/og-image.jpg" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
