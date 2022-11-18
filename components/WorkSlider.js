@@ -51,7 +51,7 @@ export default function WorkSlider({ slides }) {
                 height={932}
               />
               {slide.key === "other" && (
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl lg:text-3xl font-bold max-w-sm md:max-w-md lg:max-w-xl">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-md sm:text-2xl lg:text-3xl font-bold max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl px-8 sm:px-0">
                   <span className="text-[#0086D1]">
                     Looking for something more in-depth?
                   </span>{" "}

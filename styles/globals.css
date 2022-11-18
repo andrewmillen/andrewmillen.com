@@ -7,6 +7,15 @@
         @apply font-degular bg-neutral-100 text-neutral-800;
     }
 
+    ::selection {
+        background: #222222;
+        color: #FFFFFF;
+      }
+    ::-moz-selection {
+        background: #222222;
+        color: #FFFFFF;
+    }
+
 }
 
 @layer components {
@@ -20,6 +29,10 @@
 
     .textLink:hover {
         @apply text-link-dark;
+    }
+
+    .textLink:focus {
+        @apply bg-blue-100;
     }
 
     .workSlider .slick-dots {

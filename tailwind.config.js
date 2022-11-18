@@ -36,6 +36,9 @@ module.exports = {
               "&:hover": {
                 color: theme("colors.link.dark"),
               },
+              "&:focus": {
+                background: theme("colors.blue.100"),
+              },
             },
             blockquote: {
               fontStyle: "normal",

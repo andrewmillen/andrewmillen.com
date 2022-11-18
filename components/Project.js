@@ -12,11 +12,11 @@ export default function Project({ content }) {
             {content.label}
           </p>
         </div>
-        <p className="text-lg lg:text-2xl mb-8 lg:mb-12 xl:mb-24 leading-normal lg:leading-normal text-neutral-600 max-w-5xl">
+        <p className="text-lg lg:text-xl mb-8 lg:mb-12 xl:mb-16 leading-normal lg:leading-normal text-neutral-600 max-w-3xl">
           {content.description}
         </p>
         <Link
-          className="textLink only:text-lg lg:text-2xl lg:leading-normal font-semibold"
+          className="textLink text-lg lg:text-xl lg:leading-normal font-semibold"
           href={content.link}
         >
           {content.linkLabel}
