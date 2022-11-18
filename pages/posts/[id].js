@@ -27,6 +27,10 @@ export default function Post({ postData }) {
         <meta property="og:description" content={postData.description} />
         <meta property="og:image" content={postData.ogimage} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
+        />
       </Head>
 
       <main className="py-12 md:py-24 border-b border-neutral-300">

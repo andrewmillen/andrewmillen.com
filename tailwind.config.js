@@ -12,8 +12,8 @@ module.exports = {
       },
       colors: {
         link: {
-          normal: "#4081FF",
-          dark: "#135CEB",
+          normal: "#1867FF",
+          dark: "#0400CD",
         },
         workHlpr: "#D8CAF6",
         workGardening: "#DAECD4",

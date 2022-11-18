@@ -24,6 +24,10 @@ export default function Blog({ allPostsData, meta }) {
       <Head>
         <title>Andrew Millen | Blog</title>
         <meta name="description" content={meta.description} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
+        />
       </Head>
 
       <header className="pt-12 md:pt-16 lg:pt-24">
