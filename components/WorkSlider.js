@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function WorkSlider({ slides }) {
   // Set default slide background color for first slide
-  const [slideBg, setSlideBg] = useState("purple-100");
+  const [slideBg, setSlideBg] = useState("bg-purple-100");
 
   // Slick slider settings
   const settings = {
@@ -34,7 +34,7 @@ export default function WorkSlider({ slides }) {
 
   return (
     <div
-      className={`sliderWrapper border-b border-neutral-200 transition-colors transition-duration-1000 bg-${slideBg}`}
+      className={`sliderWrapper border-b border-neutral-200 transition-colors transition-duration-1000 ${slideBg}`}
     >
       <div className="container">
         <Slider

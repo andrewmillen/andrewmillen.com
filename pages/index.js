@@ -23,10 +23,6 @@ export default function Home({ meta, intro, slides, projects }) {
       <HomepageHeader content={intro} />
 
       <main>
-        <div className="bg-purple-100"></div>
-        <div className="bg-moss-100"></div>
-        <div className="bg-red-100"></div>
-        <div className="bg-sky-100"></div>
         <WorkSlider slides={slides} />
         {projects.map((project) => (
           <Project key={project.id} content={project.content} />

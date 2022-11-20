@@ -11,25 +11,25 @@
       "key": "hlpr",
       "src": "/work-hlpr.png",
       "alt": "An app designed to help you give to asset-deprived people.",
-      "bgcolor": "purple-100"
+      "bgcolor": "bg-purple-100"
     },
     {
       "key": "gardening",
       "src": "/work-garden.png",
       "alt": "An augmented reality concept for planning your landscapes.",
-      "bgcolor": "moss-100"
+      "bgcolor": "bg-moss-100"
     },
     {
       "key": "mealplanner",
       "src": "/work-mealplanner.png",
       "alt": "An app that recommends recipes based on weather patterns and other data.",
-      "bgcolor": "red-100"
+      "bgcolor": "bg-red-100"
     },
     {
       "key": "other",
       "src": "/work-other.png",
       "alt": "",
-      "bgcolor": "sky-100"
+      "bgcolor": "bg-sky-100"
     }
   ],
   "projects": [

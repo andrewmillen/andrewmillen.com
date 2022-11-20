@@ -1,9 +1,10 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  content: ["./components/**/*.js", "./pages/**/*.js", "./lib/**/*.js"],
+  content: [
+    "./components/**/*.js",
+    "./pages/**/*.js",
+    "./lib/**/*.js",
+    "./content/*.json",
+  ],
 
   theme: {
     extend: {
