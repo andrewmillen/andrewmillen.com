@@ -37,12 +37,12 @@ export default function WorkSlider({ slides }) {
       <div className="container">
         <Slider
           {...settings}
-          className="workSlider pt-12 pb-24 lg:pb-8 px-4 md:px-8 lg:px-16 2xl:px-0"
+          className="workSlider pt-12 pb-24 lg:pb-8 md:px-8 lg:px-16 2xl:px-0"
         >
           {slides.map((slide) => (
             <div key={slide.key}>
               {slide.key === "other" ? (
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-md sm:text-2xl lg:text-3xl font-bold max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl px-8 sm:px-0">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold max-w-md md:max-w-2xl">
                   <span className="text-[#0086D1] dark:text-blue-300">
                     Looking for something more in-depth?
                   </span>{" "}

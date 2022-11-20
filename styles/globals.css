@@ -29,6 +29,16 @@
         @apply text-link-light-hover dark:text-link-dark-hover;
     }
 
+    .workSlider .slick-track {
+        display: flex;
+      }
+    .workSlider .slick-track .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+      }
+
     .workSlider .slick-dots {
         bottom: 8% !important;
     }
