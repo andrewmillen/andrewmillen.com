@@ -58,6 +58,7 @@ export default function Post({ postData }) {
               hover:prose-a:text-link-light-hover
               dark:prose-a:text-link-dark-default
               dark:hover:prose-a:text-link-dark-hover
+              prose-a:underline-offset-4
               "
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
