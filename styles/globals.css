@@ -29,10 +29,6 @@
         @apply text-link-light-hover dark:text-link-dark-hover;
     }
 
-    .textLink:focus {
-        @apply bg-blue-100;
-    }
-
     .workSlider .slick-dots {
         bottom: 8% !important;
     }

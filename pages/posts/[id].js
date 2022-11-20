@@ -51,7 +51,14 @@ export default function Post({ postData }) {
           </div>
           <div className="container">
             <div
-              className="prose prose-neutral prose-lg md:prose-xl pt-12 dark:prose-invert"
+              className="pt-12 prose prose-neutral prose-lg md:prose-xl dark:prose-invert prose-blockquote:text-neutral-500
+              prose-p:leading-relaxed
+              prose-h2:text-3xl
+              prose-a:text-link-light-default
+              hover:prose-a:text-link-light-hover
+              dark:prose-a:text-link-dark-default
+              dark:hover:prose-a:text-link-dark-hover
+              "
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
           </div>
