@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@agentofuser/remark-oembed": "^1.0.4",
+    "@vercel/analytics": "^0.1.5",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "^13.0.1",
