@@ -18,6 +18,7 @@ export default function Project({ content }) {
         <Link
           className="textLink text-lg lg:text-xl lg:leading-normal font-semibold"
           href={content.link}
+          target="_blank"
         >
           {content.linkLabel}
         </Link>
