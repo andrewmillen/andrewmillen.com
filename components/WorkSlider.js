@@ -46,6 +46,7 @@ export default function WorkSlider({ slides }) {
               <Image
                 className="mx-auto"
                 src={slide.src}
+                priority="true"
                 alt={slide.alt}
                 width={1350}
                 height={932}
