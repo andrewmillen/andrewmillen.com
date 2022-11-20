@@ -1,6 +1,6 @@
 export default function HomepageHeader({ content }) {
   return (
-    <header className="py-4 md:py-8 lg:py-12 xl:py-20 border-b border-neutral-200 dark:border-neutral-700">
+    <header className="py-4 md:py-8 lg:py-12 xl:py-20 border-b border-neutral-200 dark:border-neutral-800">
       <div className="container">
         <h1 className="mt-4 font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
           {content.name}

@@ -41,7 +41,7 @@ export default function Blog({ allPostsData, meta }) {
         </div>
       </header>
 
-      <main className="pb-4 md:pb-8 lg:pb-12 border-b border-neutral-200 dark:border-neutral-700">
+      <main className="pb-4 md:pb-8 lg:pb-12 border-b border-neutral-200 dark:border-neutral-800">
         <div className="container">
           <ul className="max-w-4xl">
             {allPostsData.map(({ id, date, title, blurb }) => (

@@ -32,7 +32,7 @@ export default function WorkSlider({ slides }) {
 
   return (
     <div
-      className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-700 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
+      className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-800 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
     >
       <div className="container">
         <Slider

@@ -33,7 +33,7 @@ export default function Post({ postData }) {
         />
       </Head>
 
-      <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-700">
+      <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-800">
         <article>
           <div className="container">
             <div className="text-left">
@@ -47,7 +47,7 @@ export default function Post({ postData }) {
                 Published <PostDate dateString={postData.date} />
               </div>
             </div>
-            <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-700" />
+            <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-800" />
           </div>
           <div className="container">
             <div
