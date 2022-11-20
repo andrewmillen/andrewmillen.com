@@ -17,7 +17,7 @@
       "key": "gardening",
       "src": "/work-garden.png",
       "alt": "An augmented reality concept for planning your landscapes.",
-      "bgcolor": "green-100"
+      "bgcolor": "moss-100"
     },
     {
       "key": "mealplanner",
@@ -29,7 +29,7 @@
       "key": "other",
       "src": "/work-other.png",
       "alt": "",
-      "bgcolor": "blue-100"
+      "bgcolor": "sky-100"
     }
   ],
   "projects": [

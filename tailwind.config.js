@@ -15,10 +15,9 @@ module.exports = {
           normal: "#1867FF",
           dark: "#0400CD",
         },
-        workHlpr: "#D8CAF6",
-        workGardening: "#DAECD4",
-        workMealplanner: "#FFDCD9",
-        workOther: "#CBE9FB",
+        moss: {
+          100: "#DAECD4",
+        },
       },
       typography: (theme) => ({
         DEFAULT: {
