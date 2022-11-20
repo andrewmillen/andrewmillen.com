@@ -31,7 +31,7 @@ export default function WorkSlider({ slides }) {
   };
 
   return (
-    <div
+    <section
       className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-700 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
     >
       <div className="container">
@@ -69,6 +69,6 @@ export default function WorkSlider({ slides }) {
           ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 }
