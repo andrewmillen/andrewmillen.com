@@ -13,11 +13,18 @@ module.exports = {
       },
       colors: {
         link: {
-          normal: "#1867FF",
-          dark: "#0400CD",
+          light: {
+            default: "#1867FF",
+            hover: "#0400CD",
+          },
+          dark: {
+            default: "#4081FF",
+            hover: "#68A4FF",
+          },
         },
         moss: {
           100: "#DAECD4",
+          900: "#6C8652",
         },
       },
       typography: (theme) => ({

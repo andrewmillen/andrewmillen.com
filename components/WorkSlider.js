@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function WorkSlider({ slides }) {
   // Set default slide background color for first slide
-  const [slideBg, setSlideBg] = useState("bg-purple-100");
+  const [slideBg, setSlideBg] = useState(slides[0].bgcolor);
 
   // Slick slider settings
   const settings = {
@@ -18,8 +18,6 @@ export default function WorkSlider({ slides }) {
     dots: false,
     arrows: true,
     // Update slideBg by matching the index ("next") of the incoming slide to the object in the Slides array in homepageData.json
-    // Removing "current" breaks this entirely, not sure why
-    // The function works (the HTML updates) but the background color doesn't show, or shows randomly.
     beforeChange: (current, next) => setSlideBg(slides[next].bgcolor),
     responsive: [
       {
@@ -34,7 +32,7 @@ export default function WorkSlider({ slides }) {
 
   return (
     <div
-      className={`sliderWrapper border-b border-neutral-200 transition-colors transition-duration-1000 ${slideBg}`}
+      className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-700 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
     >
       <div className="container">
         <Slider

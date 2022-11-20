@@ -4,16 +4,14 @@
 
 @layer base {
     body {
-        @apply font-degular bg-neutral-100 text-neutral-800;
+        @apply font-degular bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
     }
 
     ::selection {
-        background: #222222;
-        color: #FFFFFF;
+        @apply bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900;
       }
     ::-moz-selection {
-        background: #222222;
-        color: #FFFFFF;
+        @apply bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900;
     }
 
 }
@@ -24,11 +22,11 @@
     }
 
     .textLink {
-        @apply text-link-normal underline underline-offset-4;
+        @apply text-link-light-default dark:text-link-dark-default underline underline-offset-4;
     }
 
     .textLink:hover {
-        @apply text-link-dark;
+        @apply text-link-light-hover dark:text-link-dark-hover;
     }
 
     .textLink:focus {

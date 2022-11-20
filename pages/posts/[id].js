@@ -43,15 +43,15 @@ export default function Post({ postData }) {
               <h1 className="font-bold text-3xl my-4 md:text-4xl lg:text-5xl xl:text-6xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
                 {postData.title}
               </h1>
-              <div className="block uppercase tracking-widest font-semibold text-gray-600 text-sm mt-2 mb-4 max-w-lg lg:max-w-5xl md:text-left">
+              <div className="block uppercase tracking-widest font-semibold text-neutral-600 dark:text-neutral-500 text-sm mt-2 mb-4 max-w-lg lg:max-w-5xl md:text-left">
                 Published <PostDate dateString={postData.date} />
               </div>
             </div>
-            <hr className="max-w-lg lg:max-w-xl mt-12" />
+            <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-700" />
           </div>
           <div className="container">
             <div
-              className="prose prose-lg md:prose-xl pt-12"
+              className="prose prose-neutral prose-lg md:prose-xl pt-12 dark:prose-invert"
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
           </div>
@@ -64,7 +64,7 @@ export default function Post({ postData }) {
             alt="Andrew looking suave in a leather jacket"
             className="rounded-full mb-4"
           />
-          <p className="text-lg md:text-xl leading-normal text-gray-700 max-w-2xl">
+          <p className="text-lg md:text-xl leading-normal text-neutral-700 dark:text-neutral-400 max-w-2xl">
             Andrew Millen is a hybrid UI/UX designer with a background in
             copywriting and front-end development.{" "}
             <Link href="/" className="textLink">
