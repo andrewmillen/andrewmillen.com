@@ -37,7 +37,7 @@ export default function WorkSlider({ slides }) {
       <div className="container">
         <Slider
           {...settings}
-          className="workSlider pt-12 pb-24 lg:pb-8 md:px-8 lg:px-16 2xl:px-0"
+          className="workSlider pt-12 pb-16 lg:pb-8 md:px-8 lg:px-16 2xl:px-0"
         >
           {slides.map((slide) => (
             <div key={slide.key}>
