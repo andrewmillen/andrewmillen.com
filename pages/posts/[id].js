@@ -33,7 +33,7 @@ export default function Post({ postData }) {
         />
       </Head>
 
-      <main className="py-12 md:py-24 border-b border-neutral-300">
+      <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-700">
         <article>
           <div className="container">
             <div className="text-left">

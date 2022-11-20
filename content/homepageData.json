@@ -17,19 +17,19 @@
       "key": "garden",
       "src": "/work-garden.png",
       "alt": "An augmented reality concept for planning your landscapes.",
-      "bgcolor": "bg-moss-100 bg-moss-900"
+      "bgcolor": "bg-moss-100 dark:bg-moss-900"
     },
     {
       "key": "mealplanner",
       "src": "/work-mealplanner.png",
       "alt": "An app that recommends recipes based on weather patterns and other data.",
-      "bgcolor": "bg-red-100 bg-red-500"
+      "bgcolor": "bg-red-100 dark:bg-red-500"
     },
     {
       "key": "other",
       "src": "/work-other.png",
       "alt": "",
-      "bgcolor": "bg-sky-100 bg-sky-900"
+      "bgcolor": "bg-sky-100 dark:bg-blue-900"
     }
   ],
   "projects": [

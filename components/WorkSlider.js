@@ -31,7 +31,7 @@ export default function WorkSlider({ slides }) {
   };
 
   return (
-    <section
+    <div
       className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-700 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
     >
       <div className="container">
@@ -41,34 +41,35 @@ export default function WorkSlider({ slides }) {
         >
           {slides.map((slide) => (
             <div key={slide.key}>
-              <Image
-                className="mx-auto"
-                src={slide.src}
-                priority="true"
-                alt={slide.alt}
-                width={1350}
-                height={932}
-              />
-              {slide.key === "other" && (
+              {slide.key === "other" ? (
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-md sm:text-2xl lg:text-3xl font-bold max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl px-8 sm:px-0">
-                  <span className="text-[#0086D1]">
+                  <span className="text-[#0086D1] dark:text-blue-300">
                     Looking for something more in-depth?
                   </span>{" "}
                   UX work doesn’t always make good eye candy.{" "}
                   <a
                     href="mailto:andrewmillen1+website@gmail.com"
                     target="_blank"
-                    className="underline underline-offset-4 hover:text-gray-600"
+                    className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
                   >
                     Email me
                   </a>{" "}
                   to learn more about my process.
                 </div>
+              ) : (
+                <Image
+                  className="mx-auto"
+                  src={slide.src}
+                  priority="true"
+                  alt={slide.alt}
+                  width={1350}
+                  height={932}
+                />
               )}
             </div>
           ))}
         </Slider>
       </div>
-    </section>
+    </div>
   );
 }

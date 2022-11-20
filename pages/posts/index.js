@@ -19,6 +19,8 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ allPostsData, meta }) {
+  console.log(allPostsData[0]);
+
   return (
     <Layout>
       <Head>
