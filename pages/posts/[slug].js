@@ -35,7 +35,7 @@ export default function Post({
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main>
+      <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-800">
         <article>
           <div className="container">
             <div className="text-left">
@@ -62,8 +62,9 @@ export default function Post({
               dark:hover:prose-a:text-link-dark-hover
               prose-a:underline-offset-4
               "
-            />
-            <MDXRemote {...mdxSource} components={components} />
+            >
+              <MDXRemote {...mdxSource} components={components} />
+            </div>
           </div>
         </article>
 
