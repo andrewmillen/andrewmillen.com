@@ -1,23 +1,13 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Footer from "@/components/Footer";
-import { getSortedPostsData } from "@/lib/posts";
-import Link from "next/link";
 import globalData from "@/content/globalData.json";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  const meta = globalData.meta;
-  return {
-    props: {
-      allPostsData,
-      meta,
-    },
-    revalidate: 1,
-  };
-}
-
-export default function Blog({ allPostsData, meta }) {
+export default function Blog({ posts, meta }) {
   return (
     <Layout>
       <Head>
@@ -43,20 +33,52 @@ export default function Blog({ allPostsData, meta }) {
       <main className="pb-4 md:pb-8 lg:pb-12 border-b border-neutral-200 dark:border-neutral-800">
         <div className="container">
           <ul className="max-w-4xl">
-            {allPostsData.map(({ id, date, title, blurb }) => (
-              <li key={id} className="my-8 lg:my-16">
-                <Link className="inline-block" href={`/posts/${id}`}>
+            {posts.map((post, index) => (
+              <li key={index} className="my-8 lg:my-16">
+                <Link
+                  className="inline-block"
+                  href={"/posts/" + post.slug}
+                  passHref
+                >
                   <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1 underline-offset-1 hover:underline hover:underline-offset-4">
-                    {title}
+                    {post.frontMatter.title}
                   </h2>
                 </Link>
-                <p className="mt-1 text-neutral-500 text-lg">{blurb}</p>
+                <p className="mt-1 text-neutral-500 text-lg">
+                  {post.frontMatter.description}
+                </p>
               </li>
             ))}
           </ul>
         </div>
       </main>
+
       <Footer />
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  const meta = globalData.meta;
+  const files = fs.readdirSync(path.join("posts"));
+
+  const posts = files.map((filename) => {
+    const markdownWithMeta = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
+    const { data: frontMatter } = matter(markdownWithMeta);
+
+    return {
+      frontMatter,
+      slug: filename.split(".")[0],
+    };
+  });
+
+  return {
+    props: {
+      meta,
+      posts,
+    },
+  };
+};
