@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import PostDate from "@/components/PostDate";
 import Footer from "@/components/Footer";
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
@@ -46,9 +45,6 @@ export default function Blog({ allPostsData, meta }) {
           <ul className="max-w-4xl">
             {allPostsData.map(({ id, date, title, blurb }) => (
               <li key={id} className="my-8 lg:my-16">
-                {/* <div className="block uppercase tracking-widest font-semibold text-gray-600 text-sm">
-                  <PostDate dateString={date} />
-                </div> */}
                 <Link className="inline-block" href={`/posts/${id}`}>
                   <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1 underline-offset-1 hover:underline hover:underline-offset-4">
                     {title}
