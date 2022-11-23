@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@agentofuser/remark-oembed": "^1.0.4",
     "@mdx-js/loader": "^2.1.5",
     "@next/mdx": "^13.0.4",
     "@vercel/analytics": "^0.1.5",
@@ -20,12 +19,6 @@
     "react-dom": "^18",
     "react-slick": "^0.29.0",
     "react-syntax-highlighter": "^15.5.0",
-    "rehype-raw": "^6.1.1",
-    "rehype-stringify": "^9.0.3",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1",
-    "remark-rehype": "^10.1.0",
-    "remark-unwrap-images": "^3.0.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

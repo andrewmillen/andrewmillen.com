@@ -3,7 +3,7 @@ import Head from "next/head";
 import AuthorBio from "@/components/AuthorBio";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import PostDate from "@/components/PostDate";
+import { parseISO, format } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -37,7 +37,12 @@ export default function Post({ postData }) {
                 {postData.title}
               </h1>
               <div className="block uppercase tracking-widest font-semibold text-neutral-600 dark:text-neutral-500 text-sm mt-2 mb-4 max-w-lg lg:max-w-5xl md:text-left">
-                Published {<PostDate dateString={postData.date} />}
+                Published{" "}
+                {
+                  <time dateTime={postData.date}>
+                    {format(parseISO(postData.date), "LLLL d, yyyy")}
+                  </time>
+                }
               </div>
             </div>
             <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-800" />
