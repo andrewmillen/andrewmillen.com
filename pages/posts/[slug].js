@@ -6,10 +6,8 @@ import Link from "next/link";
 import PostDate from "@/components/PostDate";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote";
-
-// Content Components
 import SyntaxHighlighter from "react-syntax-highlighter";
-import Button from "@/components/button";
+import { Button } from "@/components/blog";
 
 const components = { Button, SyntaxHighlighter };
 
@@ -80,6 +78,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
+
   return {
     paths,
     fallback: false,
