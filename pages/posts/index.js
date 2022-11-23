@@ -1,11 +1,22 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import globalData from "@/content/globalData.json";
+import { getSortedPostsData } from "@/lib/posts";
+
+export const getStaticProps = async () => {
+  const posts = getSortedPostsData();
+  const meta = globalData.meta;
+
+  return {
+    props: {
+      posts,
+      meta,
+    },
+    revalidate: 1,
+  };
+};
 
 export default function Blog({ posts, meta }) {
   return (
@@ -57,28 +68,3 @@ export default function Blog({ posts, meta }) {
     </Layout>
   );
 }
-
-export const getStaticProps = async () => {
-  const meta = globalData.meta;
-  const files = fs.readdirSync(path.join("posts"));
-
-  const posts = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-    const { data: frontMatter } = matter(markdownWithMeta);
-
-    return {
-      frontMatter,
-      slug: filename.split(".")[0],
-    };
-  });
-
-  return {
-    props: {
-      meta,
-      posts,
-    },
-  };
-};
