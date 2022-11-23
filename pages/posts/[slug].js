@@ -7,9 +7,9 @@ import PostDate from "@/components/PostDate";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { Button } from "@/components/blog";
+import { YoutubeEmbed, ImageWithCaption } from "@/components/blog";
 
-const components = { Button, SyntaxHighlighter };
+const components = { YoutubeEmbed, ImageWithCaption, SyntaxHighlighter };
 
 export default function Post({ postData }) {
   return (

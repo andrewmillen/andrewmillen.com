@@ -1,3 +1,4 @@
-import Button from "./Button";
+import ImageWithCaption from "./ImageWithCaption";
+import YoutubeEmbed from "./YoutubeEmbed";
 
-export { Button };
+export { ImageWithCaption, YoutubeEmbed };
