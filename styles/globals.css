@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-degular bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+        @apply font-degular bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100;
     }
 
     ::selection {

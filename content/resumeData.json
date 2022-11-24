@@ -1,0 +1,59 @@
+{
+  "header": {
+    "name": "Andrew Millen",
+    "title": "Senior Product Designer"
+  },
+  "experiences": [
+    {
+      "organization": "OfficeSpace Software",
+      "role": "Sr. Product Designer",
+      "dates": "November 2021 – Present",
+      "description": "Oversee design and maintenance of the OSS design system, leveraging React and front-end experience to collaborate with engineers to review, publish, and document components; Work with multiple feature teams to take projects from one-pager, through research and wireframing, to high fidelity mockups."
+    },
+    {
+      "organization": "Simple Focus",
+      "role": "Sr. UI/UX Designer",
+      "dates": "Oct 2015 – Oct 2021",
+      "description": "Managed design team to oversee production of digital projects; Designed digital products, apps, and websites informed by research and content strategy and centered around usability; Developed front-end experiences in HTML, CSS, and React."
+    },
+    {
+      "organization": "HelloHome",
+      "role": "Product Designer (Freelance)",
+      "dates": "June 2017 – July 2018",
+      "description": "Created user flows, design system, and individual UI mockups and screens for an end-to-end real estate sales platform; Worked directly with CTO, CEO, and engineering team to ensure usability and quality of final product."
+    },
+    {
+      "organization": "Red Alloy Creative",
+      "role": "Web Designer",
+      "dates": "Dec 2013 – Oct 2015",
+      "description": "Led web design and development projects from discovery through deployment; Wrote HTML, CSS, and PHP on multiple CMS platforms; Employed copywriting and language skills to develop site architecture, content strategies, and brand voice guidelines; Utilized outside skills such as photography, animation, and 3D modeling on special projects."
+    }
+  ],
+  "certifications": [
+    {
+      "provider": "Growth.Design",
+      "providerUrl": "https://growth.design/course",
+      "certification": "Product Psychology Mastery",
+      "date": "July 2021"
+    }
+  ],
+  "community": [
+    {
+      "name": "AIGA Memphis",
+      "role": "Executive Board Member, Director of Communications",
+      "date": "2017-2018"
+    },
+    {
+      "name": "Designation",
+      "role": "Design Mentor",
+      "date": "2016-2017"
+    }
+  ],
+  "education": {
+    "school": "Rhodes College",
+    "location": "Memphis, Tenn.",
+    "major": "English & Creative Writing (Cum Laude)",
+    "honors": "Sigma Tau Delta",
+    "date": "May 2012"
+  }
+}
