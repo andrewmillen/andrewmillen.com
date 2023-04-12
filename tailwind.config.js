@@ -5,7 +5,7 @@ module.exports = {
     "./lib/**/*.js",
     "./content/*.json",
   ],
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
   variants: {
     extend: {
       typography: ["dark"],
