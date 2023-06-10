@@ -7,9 +7,14 @@ import { parseISO, format } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { YoutubeEmbed, ImageWithCaption } from "@/components/blog";
+import { YoutubeEmbed, ImageWithCaption, Footnote } from "@/components/blog";
 
-const components = { YoutubeEmbed, ImageWithCaption, SyntaxHighlighter };
+const components = {
+  YoutubeEmbed,
+  ImageWithCaption,
+  Footnote,
+  SyntaxHighlighter,
+};
 
 export default function Post({ postData }) {
   return (
