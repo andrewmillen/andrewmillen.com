@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-export default function ImageWithCaption({ src, alt, width, height, caption }) {
+export default function ImageWithCaption({
+  src,
+  alt,
+  width,
+  height,
+  caption,
+  attribution,
+}) {
   return (
     <figure className="py-12">
       <Image
@@ -10,7 +17,19 @@ export default function ImageWithCaption({ src, alt, width, height, caption }) {
         height={height}
         className="xl:max-w-5xl"
       />
-      {caption && <figcaption>{caption}</figcaption>}
+      {caption && (
+        <figcaption>
+          {caption}
+          {attribution && (
+            <>
+              <br />
+              <span className="uppercase text-neutral-400 dark:text-neutral-600 text-sm">
+                {attribution}
+              </span>
+            </>
+          )}
+        </figcaption>
+      )}
     </figure>
   );
 }
