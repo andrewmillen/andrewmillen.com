@@ -4,8 +4,10 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 import globalData from "@/content/globalData.json";
 import { getSortedPostsData } from "@/lib/posts";
+import getRSS from "@/lib/rss";
 
 export const getStaticProps = async () => {
+  await getRSS();
   const posts = getSortedPostsData();
   const meta = globalData.meta;
 
