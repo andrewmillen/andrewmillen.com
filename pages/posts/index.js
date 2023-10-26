@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import RssButton from "@/components/RssButton";
 import globalData from "@/content/globalData.json";
 import { getSortedPostsData } from "@/lib/posts";
 import getRSS from "@/lib/rss";
@@ -31,6 +32,8 @@ export default function Blog({ posts, meta }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
+
+      <RssButton />
 
       <header className="pt-12 md:pt-16 lg:pt-24">
         <div className="container">

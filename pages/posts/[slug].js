@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import AuthorBio from "@/components/AuthorBio";
 import Footer from "@/components/Footer";
+import RssButton from "@/components/RssButton";
 import Link from "next/link";
 import { parseISO, format } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
@@ -32,6 +33,7 @@ export default function Post({ postData }) {
         />
       </Head>
       <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-800">
+        <RssButton />
         <article>
           <div className="container">
             <div className="text-left">
