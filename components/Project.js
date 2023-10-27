@@ -8,15 +8,15 @@ export default function Project({ content }) {
           <h2 className="font-bold text-2xl md:text-2xl lg:text-3xl xl:text-4xl">
             {content.name}
           </h2>
-          <p className="uppercase tracking-wider text-neutral-400 dark:text-neutral-600 font-normal mb-2 lg:mb-0">
+          <p className="text-sm 2xl:text-md uppercase tracking-wider text-neutral-400 dark:text-neutral-600 font-semibold mb-2 lg:mb-0">
             {content.label}
           </p>
         </div>
-        <p className="text-lg lg:text-xl mb-8 lg:mb-12 xl:mb-16 leading-normal lg:leading-normal text-neutral-600 dark:text-neutral-400 max-w-3xl">
+        <p className="text-lg 2xl:text-xl mb-8 lg:mb-12 xl:mb-16 leading-normal lg:leading-normal text-neutral-600 dark:text-neutral-400 max-w-3xl">
           {content.description}
         </p>
         <Link
-          className="textLink text-lg lg:text-xl lg:leading-normal font-semibold"
+          className="textLink text-lg 2xl:text-xl lg:leading-normal font-semibold"
           href={content.link}
           target="_blank"
         >

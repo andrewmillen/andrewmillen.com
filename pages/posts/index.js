@@ -60,7 +60,7 @@ export default function Blog({ posts, meta }) {
                     {post.frontMatter.title}
                   </h2>
                 </Link>
-                <p className="mt-1 text-neutral-500 text-lg">
+                <p className="mt-1 text-neutral-500 text-md 2xl:text-lg">
                   {post.frontMatter.description}
                 </p>
               </li>

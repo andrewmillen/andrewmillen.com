@@ -11,7 +11,7 @@ export default function AuthorBio() {
         alt="Andrew looking suave in a leather jacket"
         className="rounded-full mb-4"
       />
-      <p className="text-lg md:text-xl leading-normal text-neutral-700 dark:text-neutral-400 max-w-2xl">
+      <p className="text-md 2xl:text-lg leading-normal text-neutral-700 dark:text-neutral-400 max-w-2xl">
         Andrew Millen is a hybrid UI/UX designer with a background in
         copywriting and front-end development.{" "}
         <Link href="/" className="textLink">

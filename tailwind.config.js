@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       fontFamily: {
         degular: ["degular", "system-ui"],
+        system: "system-ui",
       },
       colors: {
         link: {

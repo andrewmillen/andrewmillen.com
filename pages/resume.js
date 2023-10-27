@@ -46,7 +46,9 @@ export default function Resume({ meta, resume }) {
             </h2>
             {resume.experiences.map((experience, index) => (
               <div key={index} className="mb-8">
-                <h3 className="font-semibold">{experience.organization}</h3>
+                <h3 className="font-semibold text-lg">
+                  {experience.organization}
+                </h3>
                 <p>{experience.role}</p>
                 <p>{experience.dates}</p>
                 <p className="mt-4">{experience.description}</p>

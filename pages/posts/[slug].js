@@ -43,7 +43,7 @@ export default function Post({ postData }) {
               <h1 className="font-bold text-3xl my-4 md:text-4xl lg:text-5xl xl:text-6xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
                 {postData.title}
               </h1>
-              <div className="block uppercase tracking-widest font-semibold text-neutral-600 dark:text-neutral-500 text-sm mt-2 mb-4 max-w-lg lg:max-w-5xl md:text-left">
+              <div className="block uppercase tracking-wider font-semibold text-neutral-600 dark:text-neutral-500 text-xs 2xl:text-md mt-2 mb-4 max-w-lg lg:max-w-5xl md:text-left">
                 Published{" "}
                 {
                   <time dateTime={postData.date}>
@@ -56,7 +56,7 @@ export default function Post({ postData }) {
           </div>
           <div className="container">
             <div
-              className="pt-12 prose prose-neutral prose-lg md:prose-xl dark:prose-invert prose-blockquote:text-neutral-500
+              className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-16 prose-blockquote:text-neutral-500
               prose-p:leading-relaxed
               prose-h2:text-3xl
               prose-a:text-link-light-default
@@ -64,6 +64,7 @@ export default function Post({ postData }) {
               dark:prose-a:text-link-dark-default
               dark:hover:prose-a:text-link-dark-hover
               prose-a:underline-offset-4
+              prose-a:font-normal
               "
             >
               <MDXRemote {...postData.mdxSource} components={components} />
