@@ -30,7 +30,7 @@ export default function Resume({ meta, resume }) {
       <header className="pt-6 pb-12 md:py-12 xl:py-20">
         <div className="container max-w-3xl">
           <Breadcrumb url="/" />
-          <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
+          <h1 className="mt-8 font-bold text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
             {resume.header.name}
           </h1>
           <p className="font-bold text-xl sm:text-2xl md:text-3xl 2xl:text-4xl">
