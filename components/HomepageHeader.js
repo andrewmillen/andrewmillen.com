@@ -17,10 +17,37 @@ export default function HomepageHeader({ content }) {
           </span>{" "}
           {content.intro}
         </p>
-        <p
-          className="text-lg 2xl:text-xl leading-normal lg:leading-normal mb-6 lg:mb-12 font-semibold"
-          dangerouslySetInnerHTML={{ __html: content.cta }}
-        ></p>
+        <p className="text-lg 2xl:text-xl leading-normal lg:leading-normal mb-6 lg:mb-12 font-semibold">
+          <a
+            className="inline-block textLink"
+            target="_blank"
+            href="mailto:andrewmillen1+website@gmail.com"
+          >
+            Shoot me an email
+          </a>{" "}
+          or visit me on{" "}
+          <a
+            target="_blank"
+            className="inline-block textLink"
+            href="https://dribbble.com/andrewmillen"
+            rel="nofollow noreferrer"
+          >
+            Dribbble
+          </a>
+          ,{" "}
+          <a
+            target="_blank"
+            className="inline-block textLink"
+            href="https://github.com/andrewmillen"
+            rel="nofollow noreferrer"
+          >
+            GitHub
+          </a>
+          , or my{" "}
+          <a className="inline-block textLink" href="/posts">
+            blog
+          </a>
+        </p>
       </div>
     </header>
   );
