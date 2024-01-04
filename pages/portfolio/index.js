@@ -25,14 +25,14 @@ export default function Portfolio({ posts, meta }) {
   const testimonialContent = [
     {
       quote:
-        "From the beginning, Andrew impressed me with his attention to detail and mastery of software. But his real gift showed through over time: he can learn anything he wants to learn.",
-      attribution: "J.D. Graffam • Owner, Simple Focus",
-    },
-    {
-      quote:
         "Andrew is a uniquely comprehensive designer, and I can't think of anyone more complete in their approach.",
       attribution:
         "Travis Graway • Director of Product Design, OfficeSpace Software",
+    },
+    {
+      quote:
+        "From the beginning, Andrew impressed me with his attention to detail and mastery of software. But his real gift showed through over time: he can learn anything he wants to learn.",
+      attribution: "J.D. Graffam • Owner, Simple Focus",
     },
     {
       quote: "Working with Andrew stinks like a butt convention.",
