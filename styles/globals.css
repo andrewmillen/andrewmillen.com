@@ -33,17 +33,20 @@
         @apply text-link-light-hover dark:text-link-dark-hover;
     }
 
-    .workSlider .slick-track {
+    .workSlider .slick-track,
+    .testimonialSlider .slick-track {
         display: flex;
       }
-    .workSlider .slick-track .slick-slide {
+    .workSlider .slick-track .slick-slide,
+    .testimonialSlider .stlick-track .slick-slide {
         display: flex;
         height: auto;
         align-items: center;
         justify-content: center;
       }
 
-    .workSlider .slick-dots {
+    .workSlider .slick-dots,
+    .testimonialSlider .slick-dots {
         bottom: 8% !important;
     }
 
@@ -54,6 +57,15 @@
     .workSlider .slick-dots li.slick-active button:before {
         font-size: 14px;
         @apply text-black dark:text-white;
+    }
+
+    .testimonialSlider .slick-dots li button:before {
+        font-size: 10px;
+        @apply text-black;
+    }
+    .testimonialSlider .slick-dots li.slick-active button:before {
+        font-size: 14px;
+        @apply text-black;
     }
 
     .bgSlider {

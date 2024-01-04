@@ -28,7 +28,7 @@ export default function TestimonialSlider({ slides }) {
   return (
     <div className="sliderWrapper bg-yellow-200 dark:bg-yellow-300 text-neutral-900">
       <div className="container">
-        <Slider {...settings} className="workSlider py-24 lg:py-32">
+        <Slider {...settings} className="testimonialSlider py-24 lg:py-32">
           {slides.map((slide) => (
             <div key={slide.key}>
               <blockquote className="text-center max-w-5xl lg:px-24">
