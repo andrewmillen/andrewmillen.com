@@ -46,7 +46,7 @@ export default function Post({ postData }) {
 
             <div className="mt-16">
               <div className="bg-yellow-200 dark:bg-neutral-800 inline py-1 px-2 leading-none font-semibold font-degular uppercase text-sm lg:text-md text-neutral-600 dark:text-neutral-400">
-                {postData.tag} Case Study
+                Case Study: {postData.tag}
               </div>
               <h1 className="font-bold text-4xl my-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
                 {postData.title}

@@ -9,7 +9,7 @@ export default function ImageWithCaption({
   attribution,
 }) {
   return (
-    <figure className="py-12">
+    <figure>
       <Image
         src={src}
         alt={alt}
