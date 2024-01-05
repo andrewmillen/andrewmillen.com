@@ -30,7 +30,7 @@ export default function GraphicsWeb() {
               alt="A website for the March Against Fear 50-year anniversary service"
               width="600"
               height="450"
-              caption="A website for the March Against Fear 50-year anniversary service."
+              caption="A website for the <a class='textLink' href='https://andrewmillen.github.io/acalltocourage/' target='blank'>March Against Fear 50-year anniversary service</a>."
             />
             <ImageWithCaption
               src="/portfolio-assets/gw-gbb.jpg"

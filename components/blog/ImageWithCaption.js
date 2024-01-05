@@ -19,7 +19,7 @@ export default function ImageWithCaption({
       />
       {caption && (
         <figcaption>
-          {caption}
+          <span dangerouslySetInnerHTML={{ __html: caption }}></span>
           {attribution && (
             <>
               <br />
