@@ -10,8 +10,8 @@ export default function CaseStudyTeaser({
 }) {
   return (
     <div className="py-12 lg:py-20">
-      <div className="bg-yellow-200 dark:bg-neutral-800 inline py-1 px-2 leading-none font-degular uppercase text-sm lg:text-md font-semibold text-neutral-600 dark:text-neutral-400">
-        Case Study: {tag}
+      <div className="inline leading-none font-degular text-lg text-neutral-600 dark:text-neutral-400">
+        {tag}
       </div>
       <Link href={"/portfolio/" + slug}>
         <h2 className="mt-2 mb-10 text-3xl lg:text-5xl font-bold font-degular">
