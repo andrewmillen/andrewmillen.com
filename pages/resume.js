@@ -30,20 +30,14 @@ export default function Resume({ meta, resume }) {
       <header className="pt-6 pb-12 md:py-12 xl:py-20">
         <div className="container max-w-3xl">
           <Breadcrumb url="/" />
-          <h1 className="mt-8 font-bold text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
-            {resume.header.name}
-          </h1>
-          <p className="font-bold text-xl sm:text-2xl md:text-3xl 2xl:text-4xl">
-            {resume.header.title}
-          </p>
+          <h1 className="mt-8 h1">{resume.header.name}</h1>
+          <p className="h1">{resume.header.title}</p>
         </div>
       </header>
       <main className="pb-12 xl:pb-20">
         <div className="container max-w-3xl">
           <div className="mb-16">
-            <h2 className="font-semibold tracking-widest uppercase mb-8">
-              Experience
-            </h2>
+            <h2 className="h4 mb-8">Experience</h2>
             {resume.experiences.map((experience, index) => (
               <div key={index} className="mb-8">
                 <h3 className="font-semibold text-lg">
@@ -56,9 +50,7 @@ export default function Resume({ meta, resume }) {
             ))}
           </div>
           <div className="mb-16">
-            <h2 className="font-semibold tracking-widest uppercase mb-8">
-              Certifications
-            </h2>
+            <h2 className="h4 mb-8">Certifications</h2>
             {resume.certifications.map((certification, index) => (
               <div key={index} className="mb-8">
                 <h3 className="font-semibold">
@@ -72,9 +64,7 @@ export default function Resume({ meta, resume }) {
             ))}
           </div>
           <div className="mb-16">
-            <h2 className="font-semibold tracking-widest uppercase mb-8">
-              Community
-            </h2>
+            <h2 className="h4 mb-8">Community</h2>
             {resume.community.map((community, index) => (
               <div key={index} className="mb-8">
                 <h3 className="font-semibold">{community.name}</h3>
@@ -84,9 +74,7 @@ export default function Resume({ meta, resume }) {
             ))}
           </div>
           <div className="mb-16">
-            <h2 className="font-semibold tracking-widest uppercase mb-8">
-              Education
-            </h2>
+            <h2 className="h4 mb-8">Education</h2>
             <div className="mb-8">
               <h3 className="font-semibold">{resume.education.school}</h3>
               <p>{resume.education.location}</p>

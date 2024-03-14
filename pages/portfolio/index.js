@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import globalData from "@/content/globalData.json";
 import Footer from "@/components/Footer.js";
 import { getSortedPostsData } from "@/lib/portfolio";
-import PortfolioWorkLinks from "@/components/portfolio/PortfolioWorkLinks";
+import AdditionalWorkLinks from "@/components/portfolio/AdditionalWorkLinks";
 import PortfolioLinks from "@/components/portfolio/PortfolioLinks";
 
 export const getStaticProps = async () => {
@@ -54,14 +54,12 @@ export default function Portfolio({ posts, meta }) {
       </Head>
       <header className="py-12 lg:py-20 border-b border-neutral-300 dark:border-neutral-800 text-center">
         <div className="container">
-          <div className="inline-flex flex-col lg:flex-row space-x-4 items-center mb-4">
+          <div className="inline-flex flex-col space-y-4 items-center mb-4">
             <Breadcrumb url="/" />
-            <h1 className="leading-none mt-2 lg:mt-0 font-bold text-2xl lg:text-4xl">
-              Andrew Millen Portfolio
-            </h1>
+            <h1 className="mt-2 lg:mt-0 h1">Andrew Millen Portfolio</h1>
           </div>
 
-          <p className="dark:text-neutral-300">
+          <p className="dark:text-neutral-300 text-xl">
             Hybrid UI/UX designer and front-end developer specializing in design
             systems
           </p>
@@ -84,7 +82,7 @@ export default function Portfolio({ posts, meta }) {
           </div>
         </section>
 
-        <PortfolioWorkLinks />
+        <AdditionalWorkLinks />
 
         <TestimonialSlider slides={testimonialContent} />
 

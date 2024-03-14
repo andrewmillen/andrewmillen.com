@@ -11,6 +11,22 @@
         @apply font-degular
     }
 
+    .h1 {
+        @apply font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl
+    }
+
+    .h2 {
+        @apply text-3xl sm:text-4xl md:text-5xl font-bold
+    }
+
+    .h3 {
+        @apply font-bold font-degular text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl
+    }
+
+    .h4 {
+        @apply uppercase font-degular tracking-wider font-semibold text-neutral-600 dark:text-neutral-500 text-sm;
+    }
+
     ::selection {
         @apply bg-neutral-900 text-white dark:bg-white dark:text-neutral-900;
       }

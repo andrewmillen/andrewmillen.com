@@ -5,14 +5,39 @@ const currentYear = format(new Date(), "yyyy");
 
 export default function Footer() {
   return (
-    <footer className="text-sm py-4 pt-16 md:pb-8 lg:pt-24 lg:pb-12 text-neutral-900 dark:text-neutral-500">
+    <footer className="py-4 md:py-8 lg:py-24 text-neutral-900 dark:text-neutral-500">
       <div className="container">
         <Breadcrumb url="/" />
+        <div className="flex lg:flex-row lg:space-x-4 mt-8">
+          <a
+            className="textLink"
+            nofollow
+            noreferrer
+            target="_blank"
+            href="https://dribbble.com/andrewmillen"
+          >
+            Dribbble
+          </a>
+          <a
+            className="textLink"
+            nofollow
+            noreferrer
+            target="_blank"
+            href="https://github.com/andrewmillen"
+          >
+            Github
+          </a>
+          <a className="textLink" href="/blog">
+            Blog
+          </a>
+        </div>
         <p className="pt-8 pb-1">
           This site was built with Next.js and Tailwind CSS and is hosted by
           Vercel. Headings are set in Degular by Ohno type.
         </p>
-        <p>© {currentYear} Andrew Millen. All rights reserved.</p>
+        <p className="mt-2">
+          © {currentYear} Andrew Millen. All rights reserved.
+        </p>
       </div>
     </footer>
   );

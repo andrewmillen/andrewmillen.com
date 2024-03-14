@@ -3,8 +3,26 @@
     "name": "Andrew Millen",
     "title": "Sr. Product Designer",
     "greeting": "Hello!",
-    "intro": "I’m a hybrid UI/UX designer with a background in copywriting and front-end development. I’ve done a little bit of everything, but my wheelhouse is building precise yet flexible design systems for digital products. Recently, I’ve also been exploring augmented reality interfaces.",
-    "cta": "<a className=\"inline-block textLink\" target=\"_blank\" href=\"mailto:andrewmillen1+website@gmail.com\">Shoot me an email</a> or visit me on <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://dribbble.com/andrewmillen\" rel=\"nofollow noreferrer\">Dribbble</a>, <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://github.com/andrewmillen\" target=\"_blank\" rel=\"nofollow noreferrer\">GitHub</a>, or my <a className=\"inline-block textLink\" href=\"/posts\">blog</a>."
+    "intro": "Hi! I’m a hybrid UI/UX designer with experience in front-end dev. I specialize in creating precise yet flexible design systems for digital products. Recently, I’ve also been exploring augmented reality interfaces and learning SwiftUI.",
+    "cta": "<a className=\"inline-block textLink\" target=\"_blank\" href=\"mailto:andrewmillen1+website@gmail.com\">Shoot me an email</a> or visit me on <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://dribbble.com/andrewmillen\" rel=\"nofollow noreferrer\">Dribbble</a>, <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://github.com/andrewmillen\" target=\"_blank\" rel=\"nofollow noreferrer\">GitHub</a>, or my <a className=\"inline-block textLink\" href=\"/posts\">blog</a>.",
+    "quickLinks": [
+      {
+        "url": "/portfolio",
+        "title": "Portfolio",
+        "emoji": "🎨"
+      },
+      {
+        "url": "/resume",
+        "title": "Resume",
+        "emoji": "📄"
+      },
+      {
+        "type": "mailto",
+        "url": "mailto:andrewmillen1+website@gmail.com",
+        "title": "Contact",
+        "emoji": "📥"
+      }
+    ]
   },
   "slides": [
     {
@@ -36,7 +54,7 @@
     {
       "id": "smashingArticle",
       "content": {
-        "name": "Better Search UX Through Microcopy",
+        "name": "‘Better Search UX Through Microcopy’",
         "label": "Article",
         "description": "I wrote about how good copy and a little thoughtfulness can improve the all-important search experience.",
         "link": "https://www.smashingmagazine.com/2019/06/better-search-ux-microcopy/",

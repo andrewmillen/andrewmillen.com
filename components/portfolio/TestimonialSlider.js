@@ -27,6 +27,7 @@ export default function TestimonialSlider({ slides }) {
 
   return (
     <section>
+      <h2 className="sr-only">Testimonials</h2>
       <div className="sliderWrapper bg-yellow-200 dark:bg-yellow-300 text-neutral-900">
         <div className="container">
           <Slider {...settings} className="testimonialSlider py-24 lg:py-32">

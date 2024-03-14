@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function PortfolioWorkLinks() {
+export default function AdditionalWorkLinks() {
   return (
     <section>
+      <h2 className="sr-only">Additional Work</h2>
       <div className="flex">
         <Link
           href="/portfolio/ui-product"
@@ -51,12 +52,12 @@ export default function PortfolioWorkLinks() {
             className="opacity-20 transition-all duration-300 group-hover:scale-110"
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+            <h3 className="h3">
               <span className="block font-normal font-degular text-lg lg:text-xl">
                 See More
               </span>
               Graphic & Web
-            </h2>
+            </h3>
           </div>
         </Link>
       </div>

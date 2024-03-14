@@ -45,7 +45,7 @@ export default function Post({ postData }) {
             </Link>
 
             <div className="mt-16">
-              <div className="bg-yellow-200 dark:bg-neutral-800 inline py-1 px-2 leading-none font-semibold font-degular uppercase text-sm lg:text-md text-neutral-600 dark:text-neutral-400">
+              <div className="bg-yellow-200 dark:bg-neutral-800 inline py-1 px-2 h4 text-neutral-800 dark:text-neutral-400">
                 Case Study: {postData.tag}
               </div>
               <h1 className="font-bold text-4xl my-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
@@ -59,9 +59,7 @@ export default function Post({ postData }) {
                 {postData.summary}
               </p>
 
-              <h3 className="text-neutral-500 font-semibold uppercase mb-2 mt-8 lg:mt-16">
-                Outcomes
-              </h3>
+              <h3 className="h4 mb-2 mt-8 lg:mt-16">Outcomes</h3>
 
               <div className="flex flex-wrap">
                 {postData.outcomes.map((outcome, index) => (

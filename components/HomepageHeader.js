@@ -9,45 +9,24 @@ export default function HomepageHeader({ content }) {
           {content.title}
         </p>
         <div className="text-3xl lg:text-4xl leading-relaxed mb-4 mt-20 lg:mt-30 xl:mt-40">
-          👋
+          {/* 👋 */}
         </div>
-        <p className="text-lg 2xl:text-xl leading-relaxed lg:leading-relaxed mb-6 lg:mb-12 text-neutral-600 dark:text-neutral-400 max-w-3xl">
-          <span className="text-neutral-800 dark:text-white font-semibold">
-            {content.greeting}
-          </span>{" "}
+        <p className="text-xl 2xl:text-2xl leading-relaxed lg:leading-relaxed mb-6 lg:mb-12 text-neutral-800 dark:text-neutral-200 max-w-3xl">
           {content.intro}
         </p>
-        <p className="text-lg 2xl:text-xl leading-normal lg:leading-normal mb-6 lg:mb-12 font-semibold">
-          <a
-            className="inline-block textLink"
-            target="_blank"
-            href="mailto:andrewmillen1+website@gmail.com"
-          >
-            Shoot me an email
-          </a>{" "}
-          or visit me on{" "}
-          <a
-            target="_blank"
-            className="inline-block textLink"
-            href="https://dribbble.com/andrewmillen"
-            rel="nofollow noreferrer"
-          >
-            Dribbble
-          </a>
-          ,{" "}
-          <a
-            target="_blank"
-            className="inline-block textLink"
-            href="https://github.com/andrewmillen"
-            rel="nofollow noreferrer"
-          >
-            GitHub
-          </a>
-          , or my{" "}
-          <a className="inline-block textLink" href="/posts">
-            blog
-          </a>
-        </p>
+        <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8 mb-12">
+          {content.quickLinks.map((link, index) => (
+            <div key={index}>
+              <span className="inline-block mr-2 text-xl">{link.emoji}</span>
+              <a
+                href={link.url}
+                className="textLink font-degular font-semibold text-xl"
+              >
+                {link.title}
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </header>
   );

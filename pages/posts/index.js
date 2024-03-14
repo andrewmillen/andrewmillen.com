@@ -40,9 +40,7 @@ export default function Blog({ posts, meta }) {
           <Link className="textLink text-lg" href={`/`}>
             ← Home
           </Link>
-          <h1 className="font-bold text-4xl mt-4 mb-2 md:text-5xl">
-            All Posts
-          </h1>
+          <h1 className="h1 mt-4">All Posts</h1>
         </div>
       </header>
 
@@ -56,7 +54,7 @@ export default function Blog({ posts, meta }) {
                   href={"/posts/" + post.slug}
                   passHref
                 >
-                  <h2 className="text-2xl lg:text-3xl font-semibold leading-tight my-1 underline-offset-1 hover:underline hover:underline-offset-4">
+                  <h2 className="h3 font-semibold my-1 lg:my-4 underline-offset-1 hover:underline hover:underline-offset-4">
                     {post.frontMatter.title}
                   </h2>
                 </Link>
