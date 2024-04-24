@@ -1,32 +1,48 @@
 {
   "header": {
     "name": "Andrew Millen",
-    "title": "Sr. Product Designer"
+    "title": "Sr. Product Designer / Front-End Developer / Design Engineer"
   },
   "experiences": [
     {
       "organization": "OfficeSpace Software",
       "role": "Sr. Product Designer",
       "dates": "November 2021 – Present",
-      "description": "Oversee design and maintenance of the OSS design system, leveraging React and front-end experience to collaborate with engineers to review, publish, and document components; Work with multiple feature teams to take projects from one-pager, through research and wireframing, to high fidelity mockups."
+      "description": [
+        "Lead design and implementation of new design system that triples dev velocity, reduces accessibility issues by 70%, and unlocks thousands in new ARR",
+        "Work across multiple teams to ship new product features and enhancements, including a suite of business intelligence dashboards that has directly increased NRR and revolutionized data workflows for WEX teams",
+        "Deliver at every step of the product development lifecycle, including running UX research, leading design workshops, and providing high fidelity design mockups"
+      ]
     },
     {
       "organization": "Simple Focus",
       "role": "Sr. UI/UX Designer",
       "dates": "Oct 2015 – Oct 2021",
-      "description": "Managed design team to oversee production of digital projects; Designed digital products, apps, and websites informed by research and content strategy and centered around usability; Developed front-end experiences in HTML, CSS, and React."
+      "description": [
+        "Oversaw design and dev teams in the production of websites, apps, and real-world experiences, including the implementation of creative growth programs",
+        "Designed and built responsive, performant websites and apps on a variety of platforms using React/JS, HTML/CSS, and PHP",
+        "Developed additional skills in motion graphics, 3D, and projection mapping to create rich interactive experiences that earned 2 Gold and 4 Silver Addy’s",
+        "Worked directly with clients ranging from local non-profits to Fortune-500s"
+      ]
     },
     {
       "organization": "HelloHome",
       "role": "Product Designer (Freelance)",
       "dates": "June 2017 – July 2018",
-      "description": "Created user flows, design system, and individual UI mockups and screens for an end-to-end real estate sales platform; Worked directly with CTO, CEO, and engineering team to ensure usability and quality of final product."
+      "description": [
+        "Worked directly with startup founder and CTO to bring their vision of an end-to-end real estate sales platform to life from scratch",
+        "Created a design system, dozens of user flows, and innovative user interface concepts for initial product launch"
+      ]
     },
     {
       "organization": "Red Alloy Creative",
       "role": "Web Designer",
       "dates": "Dec 2013 – Oct 2015",
-      "description": "Led web design and development projects from discovery through deployment; Wrote HTML, CSS, and PHP on multiple CMS platforms; Employed copywriting and language skills to develop site architecture, content strategies, and brand voice guidelines; Utilized outside skills such as photography, animation, and 3D modeling on special projects."
+      "description": [
+        "Led discovery, design, and development of web and interactive projects",
+        "Expanded service offerings by providing site architecture, content strategy, and brand voice guidelines that enriched the client experience",
+        "Helped grow the business from a solo founder to a 3-person team that was later acquired"
+      ]
     }
   ],
   "certifications": [

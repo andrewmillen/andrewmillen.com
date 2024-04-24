@@ -31,7 +31,9 @@ export default function Resume({ meta, resume }) {
         <div className="container max-w-3xl">
           <Breadcrumb url="/" />
           <h1 className="mt-8 h1">{resume.header.name}</h1>
-          <p className="h1">{resume.header.title}</p>
+          <p className="degular font-semibold text-sm sm:text-lg mt-2">
+            {resume.header.title}
+          </p>
         </div>
       </header>
       <main className="pb-12 xl:pb-20">
@@ -45,7 +47,13 @@ export default function Resume({ meta, resume }) {
                 </h3>
                 <p>{experience.role}</p>
                 <p>{experience.dates}</p>
-                <p className="mt-4">{experience.description}</p>
+                <ul className="mt-4 list-disc ml-4">
+                  {experience.description.map((content, index) => (
+                    <li className="mb-1" key={index}>
+                      {content}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
