@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "@/components/Arrows";
-import Image from "next/image";
+import testimonialData from "@/content/testimonialData.json";
 
-export default function TestimonialSlider({ slides }) {
+export default function TestimonialSlider() {
+  const testimonials = testimonialData.testimonials;
+
   // Slick slider settings
   const settings = {
     infinite: true,
@@ -31,14 +32,14 @@ export default function TestimonialSlider({ slides }) {
       <div className="sliderWrapper bg-yellow-200 dark:bg-yellow-300 text-neutral-900">
         <div className="container">
           <Slider {...settings} className="testimonialSlider py-24 lg:py-32">
-            {slides.map((slide) => (
-              <div key={slide.key}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index}>
                 <blockquote className="text-center max-w-5xl mx-auto lg:px-24">
                   <span className="block font-degular font-bold text-2xl lg:text-3xl mb-4">
-                    &ldquo;{slide.quote}&rdquo;
+                    &ldquo;{testimonial.quote}&rdquo;
                   </span>
                   <cite className="block not-italic text-neutral-500 dark:text-neutral-600 text-xl lg:text-2xl font-semibold font-degular">
-                    {slide.attribution}
+                    {testimonial.attribution}
                   </cite>
                 </blockquote>
               </div>

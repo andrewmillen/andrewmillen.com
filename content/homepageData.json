@@ -49,37 +49,5 @@
       "alt": "",
       "bgcolor": "bg-sky-100 dark:bg-blue-900"
     }
-  ],
-  "projects": [
-    {
-      "id": "smashingArticle",
-      "content": {
-        "name": "‘Better Search UX Through Microcopy’",
-        "label": "Article",
-        "description": "I wrote about how good copy and a little thoughtfulness can improve the all-important search experience.",
-        "link": "https://www.smashingmagazine.com/2019/06/better-search-ux-microcopy/",
-        "linkLabel": "Read Article in Smashing Magazine"
-      }
-    },
-    {
-      "id": "flags",
-      "content": {
-        "name": "Flags in Code",
-        "label": "Side Project",
-        "description": "What’s nerdier, loving vexillology or learning clip-path so you can code the flag of the Republic of Seychelles?",
-        "link": "https://codepen.io/collection/XOWYvZ",
-        "linkLabel": "View on CodePen"
-      }
-    },
-    {
-      "id": "mobileCursor",
-      "content": {
-        "name": "Mobile Cursor for AfterEffects",
-        "label": "Resource",
-        "description": "I built a template in AE that designers can use to overlay a mobile “cursor” over their prototypes. The effect is fully parametric and powered by a script I modified from one found on StackOverflow.",
-        "link": "https://medium.com/prototypr/a-mobile-cursor-for-interaction-prototyping-and-how-i-built-it-353a4aac18e0",
-        "linkLabel": "View on Medium"
-      }
-    }
   ]
 }

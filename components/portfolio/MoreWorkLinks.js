@@ -1,19 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function AdditionalWorkLinks() {
+export default function MoreWorkLinks() {
   return (
     <section>
       <h2 className="sr-only">Additional Work</h2>
       <div className="flex">
         <Link
           href="/portfolio/ui-product"
-          className="w-full md:w-1/3 bg-violet-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full md:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
         >
           <Image
-            src="/portfolio-assets/ui-hlpr.jpg"
+            src="/portfolio-assets/ui-costarica.jpg"
             fill="true"
             className="opacity-40 transition-all duration-300 group-hover:scale-110"
+            alt=""
           ></Image>
           <div className="z-30">
             <h2 className="font-bold font-degular text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
@@ -26,12 +27,13 @@ export default function AdditionalWorkLinks() {
         </Link>
         <Link
           href="/portfolio/3d"
-          className="w-full md:w-1/3 bg-yellow-800 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full md:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/3d-podracer.jpg"
             fill="true"
             className="opacity-40 transition-all duration-300 group-hover:scale-110"
+            alt=""
           ></Image>
           <div className="z-30">
             <h2 className="font-bold font-degular text-2xl  lg:text-3xl xl:text-4xl 2xl:text-5xl">
@@ -44,12 +46,13 @@ export default function AdditionalWorkLinks() {
         </Link>
         <Link
           href="/portfolio/graphic-web"
-          className="w-full md:w-1/3 bg-blue-950 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full md:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/gw-gbb-cover.jpg"
             fill="true"
-            className="opacity-20 transition-all duration-300 group-hover:scale-110"
+            className="opacity-40 transition-all duration-300 group-hover:scale-110"
+            alt=""
           ></Image>
           <div className="z-30">
             <h3 className="h3">

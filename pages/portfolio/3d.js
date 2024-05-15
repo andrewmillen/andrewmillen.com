@@ -1,11 +1,10 @@
 import Footer from "@/components/Footer";
-import PortfolioWorkLayout from "@/components/PortfolioWorkLayout";
+import MoreWorkLayout from "@/components/portfolio/MoreWorkLayout";
 import ImageWithCaption from "@/components/blog/ImageWithCaption";
-import Video from "@/components/blog/Video";
 
 export default function D3() {
   return (
-    <PortfolioWorkLayout title="3D">
+    <MoreWorkLayout title="3D">
       <div className="border-b border-neutral-300 dark:border-neutral-800">
         <div className="container pb-12 xl:px-0 prose flex flex-col lg:flex-row space-x-8">
           <div className="lg:w-1/2 flex flex-col items-center">
@@ -30,6 +29,13 @@ export default function D3() {
               height="450"
               caption="Kitchen scene"
             />
+            <ImageWithCaption
+              src="/portfolio-assets/3d-palm-aire.jpg"
+              alt="A vintage motel sign"
+              width="600"
+              height="450"
+              caption="Sign for the Palm Aire Motel"
+            />
           </div>
           <div className="lg:w-1/2 lg:mt-48 flex flex-col items-center">
             <ImageWithCaption
@@ -53,10 +59,17 @@ export default function D3() {
               height="450"
               caption="A scene from Serenity, the ship from Firely"
             />
+            <ImageWithCaption
+              src="/portfolio-assets/3d-lookout.jpg"
+              alt="A tall building on a cliffside"
+              width="600"
+              height="450"
+              caption="'Lookout' (clay render)"
+            />
           </div>
         </div>
       </div>
       <Footer />
-    </PortfolioWorkLayout>
+    </MoreWorkLayout>
   );
 }

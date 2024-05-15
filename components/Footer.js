@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="flex lg:flex-row lg:space-x-4 mt-8">
           <a
             className="textLink"
-            nofollow
-            noreferrer
+            nofollow="true"
+            noreferrer="true"
             target="_blank"
             href="https://dribbble.com/andrewmillen"
           >
@@ -20,8 +20,8 @@ export default function Footer() {
           </a>
           <a
             className="textLink"
-            nofollow
-            noreferrer
+            nofollow="true"
+            noreferrer="true"
             target="_blank"
             href="https://github.com/andrewmillen"
           >

@@ -10,6 +10,14 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "place-hold.it",
+      },
+    ],
+  },
   webpack(config) {
     config.resolve.alias["@"] = path.resolve(__dirname);
     return config;

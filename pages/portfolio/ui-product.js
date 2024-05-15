@@ -1,11 +1,11 @@
 import Footer from "@/components/Footer";
-import PortfolioWorkLayout from "@/components/PortfolioWorkLayout";
+import MoreWorkLayout from "@/components/portfolio/MoreWorkLayout";
 import ImageWithCaption from "@/components/blog/ImageWithCaption";
 import Video from "@/components/blog/Video";
 
 export default function UIProduct() {
   return (
-    <PortfolioWorkLayout title="UI &amp; Product">
+    <MoreWorkLayout title="UI &amp; Product">
       <div className="border-b border-neutral-300 dark:border-neutral-800">
         <div className="container pb-12 xl:px-0 prose flex flex-col lg:flex-row space-x-8">
           <div className="lg:w-1/2 flex flex-col items-center">
@@ -39,7 +39,7 @@ export default function UIProduct() {
               alt="HLPR app concept"
               width="600"
               height="450"
-              caption="HLPR app concept"
+              caption="HLPR app prototype"
             />
             <ImageWithCaption
               src="/portfolio-assets/ui-today.jpg"
@@ -59,6 +59,6 @@ export default function UIProduct() {
         </div>
       </div>
       <Footer />
-    </PortfolioWorkLayout>
+    </MoreWorkLayout>
   );
 }

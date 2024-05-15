@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import AuthorBio from "@/components/AuthorBio";
+import AuthorBio from "@/components/blog/AuthorBio";
 import Footer from "@/components/Footer";
 import RssButton from "@/components/RssButton";
 import Link from "next/link";

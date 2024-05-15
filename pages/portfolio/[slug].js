@@ -2,25 +2,18 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import StickyNote from "@/components/portfolio/StickyNote";
 import { getAllPostIds, getPostData } from "@/lib/portfolio";
 import { MDXRemote } from "next-mdx-remote";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import {
-  YoutubeEmbed,
-  ImageWithCaption,
-  Footnote,
-  Video,
-  VideoAmbient,
-} from "@/components/blog";
+import * as contentComponents from "@/components/blog";
+import Image from "next/image";
+import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemStatement";
+import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
+import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 
 const components = {
-  YoutubeEmbed,
-  ImageWithCaption,
-  Footnote,
-  Video,
-  VideoAmbient,
-  SyntaxHighlighter,
+  contentComponents,
+  CaseStudyProblemStatement,
+  CaseStudyChapter,
 };
 
 export default function Post({ postData }) {
@@ -37,7 +30,7 @@ export default function Post({ postData }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-800">
+      <main className="py-12 md:py-24">
         <article>
           <div className="container">
             <Link className="textLink text-lg" href={`/portfolio`}>
@@ -45,30 +38,29 @@ export default function Post({ postData }) {
             </Link>
 
             <div className="mt-16">
-              <div className="bg-yellow-200 dark:bg-neutral-800 inline py-1 px-2 h4 text-neutral-800 dark:text-neutral-400">
-                Case Study: {postData.tag}
+              <div className="inline-block uppercase bg-yellow-200 dark:bg-yellow-300 leading-none font-degular font-semibold px-3 py-1 rounded-full text-md text-neutral-900">
+                {postData.tag}
               </div>
-              <h1 className="font-bold text-4xl my-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-left max-w-lg lg:max-w-5xl leading-tight">
+              <h1 className="font-bold text-4xl my-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-left max-w-lg lg:max-w-none leading-tight">
                 {postData.title}
               </h1>
             </div>
             <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-800" />
 
             <div className="py-8 lg:py-16">
-              <p className="prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-p:leading-relaxed">
+              <p className="prose prose-neutral prose-lg dark:prose-invert prose-p:leading-relaxed">
                 {postData.summary}
               </p>
-
-              <h3 className="h4 mb-2 mt-8 lg:mt-16">Outcomes</h3>
-
-              <div className="flex flex-wrap">
-                {postData.outcomes.map((outcome, index) => (
-                  <div className={"mb-2 mr-2"} key={index}>
-                    <StickyNote content={outcome} />
-                  </div>
-                ))}
-              </div>
             </div>
+
+            <Image
+              src={postData.hero}
+              width="1200"
+              height="600"
+              className="my-24"
+              alt=""
+              priority
+            />
 
             <div
               className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-16 prose-blockquote:text-neutral-500
@@ -80,6 +72,7 @@ export default function Post({ postData }) {
               dark:hover:prose-a:text-link-dark-hover
               prose-a:underline-offset-4
               prose-a:font-normal
+              max-w-none
               "
             >
               <MDXRemote {...postData.mdxSource} components={components} />
@@ -87,6 +80,8 @@ export default function Post({ postData }) {
           </div>
         </article>
       </main>
+
+      <TestimonialSlider />
       <Footer />
     </Layout>
   );

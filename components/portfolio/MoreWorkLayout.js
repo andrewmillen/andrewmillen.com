@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 
-export default function PortfolioWorkLayout({ title, children }) {
+export default function MoreWorkLayout({ title, children }) {
   return (
     <div className="overflow-x-hidden">
       <header className="pt-12 pb-0 lg:pt-20 lg:pb-12 text-center">

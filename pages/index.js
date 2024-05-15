@@ -6,6 +6,7 @@ import Project from "@/components/Project.js";
 import Footer from "@/components/Footer.js";
 import globalData from "@/content/globalData.json";
 import homepageData from "@/content/homepageData.json";
+import projectsData from "@/content/projectsData.json";
 
 export default function Home({ meta, intro, slides, projects }) {
   return (
@@ -37,7 +38,7 @@ export async function getStaticProps() {
   const meta = globalData.meta;
   const intro = homepageData.intro;
   const slides = homepageData.slides;
-  const projects = homepageData.projects;
+  const projects = projectsData.projects;
 
   return {
     props: {
