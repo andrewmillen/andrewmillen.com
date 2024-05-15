@@ -45,10 +45,10 @@ export default function Post({ postData }) {
                 {postData.title}
               </h1>
             </div>
-            <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-800" />
+            <hr className="max-w-lg lg:max-w-xl lg:mt-12 border-neutral-200 dark:border-neutral-800" />
 
             <div className="py-8 lg:py-16">
-              <p className="prose prose-neutral prose-lg dark:prose-invert prose-p:leading-relaxed">
+              <p className="text-lg leading-relaxed max-w-[65ch] text-neutral-700 dark:text-neutral-100 mb-8">
                 {postData.summary}
               </p>
             </div>
