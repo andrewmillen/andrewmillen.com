@@ -11,13 +11,15 @@ export default function CaseStudyTeaser({
   return (
     <div className="flex flex-col lg:flex-row lg:items-center space-y-12 lg:space-y-0 lg:space-x-20 px-0">
       <div className="w-full lg:w-1/2">
-        <Image
-          src={thumbnail}
-          width="800"
-          height="800"
-          className="w-full max-w-xl mx-auto lg:max-w-full rounded-[30px]"
-          alt=""
-        />
+        <Link href={"/portfolio/" + slug}>
+          <Image
+            src={thumbnail}
+            width="800"
+            height="800"
+            className="w-full max-w-xl mx-auto lg:max-w-full rounded-[30px]"
+            alt=""
+          />
+        </Link>
       </div>
       <div className="w-full max-w-2xl mx-auto lg:w-1/2">
         <div className="lg:py-20">

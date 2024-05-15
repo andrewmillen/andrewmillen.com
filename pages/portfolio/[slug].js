@@ -57,7 +57,7 @@ export default function Post({ postData }) {
               src={postData.hero}
               width="1200"
               height="600"
-              className="my-24"
+              className="my-0 md:my-12 lg:my-24"
               alt=""
               priority
             />

@@ -26,7 +26,7 @@ export default function CaseStudyChapter({ src, alt, video, children }) {
           />
         )}
       </div>
-      <div className="w-full max-w-2xl lg:w-1/2">{children}</div>
+      <div className="w-full max-w-2xl lg:w-1/2 prose-h2:my-6">{children}</div>
     </div>
   );
 }
