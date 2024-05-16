@@ -5,7 +5,7 @@ const currentYear = format(new Date(), "yyyy");
 
 export default function Footer() {
   return (
-    <footer className="py-4 md:py-8 lg:py-24 text-neutral-900 dark:text-neutral-500">
+    <footer className="py-8 md:py-12 lg:py-24 text-neutral-900 dark:text-neutral-500">
       <div className="container">
         <Breadcrumb url="/" />
         <div className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:space-x-4 mt-8">

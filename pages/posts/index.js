@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import Head from "next/head";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 import RssButton from "@/components/RssButton";
 import globalData from "@/content/globalData.json";
@@ -22,6 +23,8 @@ export const getStaticProps = async () => {
 };
 
 export default function Blog({ posts, meta }) {
+  const latestPost = posts[0];
+
   return (
     <Layout>
       <Head>
@@ -40,27 +43,44 @@ export default function Blog({ posts, meta }) {
           <Link className="textLink text-lg" href={`/`}>
             ← Home
           </Link>
-          <h1 className="h1 mt-4">All Posts</h1>
+          <h1 className="h1 mt-4">Blog</h1>
         </div>
       </header>
 
-      <main className="pb-4 md:pb-8 lg:pb-12 border-b border-neutral-200 dark:border-neutral-800">
+      <main className="pb-12 md:pb-20 lg:pb-24 lg:pb-24 border-b border-neutral-200 dark:border-neutral-800">
         <div className="container">
+          <div className="my-12 lg:my-24 md:flex md:space-x-12 items-center">
+            <Image
+              width="240"
+              height="126"
+              src={latestPost.frontMatter.thumbnailUrl}
+              alt=""
+              className="mb-4 md:mb-0"
+            />
+            <div class="max-w-xl">
+              <h2 className="h4 mb-2">Latest Post</h2>
+              <Link
+                className="inline-block h3 mb-2 lg:mb-4 font-semibold hover:underline hover:underline-offset-2"
+                href={"/posts/" + latestPost.slug}
+                passHref
+              >
+                {latestPost.frontMatter.title}
+              </Link>
+              <p className="">{latestPost.frontMatter.description}</p>
+            </div>
+          </div>
+
+          <h2 className="h4 mb-4 lg:mb-6">Previous Posts</h2>
           <ul className="max-w-4xl">
-            {posts.map((post, index) => (
-              <li key={index} className="my-8 lg:my-16">
+            {posts.slice(1).map((post, index) => (
+              <li key={index} className="my-2 lg:my-4">
                 <Link
-                  className="inline-block"
+                  className="inline-block font-semibold hover:underline hover:underline-offset-2 lg:text-lg"
                   href={"/posts/" + post.slug}
                   passHref
                 >
-                  <h2 className="h3 font-semibold my-1 lg:my-4 underline-offset-1 hover:underline hover:underline-offset-4">
-                    {post.frontMatter.title}
-                  </h2>
+                  {post.frontMatter.title}
                 </Link>
-                <p className="mt-1 text-neutral-500 text-md 2xl:text-lg">
-                  {post.frontMatter.description}
-                </p>
               </li>
             ))}
           </ul>
