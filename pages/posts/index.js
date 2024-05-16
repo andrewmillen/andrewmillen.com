@@ -56,11 +56,12 @@ export default function Blog({ posts, meta }) {
               src={latestPost.frontMatter.thumbnailUrl}
               alt=""
               className="mb-4 md:mb-0"
+              priority
             />
             <div className="max-w-xl">
               <h2 className="h4 mb-2">Latest Post</h2>
               <Link
-                className="inline-block h3 mb-2 font-semibold hover:underline hover:underline-offset-4"
+                className="inline-block h3 xl:text-4xl mb-2 font-semibold hover:underline hover:underline-offset-4"
                 href={"/posts/" + latestPost.slug}
                 passHref
               >
