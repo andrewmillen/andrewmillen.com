@@ -56,7 +56,7 @@ export default function Post({ postData }) {
           </div>
           <div className="container">
             <div
-              className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-16 prose-blockquote:text-neutral-500
+              className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-12 prose-blockquote:text-neutral-500
               prose-p:leading-relaxed
               prose-h2:text-3xl
               prose-a:text-link-light-default

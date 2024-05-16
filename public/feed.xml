@@ -4,11 +4,18 @@
         <description><![CDATA[Short posts about design, life.]]></description>
         <link>https://andrewmillen.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 May 2024 22:35:24 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 May 2024 01:55:22 GMT</lastBuildDate>
         <atom:link href="https://andrewmillen.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 06 May 2024 22:35:24 GMT</pubDate>
+        <pubDate>Thu, 16 May 2024 01:55:22 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2024, Andrew Millen]]></copyright>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[What We Learn from Copying]]></title>
+            <description><![CDATA[A lesson from writers on the best way to fully understand something when you're looking, but not seeing.]]></description>
+            <link>https://andrewmillen.com/posts/what-we-learn-from-copying</link>
+            <guid isPermaLink="true">https://andrewmillen.com/posts/what-we-learn-from-copying</guid>
+            <pubDate>Tue, 14 May 2024 12:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Simplify, Then Add Lightness]]></title>
             <description><![CDATA[Colin Chapman's legendary quote applies beyond cars.]]></description>

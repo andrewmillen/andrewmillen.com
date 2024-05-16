@@ -9,7 +9,7 @@ export default function ImageWithCaption({
   attribution,
 }) {
   return (
-    <figure>
+    <figure className="lg:my-24">
       <Image
         src={src}
         alt={alt}

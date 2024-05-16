@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AuthorBio() {
   return (
-    <aside className="text-left flex flex-col space-y-4 lg:flex-row lg:items-center lg:space-x-4 mt-16 md:mt-24 lg:mt-48 container">
+    <aside className="text-left flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-center lg:space-x-8 mt-16 md:mt-24 lg:mt-48 container">
       <Image
         src="/andrew-millen.jpg"
         width={75}
