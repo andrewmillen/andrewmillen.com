@@ -17,14 +17,17 @@ const components = {
 };
 
 export default function Post({ postData }) {
-  const metaTitle = `${postData.title} | Andrew Millen Portfolio`;
+  const metaTitle = `${postData.title} | Andrew Millen | Portfolio`;
 
   return (
     <Layout>
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={postData.description} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={postData.description} />
         <meta property="og:image" content="/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"

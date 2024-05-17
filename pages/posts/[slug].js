@@ -18,12 +18,14 @@ const components = {
 };
 
 export default function Post({ postData }) {
+  const metaTitle = `${postData.title} | Andrew Millen | Blog`;
+
   return (
     <Layout>
       <Head>
-        <title>Andrew Millen | Blog</title>
+        <title>{metaTitle}</title>
         <meta name="description" content={postData.description} />
-        <meta property="og:title" content={postData.title} />
+        <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={postData.description} />
         <meta property="og:image" content={postData.thumbnailUrl} />
         <meta name="twitter:card" content="summary_large_image" />
