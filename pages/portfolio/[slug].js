@@ -23,10 +23,10 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{metaTitle}</title>
-        <meta name="description" content={postData.description} />
+        <meta name="description" content={postData.summary} />
         <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={postData.description} />
-        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:description" content={postData.summary} />
+        <meta property="og:image" content={postData.og} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="viewport"
