@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "@/components/Arrows";
 import Image from "next/image";
@@ -43,18 +44,27 @@ export default function WorkSlider({ slides }) {
             <div key={slide.key}>
               {slide.key === "other" ? (
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold max-w-md md:max-w-2xl">
-                  <span className="text-[#0086D1] dark:text-blue-300">
+                  <p className="text-[#0086D1] dark:text-blue-300 mb-4">
                     Looking for something more in-depth?
-                  </span>{" "}
-                  UX work doesn’t always make good eye candy.{" "}
-                  <a
-                    href="mailto:andrewmillen1+website@gmail.com"
-                    target="_blank"
-                    className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
-                  >
-                    Email me
-                  </a>{" "}
-                  to learn more about my process.
+                  </p>{" "}
+                  <p>
+                    UX work doesn’t always make good eye candy.{" "}
+                    <a
+                      href="mailto:andrewmillen1+website@gmail.com"
+                      target="_blank"
+                      className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
+                    >
+                      Email me
+                    </a>{" "}
+                    or{" "}
+                    <Link
+                      href="/portfolio"
+                      className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
+                    >
+                      visit my portfolio
+                    </Link>{" "}
+                    to learn more about my process.
+                  </p>
                 </div>
               ) : (
                 <Image

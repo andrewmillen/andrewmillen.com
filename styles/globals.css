@@ -52,6 +52,7 @@
     .workSlider .slick-track,
     .testimonialSlider .slick-track {
         display: flex;
+        align-items: center;
       }
     .workSlider .slick-track .slick-slide,
     .testimonialSlider .stlick-track .slick-slide {
