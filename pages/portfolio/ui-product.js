@@ -24,18 +24,18 @@ export default function UIProduct() {
               caption="Employee dashboard for a restaurant management system"
             />
             <ImageWithCaption
+              src="/portfolio-assets/ui-petsafe.jpg"
+              alt="UI for a collar that tracks dog barks"
+              width="600"
+              height="450"
+              caption="UI for a collar that tracks dog barks"
+            />
+            <ImageWithCaption
               src="/portfolio-assets/ui-gardening.jpg"
               alt="AR Gardening app concept"
               width="600"
               height="450"
               caption="AR Gardening app concept"
-            />
-            <ImageWithCaption
-              src="/portfolio-assets/ui-hlpr.jpg"
-              alt="HLPR app concept"
-              width="600"
-              height="450"
-              caption="HLPR app prototype"
             />
           </div>
           <div className="lg:w-1/2 lg:mt-80 flex flex-col items-center">
