@@ -17,29 +17,34 @@ export default function UIProduct() {
               caption="Travel app concept"
             />
             <ImageWithCaption
+              src="/portfolio-assets/ui-zignyl.jpg"
+              alt="Dashboard showing timers and reminders for a restaurant"
+              width="600"
+              height="450"
+              caption="Employee dashboard for a restaurant management system"
+            />
+            <ImageWithCaption
               src="/portfolio-assets/ui-gardening.jpg"
               alt="AR Gardening app concept"
               width="600"
               height="450"
               caption="AR Gardening app concept"
             />
-            <Video
-              src="/portfolio-assets/ui-neumorphic"
-              alt="Neumorphic thermostat UI"
-              width="600"
-              height="450"
-              caption="Neumorphic thermostat UI"
-              autoplay
-              loop
-            />
-          </div>
-          <div className="lg:w-1/2 lg:mt-48 flex flex-col items-center">
             <ImageWithCaption
               src="/portfolio-assets/ui-hlpr.jpg"
               alt="HLPR app concept"
               width="600"
               height="450"
               caption="HLPR app prototype"
+            />
+          </div>
+          <div className="lg:w-1/2 lg:mt-80 flex flex-col items-center">
+            <ImageWithCaption
+              src="/portfolio-assets/ui-hellohome.jpg"
+              alt="Dashboard showing a home sale tracker"
+              width="600"
+              height="450"
+              caption="Dashboard for a home selling startup"
             />
             <ImageWithCaption
               src="/portfolio-assets/ui-today.jpg"
@@ -54,6 +59,15 @@ export default function UIProduct() {
               width="600"
               height="450"
               caption="Pokémon trading platform app concept"
+            />
+            <Video
+              src="/portfolio-assets/ui-neumorphic"
+              alt="Neumorphic thermostat UI"
+              width="600"
+              height="450"
+              caption="Neumorphic thermostat UI"
+              autoplay
+              loop
             />
           </div>
         </div>
