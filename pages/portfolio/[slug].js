@@ -8,12 +8,16 @@ import * as contentComponents from "@/components/blog";
 import Image from "next/image";
 import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemStatement";
 import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
+import CaseStudyCallout from "@/components/portfolio/CaseStudyCallout";
+import CaseStudyBlockquote from "@/components/portfolio/CaseStudyBlockquote";
 import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 
 const components = {
   contentComponents,
   CaseStudyProblemStatement,
   CaseStudyChapter,
+  CaseStudyCallout,
+  CaseStudyBlockquote,
 };
 
 export default function Post({ postData }) {
@@ -75,6 +79,7 @@ export default function Post({ postData }) {
               dark:hover:prose-a:text-link-dark-hover
               prose-a:underline-offset-4
               prose-a:font-normal
+              prose-quoteless
               max-w-none
               "
             >

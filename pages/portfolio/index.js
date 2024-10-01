@@ -39,16 +39,18 @@ export default function Portfolio({ caseStudies, meta }) {
       <main>
         <section>
           <div className="container space-y-24 xl:space-y-32 py-12 lg:py-24 xl:py-32">
-            {caseStudies.map((caseStudy, index) => (
-              <CaseStudyTeaser
-                key={index}
-                thumbnail={caseStudy.frontMatter.thumbnail}
-                tag={caseStudy.frontMatter.tag}
-                title={caseStudy.frontMatter.title}
-                summary={caseStudy.frontMatter.summary}
-                slug={caseStudy.slug}
-              />
-            ))}
+            {caseStudies.map((caseStudy, index) =>
+              caseStudy.frontMatter.unlisted == false ? (
+                <CaseStudyTeaser
+                  key={index}
+                  thumbnail={caseStudy.frontMatter.thumbnail}
+                  tag={caseStudy.frontMatter.tag}
+                  title={caseStudy.frontMatter.title}
+                  summary={caseStudy.frontMatter.summary}
+                  slug={caseStudy.slug}
+                />
+              ) : null
+            )}
           </div>
         </section>
 

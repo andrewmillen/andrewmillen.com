@@ -14,9 +14,20 @@ module.exports = {
   },
   theme: {
     extend: {
+      listStyleImage: {
+        arrow: 'url("../public/arrow.svg")',
+      },
       fontFamily: {
         degular: ["degular", "system-ui"],
         system: "system-ui",
+      },
+      typography: {
+        quoteless: {
+          css: {
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+          },
+        },
       },
       colors: {
         link: {

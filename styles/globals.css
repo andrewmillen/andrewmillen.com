@@ -102,6 +102,10 @@
     .bgSlider .slick-list .slick-slider > div > div {
         @apply h-full;
     }
+
+    .callout-list ul li::marker {
+        @apply text-yellow-400
+    }
 }
 
 @layer utilities {
