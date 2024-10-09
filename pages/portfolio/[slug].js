@@ -10,7 +10,9 @@ import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemSt
 import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
 import CaseStudyCallout from "@/components/portfolio/CaseStudyCallout";
 import CaseStudyBlockquote from "@/components/portfolio/CaseStudyBlockquote";
+import RelatedCaseStudy from "@/components/portfolio/RelatedCaseStudy";
 import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
+import { getSortedCaseStudies } from "@/lib/portfolio";
 
 const components = {
   contentComponents,
@@ -20,7 +22,7 @@ const components = {
   CaseStudyBlockquote,
 };
 
-export default function Post({ postData }) {
+export default function Post({ postData, caseStudies }) {
   const metaTitle = `${postData.title} | Andrew Millen | Portfolio`;
 
   return (
@@ -89,6 +91,12 @@ export default function Post({ postData }) {
         </article>
       </main>
 
+      {caseStudies.map((caseStudy) =>
+        caseStudy.frontMatter.title == postData.related ? (
+          <RelatedCaseStudy postData={caseStudy} />
+        ) : null
+      )}
+
       <TestimonialSlider />
       <Footer />
     </Layout>
@@ -97,10 +105,12 @@ export default function Post({ postData }) {
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.slug);
+  const caseStudies = getSortedCaseStudies();
 
   return {
     props: {
       postData,
+      caseStudies,
     },
   };
 }
