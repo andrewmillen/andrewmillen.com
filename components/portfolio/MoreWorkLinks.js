@@ -11,9 +11,9 @@ export default function MoreWorkLinks() {
           className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
         >
           <Image
-            src="/portfolio-assets/ui-costarica.jpg"
+            src="/portfolio-assets/ui-reverso-weather.jpg"
             fill="true"
-            className="opacity-40 transition-all duration-300 group-hover:scale-110"
+            className="opacity-30 transition-all duration-300 group-hover:scale-110 group-hover:opacity-40"
             alt=""
           ></Image>
           <div className="z-30">
@@ -32,7 +32,7 @@ export default function MoreWorkLinks() {
           <Image
             src="/portfolio-assets/3d-podracer.jpg"
             fill="true"
-            className="opacity-40 transition-all duration-300 group-hover:scale-110"
+            className="opacity-30 transition-all duration-300 group-hover:scale-110 group-hover:opacity-40"
             alt=""
           ></Image>
           <div className="z-30">
@@ -49,9 +49,9 @@ export default function MoreWorkLinks() {
           className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
         >
           <Image
-            src="/portfolio-assets/gw-gbb-cover.jpg"
+            src="/portfolio-assets/gw-mlk.jpg"
             fill="true"
-            className="opacity-40 transition-all duration-300 group-hover:scale-110"
+            className="opacity-30 transition-all duration-300 group-hover:scale-110 group-hover:opacity-40"
             alt=""
           ></Image>
           <div className="z-30">

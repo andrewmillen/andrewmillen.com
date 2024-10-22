@@ -24,11 +24,11 @@ export default function UIProduct() {
               caption="Employee dashboard for a restaurant management system"
             />
             <ImageWithCaption
-              src="/portfolio-assets/ui-petsafe.jpg"
-              alt="UI for a collar that tracks dog barks"
+              src="/portfolio-assets/ui-reverso-weather.jpg"
+              alt="A weather app that returns locations that match given weather conditions."
               width="600"
               height="450"
-              caption="UI for a collar that tracks dog barks"
+              caption="A weather app that returns locations that match given weather conditions"
             />
             <ImageWithCaption
               src="/portfolio-assets/ui-gardening.jpg"
