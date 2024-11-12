@@ -18,8 +18,11 @@ export default function ImageWithCaption({
         className="xl:max-w-5xl"
       />
       {caption && (
-        <figcaption>
-          <span dangerouslySetInnerHTML={{ __html: caption }}></span>
+        <figcaption className="prose">
+          <span
+            className="text-neutral-500"
+            dangerouslySetInnerHTML={{ __html: caption }}
+          ></span>
           {attribution && (
             <>
               <br />

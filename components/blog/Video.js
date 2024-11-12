@@ -19,7 +19,7 @@ export default function Video({ src, width, height, caption, autoplay, loop }) {
           <source src={src + ".ogg"} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
-        <figcaption className="text-sm">{caption}</figcaption>
+        <figcaption className="prose text-neutral-500">{caption}</figcaption>
       </figure>
     </div>
   );
