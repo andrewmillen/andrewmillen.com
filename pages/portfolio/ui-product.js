@@ -7,7 +7,7 @@ export default function UIProduct() {
   return (
     <MoreWorkLayout title="UI &amp; Product">
       <div className="border-b border-neutral-300 dark:border-neutral-800">
-        <div className="container pb-12 xl:px-0 prose flex flex-col lg:flex-row space-x-8">
+        <div className="container pb-12 xl:px-0 prose flex flex-col lg:flex-row lg:space-x-8">
           <div className="lg:w-1/2 flex flex-col items-center">
             <ImageWithCaption
               src="/portfolio-assets/ui-costarica.jpg"

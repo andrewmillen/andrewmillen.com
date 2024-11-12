@@ -6,7 +6,7 @@ export default function D3() {
   return (
     <MoreWorkLayout title="3D">
       <div className="border-b border-neutral-300 dark:border-neutral-800">
-        <div className="container pb-12 xl:px-0 prose flex flex-col lg:flex-row space-x-8">
+        <div className="container pb-12 xl:px-0 prose flex flex-col lg:flex-row lg:space-x-8">
           <div className="lg:w-1/2 flex flex-col items-center">
             <ImageWithCaption
               src="/portfolio-assets/3d-podracer.jpg"
