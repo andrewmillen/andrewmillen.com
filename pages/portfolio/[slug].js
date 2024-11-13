@@ -39,7 +39,7 @@ export default function Post({ postData, caseStudies }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 md:py-24">
+      <main className="py-12 md:pb-0">
         <article>
           <div className="container">
             <Link className="textLink text-lg" href={`/portfolio`}>
