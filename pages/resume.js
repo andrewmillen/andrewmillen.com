@@ -31,7 +31,7 @@ export default function Resume({ meta, resume }) {
         <div className="container max-w-3xl">
           <Breadcrumb url="/" />
           <h1 className="mt-8 h1">{resume.header.name}</h1>
-          <p className="degular font-semibold text-sm sm:text-lg mt-2">
+          <p className="degular font-bold text-xl sm:text-2xl md:text-3xl xl:text-4xl mt-2">
             {resume.header.title}
           </p>
         </div>
@@ -39,7 +39,11 @@ export default function Resume({ meta, resume }) {
       <main className="pb-12 xl:pb-20">
         <div className="container max-w-3xl">
           <div className="mb-16">
-            <h2 className="h4 mb-8">Experience</h2>
+            <h2 className="h4 mb-4">About Me</h2>
+            <p>{resume.header.statement}</p>
+          </div>
+          <div className="mb-16">
+            <h2 className="h4 mb-4">Experience</h2>
             {resume.experiences.map((experience, index) => (
               <div key={index} className="mb-8">
                 <h3 className="font-semibold text-lg">
@@ -58,13 +62,11 @@ export default function Resume({ meta, resume }) {
             ))}
           </div>
           <div className="mb-16">
-            <h2 className="h4 mb-8">Certifications</h2>
+            <h2 className="h4 mb-4">Certifications</h2>
             {resume.certifications.map((certification, index) => (
               <div key={index} className="mb-8">
-                <h3 className="font-semibold">
-                  <a href={certification.providerUrl}>
-                    {certification.provider}
-                  </a>
+                <h3 className="font-semibold text-lg">
+                  {certification.provider}
                 </h3>
                 <p>{certification.certification}</p>
                 <p>{certification.date}</p>
@@ -72,19 +74,41 @@ export default function Resume({ meta, resume }) {
             ))}
           </div>
           <div className="mb-16">
-            <h2 className="h4 mb-8">Community</h2>
+            <h2 className="h4 mb-4">Publications</h2>
+            {resume.publications.map((publication, index) => (
+              <div key={index} className="mb-8">
+                <h3 className="font-semibold text-lg">
+                  {publication.publisher}
+                </h3>
+                <p>
+                  <a
+                    href={publication.link}
+                    target="_blank"
+                    className="underline"
+                  >
+                    {publication.title}
+                  </a>
+                </p>
+                <p>{publication.date}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mb-16">
+            <h2 className="h4 mb-4">Community</h2>
             {resume.community.map((community, index) => (
               <div key={index} className="mb-8">
-                <h3 className="font-semibold">{community.name}</h3>
+                <h3 className="font-semibold text-lg">{community.name}</h3>
                 <p>{community.role}</p>
                 <p>{community.date}</p>
               </div>
             ))}
           </div>
           <div className="mb-16">
-            <h2 className="h4 mb-8">Education</h2>
+            <h2 className="h4 mb-4">Education</h2>
             <div className="mb-8">
-              <h3 className="font-semibold">{resume.education.school}</h3>
+              <h3 className="font-semibold text-lg">
+                {resume.education.school}
+              </h3>
               <p>{resume.education.location}</p>
               <p>{resume.education.major}</p>
               <p>{resume.education.honors}</p>

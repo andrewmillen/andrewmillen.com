@@ -1,12 +1,13 @@
 {
   "header": {
     "name": "Andrew Millen",
-    "title": "Sr. Product Designer / Front-End Developer / Design Engineer"
+    "title": "Senior Product Designer",
+    "statement": "A design leader with 10 years of expertise in UI/UX and design systems. I consistently deliver business value through the practice of user-centered design, and strengthen teams through peer mentorship and deep collaboration with front-end developers."
   },
   "experiences": [
     {
       "organization": "OfficeSpace Software",
-      "role": "Sr. Product Designer",
+      "role": "Senior Product Designer",
       "dates": "November 2021 – Present",
       "description": [
         "Lead design and implementation of new design system that triples dev velocity, reduces accessibility issues by 70%, and unlocks thousands in new ARR",
@@ -16,7 +17,7 @@
     },
     {
       "organization": "Simple Focus",
-      "role": "Sr. UI/UX Designer",
+      "role": "Senior UI/UX Designer",
       "dates": "Oct 2015 – Oct 2021",
       "description": [
         "Oversaw design and dev teams in the production of websites, apps, and real-world experiences, including the implementation of creative growth programs",
@@ -48,9 +49,16 @@
   "certifications": [
     {
       "provider": "Growth.Design",
-      "providerUrl": "https://growth.design/course",
       "certification": "Product Psychology Mastery",
       "date": "July 2021"
+    }
+  ],
+  "publications": [
+    {
+      "publisher": "Smashing Magazine",
+      "link": "https://www.smashingmagazine.com/2019/06/better-search-ux-microcopy/",
+      "title": "Better Search UX Through Microcopy",
+      "date": "2019"
     }
   ],
   "community": [

@@ -4,7 +4,7 @@
       "id": "smashingArticle",
       "content": {
         "name": "‘Better Search UX Through Microcopy’",
-        "label": "Article",
+        "label": "Publication",
         "description": "I wrote about how good copy and a little thoughtfulness can improve the all-important search experience.",
         "link": "https://www.smashingmagazine.com/2019/06/better-search-ux-microcopy/",
         "linkLabel": "Read Article in Smashing Magazine"
@@ -15,7 +15,7 @@
       "content": {
         "name": "Flags in Code",
         "label": "Side Project",
-        "description": "What’s nerdier, loving vexillology or learning clip-path so you can code the flag of the Republic of Seychelles?",
+        "description": "What’s nerdier, loving vexillology or learning CSS clip-path so you can code the flag of the Republic of Seychelles?",
         "link": "https://codepen.io/collection/XOWYvZ",
         "linkLabel": "View on CodePen"
       }

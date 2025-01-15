@@ -13,7 +13,7 @@ export default function Portfolio({ caseStudies, meta }) {
   return (
     <Layout>
       <Head>
-        <title>Portfolio | Andrew Millen | Sr. Product Designer</title>
+        <title>Portfolio | Andrew Millen | Senior Product Designer</title>
         <meta name="description" content={meta.description} />
         <meta property="og:image" content="/og-image.jpg" />
         <meta
@@ -30,8 +30,7 @@ export default function Portfolio({ caseStudies, meta }) {
           </div>
 
           <p className="dark:text-neutral-300 text-xl">
-            Hybrid UI/UX designer and front-end developer specializing in design
-            systems
+            Design leader with 10 years of expertise in UI/UX and design systems
           </p>
         </div>
       </header>
