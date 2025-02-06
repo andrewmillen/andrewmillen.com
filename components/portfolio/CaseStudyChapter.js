@@ -6,6 +6,8 @@ export default function CaseStudyChapter({
   video,
   children,
   layout,
+  width,
+  height,
 }) {
   return (
     <>
@@ -14,15 +16,15 @@ export default function CaseStudyChapter({
           layout === "reverse"
             ? "lg:flex-row-reverse lg:space-x-24 lg:space-x-reverse"
             : layout === "vertical"
-            ? "lg:flex-col-reverse lg:space-y-24"
+            ? "lg:flex-col-reverse lg:space-y-4 lg:space-y-reverse"
             : "lg:flex-row lg:space-x-24"
         } items-center max-w-none my-12 lg:my-48`}
       >
         {layout === "vertical" ? (
           video ? (
             <video
-              width="1200"
-              height="900"
+              width={width || "1200"}
+              height={height || "900"}
               preload="metadata"
               autoPlay="autoplay"
               muted
@@ -35,17 +37,17 @@ export default function CaseStudyChapter({
             <Image
               src={src}
               alt={alt}
-              width="1200"
-              height="900"
-              className="w-full max-w-none"
+              width={width || "1200"}
+              height={height || "900"}
+              className="max-w-full"
             />
           )
         ) : (
           <div className="lg:w-1/2">
             {video ? (
               <video
-                width="800"
-                height="600"
+                width={width || "800"}
+                height={height || "600"}
                 preload="metadata"
                 autoPlay="autoplay"
                 muted
@@ -58,8 +60,8 @@ export default function CaseStudyChapter({
               <Image
                 src={src}
                 alt={alt}
-                width="800"
-                height="600"
+                width={width || "800"}
+                height={height || "600"}
                 className="w-full max-w-xl"
               />
             )}
