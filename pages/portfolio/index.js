@@ -6,7 +6,7 @@ import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import MoreWorkLinks from "@/components/portfolio/MoreWorkLinks";
 import PortfolioLinks from "@/components/portfolio/PortfolioLinks";
 import Footer from "@/components/Footer.js";
-import globalData from "@/content/globalData.json";
+import global from "@/content/global.json";
 import { getSortedCaseStudies } from "@/lib/portfolio";
 
 export default function Portfolio({ caseStudies, meta }) {
@@ -67,7 +67,7 @@ export default function Portfolio({ caseStudies, meta }) {
 
 export const getStaticProps = async () => {
   const caseStudies = getSortedCaseStudies();
-  const meta = globalData.meta;
+  const meta = global.meta;
 
   return {
     props: {

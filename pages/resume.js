@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
-import globalData from "@/content/globalData.json";
-import resumeData from "@/content/resumeData.json";
+import global from "@/content/global.json";
+import resume from "@/content/resume.json";
 
 export default function Resume({ meta, resume }) {
   return (
@@ -122,8 +122,7 @@ export default function Resume({ meta, resume }) {
 }
 
 export async function getStaticProps() {
-  const meta = globalData.meta;
-  const resume = resumeData;
+  const meta = global.meta;
 
   return {
     props: {

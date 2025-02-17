@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Project({ content }) {
+export default function FeaturedLink({ content }) {
   return (
     <section className="py-8 md:py-12 lg:py-24 border-b border-neutral-200 dark:border-neutral-800">
-      <h2 className="sr-only">Projects</h2>
+      <h2 className="sr-only">Featured Link</h2>
       <div className="container">
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-baseline mb-4 lg:mb-8">
           <h3 className="h3">{content.name}</h3>

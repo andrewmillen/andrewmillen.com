@@ -1,10 +1,8 @@
 import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "@/components/Arrows";
-import testimonialData from "@/content/testimonialData.json";
+import testimonials from "@/content/testimonials.json";
 
 export default function TestimonialSlider() {
-  const testimonials = testimonialData.testimonials;
-
   // Slick slider settings
   const settings = {
     infinite: true,

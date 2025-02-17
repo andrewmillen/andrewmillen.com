@@ -4,14 +4,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import RssButton from "@/components/RssButton";
-import globalData from "@/content/globalData.json";
+import global from "@/content/global.json";
 import { getSortedBlogPosts } from "@/lib/posts";
 import getRSS from "@/lib/rss";
 
 export const getStaticProps = async () => {
   await getRSS();
   const posts = getSortedBlogPosts();
-  const meta = globalData.meta;
+  const meta = global.meta;
 
   return {
     props: {
