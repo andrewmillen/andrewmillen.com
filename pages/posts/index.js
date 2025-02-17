@@ -8,20 +8,6 @@ import global from "@/content/global.json";
 import { getSortedBlogPosts } from "@/lib/posts";
 import getRSS from "@/lib/rss";
 
-export const getStaticProps = async () => {
-  await getRSS();
-  const posts = getSortedBlogPosts();
-  const meta = global.meta;
-
-  return {
-    props: {
-      posts,
-      meta,
-    },
-    revalidate: 1,
-  };
-};
-
 export default function Blog({ posts, meta }) {
   const latestPost = posts[0];
 
@@ -92,3 +78,17 @@ export default function Blog({ posts, meta }) {
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  await getRSS();
+  const posts = getSortedBlogPosts();
+  const meta = global.meta;
+
+  return {
+    props: {
+      posts,
+      meta,
+    },
+    revalidate: 1,
+  };
+};
