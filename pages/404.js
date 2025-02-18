@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import globalData from "@/content/globalData.json";
+import global from "@/content/global.json";
 
 export default function ErrorPage({ meta, errorPageContent }) {
   return (
@@ -40,8 +40,8 @@ export default function ErrorPage({ meta, errorPageContent }) {
 }
 
 export async function getStaticProps() {
-  const meta = globalData.meta;
-  const errorPageContent = globalData.errorPage;
+  const meta = global.meta;
+  const errorPageContent = global.errorPage;
 
   return {
     props: {
