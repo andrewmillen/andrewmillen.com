@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import global from "@/content/global.json";
 
@@ -8,7 +9,7 @@ export default function ErrorPage({ meta, errorPageContent }) {
   return (
     <Layout>
       <Head>
-        <title>{errorPageContent.title}</title>
+        <title>Andrew Millen | 404</title>
         <meta name="description" content={meta.description} />
         <meta
           name="viewport"
@@ -20,11 +21,14 @@ export default function ErrorPage({ meta, errorPageContent }) {
       <main className="pt-12 pb-4 text-center md:pt-16 lg:pt-24">
         <div className="container">
           <Breadcrumb url="/" />
-          <h1 className="font-bold text-4xl mb-2 md:text-5xl">
-            {errorPageContent.heading}
+          <h1 className="font-bold text-4xl mt-4 mb-2 lg:mb-8 md:text-5xl">
+            404: Page Not Found
           </h1>
           <p className="text-lg mb-6 max-w-lg mx-auto lg:text-xl leading-relaxed lg:max-w-2xl lg:mb-12">
-            {errorPageContent.content}
+            The page you're looking for doesn't exist.{" "}
+            <Link href="/" className="textLink">
+              Return home.
+            </Link>
           </p>
           <Image
             src="/nedry.jpg"
@@ -41,12 +45,10 @@ export default function ErrorPage({ meta, errorPageContent }) {
 
 export async function getStaticProps() {
   const meta = global.meta;
-  const errorPageContent = global.errorPage;
 
   return {
     props: {
       meta,
-      errorPageContent,
     },
   };
 }
