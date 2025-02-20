@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import AuthorBio from "@/components/blog/AuthorBio";
-import Footer from "@/components/Footer";
 import RssButton from "@/components/RssButton";
 import Link from "next/link";
 import { parseISO, format } from "date-fns";
@@ -76,7 +75,6 @@ export default function Post({ postData }) {
 
         <AuthorBio />
       </main>
-      <Footer />
     </Layout>
   );
 }

@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import MoreWorkLayout from "@/components/portfolio/MoreWorkLayout";
 import ImageWithCaption from "@/components/blog/ImageWithCaption";
 import Video from "@/components/blog/Video";
@@ -72,7 +71,6 @@ export default function UIProduct() {
           </div>
         </div>
       </div>
-      <Footer />
     </MoreWorkLayout>
   );
 }

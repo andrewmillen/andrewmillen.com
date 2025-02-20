@@ -5,7 +5,6 @@ import CaseStudyTeaser from "@/components/portfolio/CaseStudyTeaser";
 import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import MoreWorkLinks from "@/components/portfolio/MoreWorkLinks";
 import PortfolioLinks from "@/components/portfolio/PortfolioLinks";
-import Footer from "@/components/Footer.js";
 import global from "@/content/global.json";
 import { getSortedCaseStudies } from "@/lib/portfolio";
 
@@ -58,8 +57,6 @@ export default function Portfolio({ caseStudies, meta }) {
         <MoreWorkLinks />
 
         <PortfolioLinks />
-
-        <Footer />
       </main>
     </Layout>
   );

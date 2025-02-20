@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import { getAllPostIds, getPostData } from "@/lib/portfolio";
 import { MDXRemote } from "next-mdx-remote";
@@ -98,7 +97,6 @@ export default function Post({ postData, caseStudies }) {
       )}
 
       <TestimonialSlider />
-      <Footer />
     </Layout>
   );
 }

@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import MoreWorkLayout from "@/components/portfolio/MoreWorkLayout";
 import ImageWithCaption from "@/components/blog/ImageWithCaption";
 
@@ -69,7 +68,6 @@ export default function D3() {
           </div>
         </div>
       </div>
-      <Footer />
     </MoreWorkLayout>
   );
 }

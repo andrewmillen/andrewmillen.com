@@ -2,7 +2,6 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 import RssButton from "@/components/RssButton";
 import global from "@/content/global.json";
 import { getSortedBlogPosts } from "@/lib/posts";
@@ -73,8 +72,6 @@ export default function Blog({ posts, meta }) {
           </ul>
         </div>
       </main>
-
-      <Footer />
     </Layout>
   );
 }
