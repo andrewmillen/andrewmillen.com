@@ -7,5 +7,24 @@
     "title": "Andrew Millen | 404",
     "heading": "404: Page Not Found",
     "content": "The page you're looking for doesn't exist."
+  },
+  "footer": {
+    "links": [
+      {
+        "title": "Dribbble",
+        "url": "https://dribbble.com/andrewmillen",
+        "external": true
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/andrewmillen",
+        "external": true
+      },
+      {
+        "title": "Blog",
+        "url": "/blog",
+        "external": false
+      }
+    ]
   }
 }
