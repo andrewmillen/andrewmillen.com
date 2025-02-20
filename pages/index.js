@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import Introduction from "@/components/Introduction";
 import FeaturedWorkSlider from "@/components/FeaturedWorkSlider";
 import FeaturedLink from "@/components/FeaturedLink.js";
-import Footer from "@/components/Footer.js";
 import global from "@/content/global.json";
 import homepage from "@/content/homepage.json";
 import featuredLinks from "@/content/featuredLinks.json";
