@@ -1,14 +1,19 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
-import HomepageHeader from "@/components/HomepageHeader";
-import WorkSlider from "@/components/WorkSlider";
+import Introduction from "@/components/Introduction";
+import FeaturedWorkSlider from "@/components/FeaturedWorkSlider";
 import FeaturedLink from "@/components/FeaturedLink.js";
 import Footer from "@/components/Footer.js";
 import global from "@/content/global.json";
 import homepage from "@/content/homepage.json";
 import featuredLinks from "@/content/featuredLinks.json";
 
-export default function Home({ meta, intro, slides, links }) {
+export default function Home({
+  meta,
+  introduction,
+  featuredWork,
+  featuredLinks,
+}) {
   return (
     <Layout>
       <Head>
@@ -21,11 +26,12 @@ export default function Home({ meta, intro, slides, links }) {
         />
       </Head>
 
-      <HomepageHeader content={intro} />
+      <Introduction content={introduction} />
 
       <main>
-        <WorkSlider slides={slides} />
-        {links.map((link) => (
+        <FeaturedWorkSlider slides={featuredWork} />
+
+        {featuredLinks.map((link) => (
           <FeaturedLink key={link.id} content={link.content} />
         ))}
       </main>
@@ -36,16 +42,15 @@ export default function Home({ meta, intro, slides, links }) {
 
 export async function getStaticProps() {
   const meta = global.meta;
-  const intro = homepage.intro;
-  const slides = homepage.slides;
-  const links = featuredLinks;
+  const introduction = homepage.introduction;
+  const featuredWork = homepage.featuredWork;
 
   return {
     props: {
       meta,
-      intro,
-      slides,
-      links,
+      introduction,
+      featuredWork,
+      featuredLinks,
     },
   };
 }

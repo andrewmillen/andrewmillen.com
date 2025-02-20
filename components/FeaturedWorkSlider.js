@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "@/components/Arrows";
 import Image from "next/image";
 
-export default function WorkSlider({ slides }) {
+export default function FeaturedWorkSlider({ slides }) {
   // Set default slide background color for first slide
   const [slideBg, setSlideBg] = useState(slides[0].bgcolor);
 
