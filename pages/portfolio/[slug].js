@@ -6,6 +6,7 @@ import { getAllPostIds, getPostData } from "@/lib/portfolio";
 import { MDXRemote } from "next-mdx-remote";
 import * as contentComponents from "@/components/blog";
 import Image from "next/image";
+import Tag from "@/components/Tag";
 import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemStatement";
 import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
 import CaseStudyCallout from "@/components/portfolio/CaseStudyCallout";
@@ -47,9 +48,8 @@ export default function Post({ postData, caseStudies }) {
             </Link>
 
             <div className="mt-16">
-              <div className="inline-block uppercase bg-yellow-200 dark:bg-yellow-300 leading-none font-degular font-semibold px-3 py-1 rounded-full text-md text-neutral-900">
-                {postData.tag}
-              </div>
+              <Tag content={postData.tag} />
+
               <h1 className="font-bold text-4xl my-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-left max-w-lg lg:max-w-none leading-tight">
                 {postData.title}
               </h1>
@@ -91,9 +91,9 @@ export default function Post({ postData, caseStudies }) {
         </article>
       </main>
 
-      {caseStudies.map((caseStudy) =>
+      {caseStudies.map((caseStudy, index) =>
         caseStudy.frontMatter.title == postData.related ? (
-          <RelatedCaseStudy postData={caseStudy} />
+          <RelatedCaseStudy key={index} postData={caseStudy} />
         ) : null
       )}
 

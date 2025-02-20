@@ -31,9 +31,14 @@ export default function Home({
       <main>
         <FeaturedWorkSlider slides={featuredWork} />
 
-        {featuredLinks.map((link) => (
-          <FeaturedLink key={link.id} content={link.content} />
-        ))}
+        <section>
+          <h2 className="sr-only">Featured Links</h2>
+          <ul>
+            {featuredLinks.map((link, index) => (
+              <FeaturedLink key={index} content={link.content} />
+            ))}
+          </ul>
+        </section>
       </main>
       <Footer />
     </Layout>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Tag from "@/components/Tag";
 import Image from "next/image";
 
 export default function RelatedCaseStudy({ postData }) {
@@ -21,9 +21,7 @@ export default function RelatedCaseStudy({ postData }) {
               <div className="font-degular text-2xl mb-8 text-neutral-700 dark:text-neutral-400">
                 Related Case Study
               </div>
-              <div className="inline-block uppercase bg-yellow-200 dark:bg-yellow-300 leading-none font-degular font-semibold px-3 py-1 rounded-full text-md text-neutral-900">
-                {postData.frontMatter.tag}
-              </div>
+              <Tag content={postData.frontMatter.tag} />
               <h2 className="mt-2 mb-4 md:mb-8 h2">
                 {postData.frontMatter.title}
               </h2>
