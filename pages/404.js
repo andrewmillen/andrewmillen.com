@@ -5,7 +5,7 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import global from "@/content/global.json";
 
-export default function ErrorPage({ meta, errorPageContent }) {
+export default function ErrorPage({ meta }) {
   return (
     <Layout>
       <Head>
