@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import AuthorBio from "@/components/blog/AuthorBio";
-import RssButton from "@/components/RssButton";
+import Button from "@/components/Button";
 import Link from "next/link";
 import { parseISO, format } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
@@ -34,7 +34,6 @@ export default function Post({ postData }) {
         />
       </Head>
       <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-800">
-        <RssButton />
         <article>
           <div className="container">
             <div className="text-left">
@@ -74,6 +73,15 @@ export default function Post({ postData }) {
         </article>
 
         <AuthorBio />
+
+        <div className="container pt-20">
+          <Button
+            icon="rss"
+            label="Subscribe via RSS"
+            url="https://andrewmillen.com/feed.xml"
+            background="bg-orange-50 hover:bg-orange-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+          />
+        </div>
       </main>
     </Layout>
   );

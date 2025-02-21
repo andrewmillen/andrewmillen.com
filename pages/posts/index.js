@@ -2,7 +2,7 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import RssButton from "@/components/RssButton";
+import Button from "@/components/Button";
 import Breadcrumb from "@/components/Breadcrumb";
 import global from "@/content/global.json";
 import { getSortedBlogPosts } from "@/lib/posts";
@@ -21,8 +21,6 @@ export default function Blog({ posts, meta }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-
-      <RssButton />
 
       <header className="pt-12 md:pt-16 lg:pt-24">
         <div className="container">
@@ -56,7 +54,7 @@ export default function Blog({ posts, meta }) {
           </div>
 
           <h2 className="h4 mb-4 lg:mb-6">Previous Posts</h2>
-          <ul className="max-w-4xl">
+          <ul className="max-w-4xl mb-20">
             {posts.slice(1).map((post, index) => (
               <li key={index} className="my-2 lg:my-4">
                 <Link
@@ -69,6 +67,13 @@ export default function Blog({ posts, meta }) {
               </li>
             ))}
           </ul>
+
+          <Button
+            icon="rss"
+            label="Subscribe via RSS"
+            url="https://andrewmillen.com/feed.xml"
+            background="bg-orange-50 hover:bg-orange-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+          />
         </div>
       </main>
     </Layout>

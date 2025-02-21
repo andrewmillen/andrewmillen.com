@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
+import Button from "@/components/Button";
 import global from "@/content/global.json";
 import resume from "@/content/resume.json";
 
@@ -16,16 +17,6 @@ export default function Resume({ meta, resume }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-
-      <a
-        href="/andrew-millen-resume.pdf"
-        rel="nofollow noreferrer"
-        className="fixed left-0 right-0 bottom-0 lg:left-auto lg:right-6 lg:bottom-6 justify-center lg:rounded-md bg-blue-100 dark:bg-blue-900 py-4 px-4 flex space-x-4 group"
-      >
-        <span className="text-link-light-default dark:text-white underline underline-offset-4 group-hover:text-link-light-hover group-hover:dark:text-link-dark-hover mb-1">
-          Download PDF
-        </span>
-      </a>
 
       <header className="pt-6 pb-12 md:py-12 xl:py-20">
         <div className="container max-w-3xl">
@@ -114,6 +105,15 @@ export default function Resume({ meta, resume }) {
               <p>{resume.education.honors}</p>
               <p>{resume.education.date}</p>
             </div>
+          </div>
+
+          <div className="xl:fixed xl:right-6 xl:bottom-6">
+            <Button
+              icon="download"
+              label="Download as PDF"
+              url="/andrew-millen-resume.pdf"
+              background="bg-blue-100 hover:bg-blue-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+            />
           </div>
         </div>
       </main>
