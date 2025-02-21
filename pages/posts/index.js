@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import RssButton from "@/components/RssButton";
+import Breadcrumb from "@/components/Breadcrumb";
 import global from "@/content/global.json";
 import { getSortedBlogPosts } from "@/lib/posts";
 import getRSS from "@/lib/rss";
@@ -25,34 +26,32 @@ export default function Blog({ posts, meta }) {
 
       <header className="pt-12 md:pt-16 lg:pt-24">
         <div className="container">
-          <Link className="textLink text-lg" href={`/`}>
-            ← Home
-          </Link>
+          <Breadcrumb url="/" />
           <h1 className="h1 mt-4">Blog</h1>
         </div>
       </header>
 
       <main className="pb-12 md:pb-20 lg:pb-24 lg:pb-24 border-b border-neutral-200 dark:border-neutral-800">
         <div className="container">
-          <div className="my-12 lg:my-24 md:flex md:space-x-12 items-center">
+          <div className="my-12 lg:my-24">
             <Image
               width="240"
               height="126"
               src={latestPost.frontMatter.thumbnailUrl}
               alt=""
-              className="mb-4 md:mb-0"
+              className="mb-4 md:mb-8"
               priority
             />
-            <div className="max-w-xl">
+            <div>
               <h2 className="h4 mb-2">Latest Post</h2>
               <Link
-                className="inline-block h3 xl:text-4xl mb-2 font-semibold hover:underline hover:underline-offset-4"
+                className="inline-block h2 mb-3 hover:underline hover:underline-offset-4"
                 href={"/posts/" + latestPost.slug}
                 passHref
               >
                 {latestPost.frontMatter.title}
               </Link>
-              <p className="">{latestPost.frontMatter.description}</p>
+              <p className="max-w-2xl">{latestPost.frontMatter.description}</p>
             </div>
           </div>
 
