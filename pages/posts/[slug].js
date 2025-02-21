@@ -38,7 +38,7 @@ export default function Post({ postData }) {
           <div className="container">
             <div className="text-left">
               <Link className="textLink text-lg" href={`/posts/`}>
-                ← All Posts
+                <span className="font-degular">←</span> All Posts
               </Link>
               <h1 className="mt-8 md:mt-16 h1 max-w-3xl lg:max-w-5xl">
                 {postData.title}

@@ -43,7 +43,7 @@ export default function Post({ postData, caseStudies }) {
         <article>
           <div className="container">
             <Link className="textLink text-lg" href={`/portfolio`}>
-              ← All Case Studies
+              <span className="font-degular">←</span> All Case Studies
             </Link>
 
             <div className="mt-8 md:mt-16">
