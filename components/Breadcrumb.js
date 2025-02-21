@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Breadcrumb({ url }) {
   return (
-    <Link href={url} className="inline-block">
+    <Link href={url} className="inline-block hover:opacity-80">
       <svg
         viewBox="0 0 172 172"
         className="w-10 h-10 text-neutral-900 dark:text-white"
