@@ -39,21 +39,20 @@ export default function Post({ postData, caseStudies }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 md:pb-0">
+      <main className="py-12 md:pb-0 lg:pt-20">
         <article>
           <div className="container">
             <Link className="textLink text-lg" href={`/portfolio`}>
               ← All Case Studies
             </Link>
 
-            <div className="mt-16">
+            <div className="mt-8 md:mt-16">
               <Tag content={postData.tag} />
 
-              <h1 className="font-bold text-4xl my-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-left max-w-lg lg:max-w-none leading-tight">
-                {postData.title}
-              </h1>
+              <h1 className="mt-2 h1">{postData.title}</h1>
             </div>
-            <hr className="max-w-lg lg:max-w-xl lg:mt-12 border-neutral-200 dark:border-neutral-800" />
+
+            <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
 
             <div className="py-8 lg:py-16">
               <p className="text-lg leading-relaxed max-w-[65ch] text-neutral-700 dark:text-neutral-100 mb-8">

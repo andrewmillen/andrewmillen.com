@@ -2,12 +2,8 @@ export default function Introduction({ content }) {
   return (
     <header className="py-4 sm:py-8 md:py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800">
       <div className="container">
-        <h1 className="mt-4 font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl">
-          {content.name}
-        </h1>
-        <p className="h1 inline-block font-bold text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl leading-none">
-          {content.title}
-        </p>
+        <h1 className="h1 mt-4">{content.name}</h1>
+        <p className="h1 inline-block">{content.title}</p>
         <p className="text-lg leading-relaxed 2xl:text-xl 2xl:leading-relaxed mt-16 sm:mt-24 2xl:mt-44 mb-6 lg:mb-12 text-neutral-800 dark:text-neutral-200 max-w-3xl">
           {content.summary}
         </p>

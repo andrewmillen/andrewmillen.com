@@ -12,7 +12,7 @@
     }
 
     .h1 {
-        @apply font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl
+        @apply font-bold text-4xl leading-none sm:text-5xl sm:leading-none md:text-6xl md:leading-none 2xl:text-7xl 2xl:leading-none
     }
 
     .h2 {

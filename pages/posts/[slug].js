@@ -40,10 +40,10 @@ export default function Post({ postData }) {
               <Link className="textLink text-lg" href={`/posts/`}>
                 ← All Posts
               </Link>
-              <h1 className="font-bold text-3xl my-4 md:text-4xl lg:text-5xl xl:text-6xl max-w-lg lg:max-w-5xl leading-tight">
+              <h1 className="mt-8 md:mt-16 h1 max-w-3xl lg:max-w-5xl">
                 {postData.title}
               </h1>
-              <div className="block h4 mt-2 mb-4 max-w-lg lg:max-w-5xl">
+              <div className="block h4 mt-2 sm:mt-4 max-w-lg lg:max-w-5xl">
                 Published{" "}
                 {
                   <time dateTime={postData.date}>
@@ -52,7 +52,8 @@ export default function Post({ postData }) {
                 }
               </div>
             </div>
-            <hr className="max-w-lg lg:max-w-xl mt-12 border-neutral-200 dark:border-neutral-800" />
+
+            <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
           </div>
           <div className="container">
             <div

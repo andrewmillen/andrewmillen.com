@@ -9,9 +9,7 @@ export default function MoreWorkLayout({ title, children }) {
           <div className="flex flex-col space-y-2 items-center">
             <div className="inline-flex flex-col lg:flex-row space-x-4 items-center mb-4">
               <Breadcrumb url="/" />
-              <h1 className="leading-none mt-2 lg:mt-0 font-bold text-2xl lg:text-4xl">
-                {title}
-              </h1>
+              <h1 className="h3 mt-2 lg:mt-0">{title}</h1>
             </div>
 
             <Link className="textLink text-lg" href={`/portfolio`}>

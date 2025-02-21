@@ -25,7 +25,7 @@ export default function Portfolio({ caseStudies, meta }) {
         <div className="container">
           <div className="inline-flex flex-col space-y-4 items-center mb-4">
             <Breadcrumb url="/" />
-            <h1 className="mt-2 lg:mt-0 h1">Andrew Millen Portfolio</h1>
+            <h1 className="h1">Andrew Millen Portfolio</h1>
           </div>
 
           <p className="dark:text-neutral-300 text-xl">
