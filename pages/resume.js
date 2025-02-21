@@ -8,7 +8,7 @@ export default function Resume({ meta, resume }) {
   return (
     <Layout>
       <Head>
-        <title>{meta.title} | Resume</title>
+        <title>Andrew Millen | Resume</title>
         <meta name="description" content={meta.description} />
         <meta property="og:image" content="/og-image.jpg" />
         <meta
