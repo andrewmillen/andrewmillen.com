@@ -33,7 +33,7 @@ export default function Post({ postData }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 md:py-24 border-b border-neutral-300 dark:border-neutral-800">
+      <main className="py-12 lg:py-20 border-b border-neutral-300 dark:border-neutral-800">
         <article>
           <div className="container">
             <div className="text-left">
