@@ -35,12 +35,10 @@ export default function Footer() {
             )
           )}
         </ul>
-        <p className="pt-8 pb-1">
-          This site was built with Next.js and Tailwind CSS and is hosted by
-          Vercel. Headings are set in Degular by Ohno type.
-        </p>
-        <p className="mt-2">
-          © {currentYear} Andrew Millen. All rights reserved.
+        <p className="pt-8">
+          This site is powered by Next.js, styled by Tailwind CSS, and hosted on
+          Vercel. Content is written in MDX. Headings are set in Degular by Ohno
+          type.
         </p>
       </div>
     </footer>
