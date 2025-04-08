@@ -4,11 +4,18 @@
         <description><![CDATA[Short posts about design, life.]]></description>
         <link>https://andrewmillen.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 21 Feb 2025 23:38:38 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Apr 2025 02:28:58 GMT</lastBuildDate>
         <atom:link href="https://andrewmillen.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 21 Feb 2025 23:38:38 GMT</pubDate>
+        <pubDate>Mon, 07 Apr 2025 02:28:58 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025, Andrew Millen]]></copyright>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Creating Strategic Design Principles]]></title>
+            <description><![CDATA[A look at how we created our design principles at OfficeSpace that help guide our decision making.]]></description>
+            <link>https://andrewmillen.com/posts/design-principles</link>
+            <guid isPermaLink="true">https://andrewmillen.com/posts/design-principles</guid>
+            <pubDate>Sat, 05 Apr 2025 12:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[What We Learn from Copying]]></title>
             <description><![CDATA[A lesson from writers on the best way to fully understand something when you're looking, but not seeing.]]></description>

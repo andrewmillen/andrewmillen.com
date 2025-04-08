@@ -3,6 +3,7 @@ import Head from "next/head";
 import AuthorBio from "@/components/blog/AuthorBio";
 import Button from "@/components/Button";
 import Link from "next/link";
+import Image from "next/image";
 import { parseISO, format } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote";
@@ -14,6 +15,7 @@ const components = {
   ImageWithCaption,
   Footnote,
   SyntaxHighlighter,
+  Image,
 };
 
 export default function Post({ postData }) {
