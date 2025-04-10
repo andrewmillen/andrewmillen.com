@@ -33,20 +33,84 @@ On their own, these principles suffer from some of the pitfalls I mentioned earl
 
 - The **risks we were seeking to mitigate** with each principle
 - **The methods we should use** to employ each principle
-- What the **observable outcome** would be if we follow each principle
+- What the **observable outcome** would be and what **metrics** would be affected if we follow each principle
 
 So I created the following table:
 
-<ImageWithCaption
-src="/post-assets/principles-table.jpg"
-alt="A table with our design principles and their associated risks, methods, and outcomes."
-width="1536"
-height="823"
-/>
+<div className="max-w-full md:max-w-none lg:w-[896px] xl:w-[1152px] 2xl:w-[1280px] overflow-auto my-12">
+<table className="table-fixed" className="not-prose text-base leading-tight w-[1400px] max-w-7xl border-separate border-spacing-[1px] bg-neutral-200 dark:bg-neutral-700">
+    <thead className="bg-neutral-100 dark:bg-neutral-800">
+        <tr>
+            <th className="font-degular p-3 font-semibold text-sm leading-tight text-left w-1/5">What risk do we need to mitigate?</th>
+            <th className="font-degular p-3 font-semibold text-sm leading-tight text-left w-1/5">What principle helps us do that?</th>
+            <th className="font-degular p-3 font-semibold text-sm leading-tight text-left w-2/5">How do we employ this principle?</th>
+            <th className="font-degular p-3 font-semibold text-sm leading-tight text-left w-1/5">What’s the outcome of this principle?</th>
+        </tr>
+    </thead>
+    <tbody className="bg-white dark:bg-neutral-900">
+        <tr>
+            <td className="p-3" valign="top">Prioritizing business goals over user goals; forgetting to design for distinct roles</td>
+            <td className="p-3 text-xl font-semibold" valign="top">Empathy</td>
+            <td className="p-3" valign="top">
+                <p>Center the user’s story.</p>
+                <ul className="list-disc ml-4 mt-3">
+                    <li className="mb-1">Design on a foundation of inclusivity and accessibility.</li>
+                    <li className="mb-1">Always consider the broader context of our UX.</li>
+                    <li className="mb-1">Accommodate new, one-time, and frequent users alike.</li>
+                </ul>
+            </td>
+            <td className="p-3" valign="top">Users report a positive experience in OfficeSpace and are return frequently (NPS, MAUs).</td>
+
+
+        </tr>
+        <tr>
+            <td className="p-3" valign="top">The tendency to forget that our users’ needs are mostly external to our product</td>
+            <td className="p-3 text-xl font-semibold" valign="top">Purpose</td>
+            <td className="p-3" valign="top">
+                <p>Design flows, not static views.</p>
+                <ul className="list-disc ml-4 mt-3">
+                    <li className="mb-1">Always start by understanding the user's goal through research.</li>
+                    <li className="mb-1">Anticipate next steps; provide information proactively.</li>
+                    <li className="mb-1">Celebrate moments of completion.</li>
+                </ul>
+            </td>
+            <td className="p-3" valign="top">Users accomplish their goals, even if it means spending less time in OfficeSpace (Time on Task)</td>
+        </tr>
+        <tr>
+            <td className="p-3" valign="top">Attempting to over-simplify when it's not appropriate or possible to do so</td>
+            <td className="p-3 text-xl font-semibold" valign="top">Clarity</td>
+            <td className="p-3" valign="top">
+                <p>Don’t fight against inherent complexity—manage it with clarity.</p>
+                <ul className="list-disc ml-4 mt-3">
+                    <li className="mb-1">Remember that complexity isn’t necessarily bad or confusing. Complex workflows are the path to major value.</li>
+                    <li className="mb-1">Create singular points of focus and clear paths forward.</li>
+                    <li className="mb-1">Be supportive; help the user navigate their tasks.</li>
+                    <li className="mb-1">Validate your solutions through user testing.</li>
+                </ul>
+            </td>
+            <td className="p-3" valign="top">Users feel in control of their experience at all times even during complex operations. At a high level, they have an accurate understanding of our system and how to use it. (Support Requests)</td>
+        </tr>
+        <tr>
+            <td className="p-3" valign="top">Drifting off-system without good rationale or because it's the path of least resistance</td>
+            <td className="p-3 text-xl font-semibold" valign="top">Consistency</td>
+            <td className="p-3" valign="top">
+                <p>Be rigorous about consistency in our designs and their implementation.</p>
+                <ul className="list-disc ml-4 mt-3">
+                    <li className="mb-1">Follow established internal and external patterns.</li>
+                    <li className="mb-1">Be uncompromising about the quality of implementation.</li>
+                    <li className="mb-1">Innovations are necessary, but should always be systematized.</li>
+                </ul>
+            </td>
+            <td className="p-3" valign="top">Users always have the “confidence to click.” They feel the safety to explore and manipulate the UI because the design system is logically sound. They trust the product. (Feature Adoption)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
 
 This, I think, is what turns this from a naval-gazing exercise into something truly useful. The top level principles are good shorthand, but by studying this table, any designer on the team can check their work against these principles in a more meaningful way.
 
-Of course, what you leave out is just as important as what you put in. You’ll notice some popular ideas are not part of our set, like “simplicity” or “delight.” That’s because these concepts don’t align with our strategy. Seeking pure simplification is missing the point; instead, we should bring clarity without sacrificing the control **we’re giving the user. Likewise, manufactured charm doesn’t jive with our users who have important goals to accomplish in short amounts of time. Accepting these realities is freeing.
+Of course, what you leave out is just as important as what you put in. You’ll notice some popular ideas are not part of our set, like “simplicity” or “delight.” That’s because these concepts don’t align with our strategy. Seeking pure simplification is missing the point; instead, we should bring clarity without sacrificing the control we’re giving the user. Likewise, manufactured charm doesn’t jive with our users who have important goals to accomplish in short amounts of time. Understanding these trade-offs is empowering.
 
 ### Outcome
 

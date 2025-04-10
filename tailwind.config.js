@@ -4,7 +4,7 @@ module.exports = {
     "./pages/**/*.js",
     "./lib/**/*.js",
     "./content/*.json",
-    "./portfolio/*.mdx",
+    "./content/**/*.mdx",
   ],
   plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
   variants: {

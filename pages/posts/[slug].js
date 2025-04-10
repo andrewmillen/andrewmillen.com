@@ -68,6 +68,7 @@ export default function Post({ postData }) {
               dark:hover:prose-a:text-link-dark-hover
               prose-a:underline-offset-4
               prose-a:font-normal
+              prose-ul:ml-4
               "
             >
               <MDXRemote {...postData.mdxSource} components={components} />
