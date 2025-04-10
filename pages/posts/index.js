@@ -31,13 +31,13 @@ export default function Blog({ posts, meta }) {
 
       <main className="pb-12 md:pb-20 lg:pb-24 border-b border-neutral-200 dark:border-neutral-800">
         <div className="container">
-          <div className="my-12 lg:my-24">
+          <div className="my-12 lg:my-24 lg:flex lg:gap-8 lg:items-center">
             <Image
-              width="240"
-              height="126"
+              width="450"
+              height="236"
               src={latestPost.frontMatter.thumbnailUrl}
               alt=""
-              className="mb-4 md:mb-8"
+              className="mb-4 md:mb-8 lg:mb-0"
               priority
             />
             <div>
