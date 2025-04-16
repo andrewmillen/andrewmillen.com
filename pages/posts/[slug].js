@@ -58,19 +58,7 @@ export default function Post({ postData }) {
             <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
           </div>
           <div className="container">
-            <div
-              className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-12 prose-blockquote:text-neutral-500
-              prose-p:leading-relaxed
-              prose-h2:text-3xl
-              prose-a:text-link-light-default
-              hover:prose-a:text-link-light-hover
-              dark:prose-a:text-link-dark-default
-              dark:hover:prose-a:text-link-dark-hover
-              prose-a:underline-offset-4
-              prose-a:font-normal
-              prose-ul:ml-4
-              "
-            >
+            <div className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert">
               <MDXRemote {...postData.mdxSource} components={components} />
             </div>
           </div>

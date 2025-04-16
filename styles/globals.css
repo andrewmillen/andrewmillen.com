@@ -34,6 +34,34 @@
         @apply bg-neutral-900 text-white dark:bg-white dark:text-neutral-900;
     }
 
+    .prose blockquote {
+        @apply my-12 lg:my-16 font-normal not-italic text-neutral-500 dark:text-neutral-400 pl-8 lg:pl-10 border-l-4 border-yellow-300 dark:border-yellow-400;
+    }
+
+    .prose blockquote p {
+        @apply relative;
+    }
+
+    .prose blockquote p:before {
+        @apply absolute -left-2 font-normal;
+    }
+
+    .prose p {
+        @apply leading-relaxed;
+    }
+
+    .prose h2 {
+        @apply text-3xl
+    }
+
+    .prose ul {
+        @apply ml-4;
+    }
+
+    .prose a {
+        @apply text-link-dark-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
+    }
+
 }
 
 @layer components {
