@@ -59,7 +59,7 @@
     }
 
     .prose a {
-        @apply text-link-dark-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
+        @apply text-link-light-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
     }
 
 }
