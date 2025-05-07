@@ -36,9 +36,9 @@ export default function Footer() {
           )}
         </ul>
         <p className="pt-8">
-          This site is powered by Next.js, styled by Tailwind CSS, and hosted on
-          Vercel. Content is written in MDX. Headings are set in Degular by Ohno
-          type.
+          This site is powered by Next.js, styled with Tailwind CSS, and hosted
+          on Vercel. Content is written in MDX. Headings are set in Degular by
+          Ohno type.
         </p>
       </div>
     </footer>
