@@ -18,15 +18,15 @@ export default function ImageWithCaption({
         className="xl:max-w-5xl"
       />
       {caption && (
-        <figcaption className="prose">
+        <figcaption className="prose prose:leading-tight">
           <span
-            className="text-neutral-500"
+            className="text-neutral-600 dark:text-neutral-400"
             dangerouslySetInnerHTML={{ __html: caption }}
           ></span>
           {attribution && (
             <>
               <br />
-              <span className="uppercase text-neutral-400 dark:text-neutral-600 text-sm">
+              <span className="uppercase text-neutral-600 dark:text-neutral-400 text-sm">
                 {attribution}
               </span>
             </>
