@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Breadcrumb from "@/components/Breadcrumb";
 
-const CORRECT_PASSWORD = "portfolio123"; // Placeholder password
+const CORRECT_PASSWORD = process.env.NEXT_PUBLIC_PORTFOLIO_PASSWORD;
 
 export default function PortfolioPasswordGate({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
