@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  const noFooterRoutes = ["/resume", "/404"];
+  const noFooterRoutes = ["/resume", "/404", "/cleanmode"];
   const isPortfolioRoute = router.pathname.startsWith("/portfolio");
 
   return (

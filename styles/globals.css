@@ -145,4 +145,8 @@
     .aspect-16x9 iframe {
         @apply absolute top-0 left-0 w-full h-full;
     }
+
+    .scanlines {
+        @apply bg-[repeating-linear-gradient(#F0F0F0,_#F0F0F0_2px,_#FFFFFF_2px,#FFFFFF_4px)] dark:bg-[repeating-linear-gradient(#222222,_#222222_2px,_#000000_2px,#000000_4px)];
+    }
 }
