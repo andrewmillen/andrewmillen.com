@@ -9,7 +9,7 @@ export default function FeaturedLink({ content }) {
           <h3 className="h3">{content.name}</h3>
           <Tag content={content.tag} />
         </div>
-        <p className="text-lg 2xl:text-xl mb-8 lg:mb-12 xl:mb-16 leading-relaxed 2xl:leading-relaxed text-neutral-700 dark:text-neutral-400 max-w-3xl">
+        <p className="text-lg 2xl:text-xl mb-8 lg:mb-12 xl:mb-16 leading-relaxed 2xl:leading-relaxed text-neutral-700 dark:text-neutral-400 max-w-2xl">
           {content.description}
         </p>
         <Link
