@@ -16,10 +16,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {isPortfolioRoute ? (
-        <PortfolioPasswordGate>
+        <>
+          {/* <PortfolioPasswordGate> */}
           <Component {...pageProps} />
           {!noFooterRoutes.includes(router.pathname) && <Footer />}
-        </PortfolioPasswordGate>
+          {/* </PortfolioPasswordGate> */}
+        </>
       ) : (
         <>
           <Component {...pageProps} />
