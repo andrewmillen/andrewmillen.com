@@ -1,12 +1,12 @@
-import Link from "next/link";
-import Layout from "@/components/Layout";
+import Breadcrumb from "@/components/Breadcrumb";
+import Button from "@/components/Button";
 import Head from "next/head";
 import Image from "next/image";
-import Button from "@/components/Button";
-import Breadcrumb from "@/components/Breadcrumb";
-import global from "@/content/global.json";
-import { getSortedBlogPosts } from "@/lib/posts";
+import Layout from "@/components/Layout";
+import Link from "next/link";
 import getRSS from "@/lib/rss";
+import { getSortedBlogPosts } from "@/lib/posts";
+import global from "@/content/global.json";
 
 export default function Blog({ posts, meta }) {
   const latestPost = posts[0];
@@ -35,7 +35,11 @@ export default function Blog({ posts, meta }) {
             <Image
               width="450"
               height="236"
-              src={latestPost.frontMatter.thumbnailUrl}
+              // Some posts might have animated GIF thumbnails, to be used here on the index only.
+              src={
+                latestPost.frontMatter.animatedThumbnailUrl ||
+                latestPost.frontMatter.thumbnailUrl
+              }
               alt=""
               className="mb-4 md:mb-8 lg:mb-0"
               priority

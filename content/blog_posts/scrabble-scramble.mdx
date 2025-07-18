@@ -1,0 +1,44 @@
+---
+title: "Scrabble Scramble"
+date: '2025-07-18'
+description: "A modest proposal to enliven Scrabble games by randomizing the board layout."
+thumbnailUrl: "/post-assets/og-scrabble.jpg"
+animatedThumbnailUrl: "/post-assets/og-scrabble.gif"
+---
+
+I've played a *lot* of Scrabble in my life. It's perfect for a word nerd like me. But one thing that does bother me is that the <a href="https://commons.wikimedia.org/wiki/Category:Scrabble_boards#/media/File:Scrabble_board_-_English.svg" target="_blank">standard board layout</a> leads to extremely predictable gameplay. At least in our house, the run of play always follows the diagonal lines of Double Word Score squares into the corners towards the Triple Word Scores, where things get defensive and closed off. Most games end with at least one quadrant of the board basically inaccessible and unplayed.
+
+Compare the board layout of Words with Friends, a mobile version of Scrabble that I've also played an embarrassing amount of. Premium squares in WWF are more <a href="https://www.bolsboardgames.com/2011/01/words-with-friends-board-and-tile.html" target="_blank">evenly distributed</a>, allowing the game to grow in multiple directions and leading to a more even balance of offensive and defensive strategy.
+
+Is there one single optimal board layout? Maybe, but...
+
+## Hear me out
+
+What if we randomize the board layout for every game? We would maintain a static center square, and keep the same distribution of premium tiles—just randomize their location.
+
+I worked up this idea in CodePen. Click the **middle square** to reshuffle the board and imagine how the gameplay changes with each layout.
+
+<div className="my-6 lg:my-12 w-full h-[500px] sm:h-[700px] md:h-[800px]">
+  <iframe
+    className="w-full h-full"
+    title="Scrabble Scramble"
+    src="https://codepen.io/andrewmillen/full/vEYxOZG"
+    frameBorder="no"
+    loading="lazy"
+    allowTransparency="true"
+    allowFullScreen="true"
+  ></iframe>
+</div>
+
+This, obviously, makes every game different. It allows for astronomically high-scoring plays if several word-score multipliers are lined up closer than they were ever intended to be; but it's also possible that one side of the board might lack any good multipliers leading to the same problem of an unplayed quadrant.
+
+This could be solved with an algorithm that puts some parameters around the arrangement of premium squares when randomizing. But I'd propose an alternative:
+reshuffle the board layout *after every play*. Yes, utter C<sup>3</sup>H<sup>4</sup>A<sup>1</sup>O<sup>1</sup>S<sup>1</sup>.
+
+The played tiles would not move—only the squares. That means we have to decide what to do with the scoring system. I see two options:
+* The score of each play is unchanged after the turn, even if the tiles you played on change in value via a reshuffle.
+* The score of each play *does* change retroactively with each reshuffle. Your score then goes up or down as the game goes on with you having little to no control. This is truly insane and sounds kinda fun, but it takes too much strategy out of the game.
+
+Maybe the more sensible approach is to let the players decide when to reshuffle the board. Maybe a player can choose to reshuffle if they're losing by more than X number of points. Or each player gets the option of one reshuffle per game, but they have to trade three turns to do so.
+
+I guess my point is—I know you were wondering—Scrabble is a fine game, but could use a little variety for those of us who play it regularly. That's all. Tune in next week, when I'll share my idea to liven up Jenga by lighting the tower on fire.
