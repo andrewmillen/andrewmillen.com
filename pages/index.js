@@ -1,11 +1,10 @@
-import Head from "next/head";
-import Layout from "@/components/Layout";
-import Introduction from "@/components/Introduction";
-import FeaturedWorkSlider from "@/components/FeaturedWorkSlider";
 import FeaturedLink from "@/components/FeaturedLink.js";
+import FeaturedWorkSlider from "@/components/FeaturedWorkSlider";
+import Head from "next/head";
+import Introduction from "@/components/Introduction";
+import Layout from "@/components/Layout";
 import global from "@/content/global.json";
 import homepage from "@/content/homepage.json";
-import featuredLinks from "@/content/featuredLinks.json";
 
 export default function Home({
   meta,
@@ -47,6 +46,7 @@ export async function getStaticProps() {
   const meta = global.meta;
   const introduction = homepage.introduction;
   const featuredWork = homepage.featuredWork;
+  const featuredLinks = homepage.featuredLinks;
 
   return {
     props: {

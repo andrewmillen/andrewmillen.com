@@ -38,5 +38,37 @@
       "src": "/work-mealplanner.png",
       "alt": "An app that recommends recipes based on weather patterns and other data."
     }
+  ],
+  "featuredLinks": [
+    {
+      "id": "smashingArticle",
+      "content": {
+        "name": "‘Better Search UX Through Microcopy’",
+        "tag": "Publication",
+        "description": "I wrote about how good copy and a little thoughtfulness can improve the all-important search experience.",
+        "link": "https://www.smashingmagazine.com/2019/06/better-search-ux-microcopy/",
+        "linkLabel": "Read Article in Smashing Magazine"
+      }
+    },
+    {
+      "id": "flags",
+      "content": {
+        "name": "Flags in Code",
+        "tag": "Side Project",
+        "description": "I coded some of my favorite flags in various HTML and CSS frameworks. You know, for fun.",
+        "link": "https://codepen.io/collection/XOWYvZ",
+        "linkLabel": "View on CodePen"
+      }
+    },
+    {
+      "id": "mobileCursor",
+      "content": {
+        "name": "Mobile Cursor for AfterEffects",
+        "tag": "Resource",
+        "description": "I built a template in AE that designers can use to overlay a mobile “cursor” over their prototypes. The effect is fully parametric and powered by a script I modified from one found on StackOverflow.",
+        "link": "https://medium.com/prototypr/a-mobile-cursor-for-interaction-prototyping-and-how-i-built-it-353a4aac18e0",
+        "linkLabel": "View on Medium"
+      }
+    }
   ]
 }
