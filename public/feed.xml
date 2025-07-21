@@ -4,9 +4,9 @@
         <description><![CDATA[Short posts about design, life.]]></description>
         <link>https://andrewmillen.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 18 Jul 2025 14:13:33 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Jul 2025 14:15:05 GMT</lastBuildDate>
         <atom:link href="https://andrewmillen.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 18 Jul 2025 14:13:33 GMT</pubDate>
+        <pubDate>Fri, 18 Jul 2025 14:15:05 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025, Andrew Millen]]></copyright>
         <language><![CDATA[en]]></language>
         <item>
@@ -14,7 +14,7 @@
             <description><![CDATA[A modest proposal to enliven Scrabble games by randomizing the board layout.]]></description>
             <link>https://andrewmillen.com/posts/scrabble-scramble</link>
             <guid isPermaLink="true">https://andrewmillen.com/posts/scrabble-scramble</guid>
-            <pubDate>Tue, 15 Jul 2025 12:00:00 GMT</pubDate>
+            <pubDate>Thu, 17 Jul 2025 12:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Creating Strategic Design Principles]]></title>
