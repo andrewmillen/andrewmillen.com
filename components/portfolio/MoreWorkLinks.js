@@ -8,7 +8,7 @@ export default function MoreWorkLinks() {
       <div className="flex flex-col sm:flex-row">
         <Link
           href="/portfolio/ui-product"
-          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/ui-reverso-weather.jpg"
@@ -27,7 +27,7 @@ export default function MoreWorkLinks() {
         </Link>
         <Link
           href="/portfolio/3d"
-          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/3d-podracer.jpg"
@@ -46,7 +46,7 @@ export default function MoreWorkLinks() {
         </Link>
         <Link
           href="/portfolio/graphic-web"
-          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/gw-thumbnail.jpg"

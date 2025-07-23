@@ -57,11 +57,11 @@ export default function PortfolioPasswordGate({ children }) {
           data-1p-ignore
           data-lpignore="true"
           data-protonpass-ignore="true"
-          className="w-80 border bg-white dark:bg-black border-neutral-300 dark:border-neutral-800 rounded-md p-3 pr-14 outline-none focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2"
+          className="w-80 border bg-white dark:bg-black border-neutral-300 dark:border-neutral-800 rounded-md p-3 pr-14 outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2"
         />
         <button
           type="submit"
-          className={`font-degular absolute right-1 top-1/2 -translate-y-1/2 h-10 w-10 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-sm text-2xl font-semibold outline-none focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 transition-opacity duration-100 ${
+          className={`font-degular absolute right-1 top-1/2 -translate-y-1/2 h-10 w-10 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-xs text-2xl font-semibold outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 transition-opacity duration-100 ${
             password ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -69,7 +69,7 @@ export default function PortfolioPasswordGate({ children }) {
         </button>
       </form>
       {error && (
-        <p className="bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-200 text-sm py-1 px-2 rounded mt-4">
+        <p className="bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-200 text-sm py-1 px-2 rounded-sm mt-4">
           {error}
         </p>
       )}

@@ -1,6 +1,235 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@config '../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility container {
+  @apply px-6 sm:px-12 md:px-16 mx-auto max-w-5xl 2xl:px-8 lg:max-w-7xl;
+}
+
+@utility textLink {
+  @apply text-link-light-default dark:text-link-dark-default underline underline-offset-4;
+
+  &:hover {
+    @apply text-link-light-hover dark:text-link-dark-hover;
+  }
+}
+
+@utility workSlider {
+  & .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  & .slick-track .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .slick-dots {
+    bottom: 8% !important;
+  }
+
+  & .slick-dots li button:before {
+    font-size: 10px;
+    @apply text-black dark:text-white;
+  }
+  & .slick-dots li.slick-active button:before {
+    font-size: 14px;
+    @apply text-black dark:text-white;
+  }
+}
+
+@utility slick-track {
+  .workSlider & {
+    display: flex;
+    align-items: center;
+  }
+
+  .testimonialSlider & {
+    display: flex;
+    align-items: center;
+  }
+  .workSlider & .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@utility testimonialSlider {
+  & .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  & .stlick-track .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .slick-dots {
+    bottom: 8% !important;
+  }
+
+  & .slick-dots li button:before {
+    font-size: 10px;
+    @apply text-black;
+  }
+  & .slick-dots li.slick-active button:before {
+    font-size: 14px;
+    @apply text-black;
+  }
+}
+
+@utility slick-slide {
+  .workSlider .slick-track & {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonialSlider .stlick-track & {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@utility stlick-track {
+  .testimonialSlider & .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@utility slick-dots {
+  .workSlider & {
+    bottom: 8% !important;
+  }
+
+  .testimonialSlider & {
+    bottom: 8% !important;
+  }
+
+  .workSlider & li button:before {
+    font-size: 10px;
+    @apply text-black dark:text-white;
+  }
+  .workSlider & li.slick-active button:before {
+    font-size: 14px;
+    @apply text-black dark:text-white;
+  }
+
+  .testimonialSlider & li button:before {
+    font-size: 10px;
+    @apply text-black;
+  }
+  .testimonialSlider & li.slick-active button:before {
+    font-size: 14px;
+    @apply text-black;
+  }
+}
+
+@utility slick-active {
+  .workSlider .slick-dots &li button:before {
+    font-size: 14px;
+    @apply text-black dark:text-white;
+  }
+  .testimonialSlider .slick-dots &li button:before {
+    font-size: 14px;
+    @apply text-black;
+  }
+}
+
+@utility bgSlider {
+  @apply absolute w-full h-full;
+
+  & .slick-list {
+    @apply h-full;
+  }
+
+  & .slick-list .slick-slider {
+    @apply h-full;
+  }
+  & .slick-list .slick-slider > div {
+    @apply h-full;
+  }
+  & .slick-list .slick-slider > div > div {
+    @apply h-full;
+  }
+}
+
+@utility slick-list {
+  .bgSlider & {
+    @apply h-full;
+  }
+
+  .bgSlider & .slick-slider {
+    @apply h-full;
+  }
+  .bgSlider & .slick-slider > div {
+    @apply h-full;
+  }
+  .bgSlider & .slick-slider > div > div {
+    @apply h-full;
+  }
+}
+
+@utility slick-slider {
+  .bgSlider .slick-list & {
+    @apply h-full;
+  }
+  .bgSlider .slick-list & > div {
+    @apply h-full;
+  }
+  .bgSlider .slick-list & > div > div {
+    @apply h-full;
+  }
+}
+
+@utility callout-list {
+  & ul li::marker {
+    @apply text-yellow-400;
+  }
+}
+
+@utility aspect-16x9 {
+  padding-bottom: 56.25%;
+  @apply relative;
+
+  & iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+}
+
+@utility scanlines {
+  @apply bg-[repeating-linear-gradient(#F0F0F0,#F0F0F0_2px,#FFFFFF_2px,#FFFFFF_4px)] dark:bg-[repeating-linear-gradient(#222222,#222222_2px,#000000_2px,#000000_4px)];
+}
 
 @layer base {
     body {
@@ -62,91 +291,4 @@
         @apply text-link-light-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
     }
 
-}
-
-@layer components {
-    .container {
-        @apply px-6 sm:px-12 md:px-16 mx-auto max-w-5xl 2xl:px-8 lg:max-w-7xl
-    }
-
-    .textLink {
-        @apply text-link-light-default dark:text-link-dark-default underline underline-offset-4;
-    }
-
-    .textLink:hover {
-        @apply text-link-light-hover dark:text-link-dark-hover;
-    }
-
-    .workSlider .slick-track,
-    .testimonialSlider .slick-track {
-        display: flex;
-        align-items: center;
-      }
-    .workSlider .slick-track .slick-slide,
-    .testimonialSlider .stlick-track .slick-slide {
-        display: flex;
-        height: auto;
-        align-items: center;
-        justify-content: center;
-      }
-
-    .workSlider .slick-dots,
-    .testimonialSlider .slick-dots {
-        bottom: 8% !important;
-    }
-
-    .workSlider .slick-dots li button:before {
-        font-size: 10px;
-        @apply text-black dark:text-white;
-    }
-    .workSlider .slick-dots li.slick-active button:before {
-        font-size: 14px;
-        @apply text-black dark:text-white;
-    }
-
-    .testimonialSlider .slick-dots li button:before {
-        font-size: 10px;
-        @apply text-black;
-    }
-    .testimonialSlider .slick-dots li.slick-active button:before {
-        font-size: 14px;
-        @apply text-black;
-    }
-
-    .bgSlider {
-        @apply absolute w-full h-full
-    }
-
-    .bgSlider .slick-list {
-        @apply h-full;
-    }
-
-    .bgSlider .slick-list .slick-slider {
-        @apply h-full;
-    }
-    .bgSlider .slick-list .slick-slider > div {
-        @apply h-full;
-    }
-    .bgSlider .slick-list .slick-slider > div > div {
-        @apply h-full;
-    }
-
-    .callout-list ul li::marker {
-        @apply text-yellow-400
-    }
-}
-
-@layer utilities {
-    .aspect-16x9 {
-        padding-bottom: 56.25%;
-        @apply relative;
-    }
-
-    .aspect-16x9 iframe {
-        @apply absolute top-0 left-0 w-full h-full;
-    }
-
-    .scanlines {
-        @apply bg-[repeating-linear-gradient(#F0F0F0,_#F0F0F0_2px,_#FFFFFF_2px,#FFFFFF_4px)] dark:bg-[repeating-linear-gradient(#222222,_#222222_2px,_#000000_2px,#000000_4px)];
-    }
 }

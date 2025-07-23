@@ -74,9 +74,9 @@ export default function Post({ postData, caseStudies }) {
               prose-p:leading-relaxed
               prose-h2:text-3xl
               prose-a:text-link-light-default
-              hover:prose-a:text-link-light-hover
+              prose-a:hover:text-link-light-hover
               dark:prose-a:text-link-dark-default
-              dark:hover:prose-a:text-link-dark-hover
+              dark:prose-a:hover:text-link-dark-hover
               prose-a:underline-offset-4
               prose-a:font-normal
               prose-quoteless
