@@ -4,7 +4,7 @@ import MoreWorkLayout from "@/components/portfolio/MoreWorkLayout";
 export default function GraphicsWeb() {
   return (
     <MoreWorkLayout title="Graphic &amp; Web">
-      <div className="lg:w-1/2 flex flex-col items-center prose">
+      <div className="lg:w-1/2 flex flex-col items-center">
         <ImageWithCaption
           src="/portfolio-assets/gw-aiga.jpg"
           alt="A Memphis themed poster featuring the pyramid on the river"
@@ -34,7 +34,7 @@ export default function GraphicsWeb() {
           caption="A custom typeface created for a work contest, including an <a class='textLink' href='https://andrewmillen.github.io/casino-type-specimen/' target='blank'>interactive specimen</a>"
         />
       </div>
-      <div className="lg:w-1/2 mt-16 lg:mt-48 flex flex-col items-center prose">
+      <div className="lg:w-1/2 mt-16 lg:mt-48 flex flex-col items-center">
         <ImageWithCaption
           src="/portfolio-assets/gw-gbb.jpg"
           alt="Art for an SBNation NBA podcast"
