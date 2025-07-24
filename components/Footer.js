@@ -1,12 +1,10 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
-import { format } from "date-fns";
 import global from "@/content/global.json";
-
-const currentYear = format(new Date(), "yyyy");
 
 export default function Footer() {
   const links = global.footer.links;
+  const colophon = global.footer.colophon;
 
   return (
     <footer className="py-8 md:py-12 lg:py-24 text-neutral-900 dark:text-neutral-300">
@@ -35,11 +33,7 @@ export default function Footer() {
             )
           )}
         </ul>
-        <p className="pt-8 text-sm">
-          This site is powered by Next.js, styled with Tailwind CSS, and hosted
-          on Vercel. Content is written in MDX. Headings are set in Degular by
-          Ohno type.
-        </p>
+        <p className="pt-8 text-sm">{colophon}</p>
       </div>
     </footer>
   );
