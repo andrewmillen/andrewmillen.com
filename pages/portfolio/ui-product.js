@@ -5,7 +5,7 @@ import Video from "@/components/blog/Video";
 export default function UIProduct() {
   return (
     <MoreWorkLayout title="UI &amp; Product">
-      <div className="lg:w-1/2 flex flex-col items-center">
+      <div className="lg:w-1/2 flex flex-col items-center space-y-12 lg:space-y-0">
         <ImageWithCaption
           src="/portfolio-assets/ui-costarica.jpg"
           alt="Travel app concept"
@@ -35,7 +35,7 @@ export default function UIProduct() {
           caption="AR Gardening app concept"
         />
       </div>
-      <div className="lg:w-1/2 mt-16 lg:mt-80 flex flex-col items-center">
+      <div className="lg:w-1/2 lg:mt-48 flex flex-col items-center space-y-12 lg:space-y-0">
         <ImageWithCaption
           src="/portfolio-assets/ui-hellohome.jpg"
           alt="Dashboard showing a home sale tracker"

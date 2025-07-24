@@ -4,7 +4,7 @@ import MoreWorkLayout from "@/components/portfolio/MoreWorkLayout";
 export default function D3() {
   return (
     <MoreWorkLayout title="3D">
-      <div className="lg:w-1/2 flex flex-col items-center">
+      <div className="lg:w-1/2 flex flex-col items-center space-y-12 lg:space-y-0">
         <ImageWithCaption
           src="/portfolio-assets/3d-podracer.jpg"
           alt="Anakin's podracer"
@@ -34,7 +34,7 @@ export default function D3() {
           caption="Sign for the Palm Aire Motel"
         />
       </div>
-      <div className="lg:w-1/2 lg:mt-16 flex flex-col items-center">
+      <div className="lg:w-1/2 lg:mt-48 flex flex-col items-center space-y-12 lg:space-y-0">
         <ImageWithCaption
           src="/portfolio-assets/3d-nedry.jpg"
           alt="Nedry's desk from Jurassic Park"
