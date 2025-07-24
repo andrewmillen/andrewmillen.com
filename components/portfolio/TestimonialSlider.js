@@ -28,7 +28,7 @@ export default function TestimonialSlider() {
   return (
     <section>
       <h2 className="sr-only">Testimonials</h2>
-      <div className="sliderWrapper bg-yellow-200 dark:bg-yellow-300 text-neutral-900">
+      <div className="bg-yellow-200 dark:bg-yellow-300 text-neutral-900">
         <div className="container">
           <Slider
             {...settings}

@@ -40,7 +40,7 @@ export default function FeaturedWorkSlider({ slides }) {
   };
 
   return (
-    <div className={`sliderWrapper bg-linear-to-br ${slideBg}`}>
+    <div className={`bg-linear-to-br ${slideBg}`}>
       <div className="container">
         <Slider
           {...settings}
