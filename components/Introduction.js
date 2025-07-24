@@ -1,6 +1,6 @@
 export default function Introduction({ content }) {
   return (
-    <header className="py-4 sm:py-8 md:py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800">
+    <header className="py-4 sm:py-8 md:py-12 lg:py-20 dark:border-neutral-800">
       <div className="container">
         <h1 className="h1 mt-4">{content.name}</h1>
         <p className="h1 inline-block">{content.title}</p>
@@ -13,7 +13,7 @@ export default function Introduction({ content }) {
               <span className="inline-block mr-2 text-xl">{link.emoji}</span>
               <a
                 href={link.url}
-                className="textLink font-degular font-semibold text-xl"
+                className="textLink font-display font-semibold text-xl"
               >
                 {link.title}
               </a>

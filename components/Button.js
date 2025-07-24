@@ -10,7 +10,7 @@ export default function Button({ icon, label, url, background }) {
           height="16"
           src={`/icon-${icon}.svg`}
         />
-        <span className="inline-block font-degular font-semibold text-lg leading-none">
+        <span className="inline-block font-display font-semibold text-lg leading-none">
           {label}
         </span>
       </span>

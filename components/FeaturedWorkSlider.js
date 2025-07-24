@@ -7,10 +7,10 @@ import { useState } from "react";
 
 export default function FeaturedWorkSlider({ slides }) {
   const slideBgColors = [
-    "bg-purple-100 dark:bg-purple-900", // hlpr
-    "bg-moss-100 dark:bg-moss-900", // gardening
-    "bg-red-100 dark:bg-red-500", // meal planner
-    "bg-sky-100 dark:bg-blue-900", // other
+    "from-purple-100 to-purple-200", // hlpr
+    "from-moss-100 to-moss-200", // gardening
+    "from-red-100 to-red-200", // meal planner
+    "from-sky-100 to-sky-200", // other
   ];
 
   // Set default slide background color for first slide
@@ -40,10 +40,7 @@ export default function FeaturedWorkSlider({ slides }) {
   };
 
   return (
-    <div
-      className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-800 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
-    >
-      {" "}
+    <div className={`sliderWrapper bg-linear-to-br ${slideBg}`}>
       <div className="container">
         <Slider
           {...settings}

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MoreWorkLinks() {
   return (
@@ -17,8 +17,8 @@ export default function MoreWorkLinks() {
             alt=""
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-              <span className="block font-normal font-degular text-lg lg:text-xl">
+            <h2 className="font-bold font-display text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
+              <span className="block font-normal font-display text-lg lg:text-xl">
                 See More
               </span>
               UI &amp; Product
@@ -36,8 +36,8 @@ export default function MoreWorkLinks() {
             alt=""
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-              <span className="block font-normal font-degular text-lg lg:text-xl">
+            <h2 className="font-bold font-display text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
+              <span className="block font-normal font-display text-lg lg:text-xl">
                 See More
               </span>
               3D
@@ -55,8 +55,8 @@ export default function MoreWorkLinks() {
             alt=""
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-              <span className="block font-normal font-degular text-lg lg:text-xl">
+            <h2 className="font-bold font-display text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
+              <span className="block font-normal font-display text-lg lg:text-xl">
                 See More
               </span>
               Graphic & Web

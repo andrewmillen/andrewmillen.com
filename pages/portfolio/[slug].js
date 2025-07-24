@@ -1,16 +1,18 @@
-import Layout from "@/components/Layout";
-import Head from "next/head";
-import Link from "next/link";
-import { getAllPostIds, getPostData } from "@/lib/portfolio";
-import { MDXRemote } from "next-mdx-remote";
 import * as contentComponents from "@/components/blog";
-import Image from "next/image";
-import Tag from "@/components/Tag";
-import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemStatement";
-import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
-import CaseStudyCallout from "@/components/portfolio/CaseStudyCallout";
+
+import { getAllPostIds, getPostData } from "@/lib/portfolio";
+
 import CaseStudyBlockquote from "@/components/portfolio/CaseStudyBlockquote";
+import CaseStudyCallout from "@/components/portfolio/CaseStudyCallout";
+import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
+import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemStatement";
+import Head from "next/head";
+import Image from "next/image";
+import Layout from "@/components/Layout";
+import Link from "next/link";
+import { MDXRemote } from "next-mdx-remote";
 import RelatedCaseStudy from "@/components/portfolio/RelatedCaseStudy";
+import Tag from "@/components/Tag";
 import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import { getSortedCaseStudies } from "@/lib/portfolio";
 
@@ -39,11 +41,11 @@ export default function Post({ postData, caseStudies }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 md:pb-0 lg:pt-20">
+      <main className="py-12 2xl:mb-32 lg:pt-20">
         <article>
           <div className="container">
             <Link className="textLink text-lg" href={`/portfolio`}>
-              <span className="font-degular">←</span> All Case Studies
+              <span className="font-display">←</span> All Case Studies
             </Link>
 
             <div className="mt-8 md:mt-16">

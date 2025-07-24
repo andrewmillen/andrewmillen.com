@@ -1,5 +1,6 @@
+import { NextArrow, PrevArrow } from "@/components/Arrows";
+
 import Slider from "react-slick";
-import { PrevArrow, NextArrow } from "@/components/Arrows";
 import testimonials from "@/content/testimonials.json";
 
 export default function TestimonialSlider() {
@@ -36,10 +37,10 @@ export default function TestimonialSlider() {
             {testimonials.map((testimonial, index) => (
               <div key={index}>
                 <blockquote className="text-center max-w-6xl mx-auto lg:px-24">
-                  <span className="block font-degular font-bold text-3xl lg:text-4xl mb-4">
+                  <span className="block font-display font-bold text-3xl lg:text-4xl mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </span>
-                  <cite className="block not-italic text-neutral-500 dark:text-neutral-600 text-xl lg:text-2xl font-semibold font-degular">
+                  <cite className="block not-italic text-neutral-500 dark:text-neutral-600 text-xl lg:text-2xl font-semibold font-display">
                     {testimonial.attribution}
                   </cite>
                 </blockquote>

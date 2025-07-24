@@ -13,12 +13,17 @@ export default function MoreWorkLayout({ title, children }) {
             </div>
 
             <Link className="textLink text-lg" href={`/portfolio`}>
-              <span className="font-degular">←</span> Portfolio
+              <span className="font-display">←</span> Portfolio
             </Link>
           </div>
         </div>
       </header>
-      {children}
+
+      <div className="border-b border-neutral-300 dark:border-neutral-800 pt-12 lg:pt-0">
+        <div className="container pb-12 xl:px-0 flex flex-col items-center lg:flex-row lg:space-x-8">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }

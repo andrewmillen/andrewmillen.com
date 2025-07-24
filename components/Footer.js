@@ -1,6 +1,6 @@
-import { format } from "date-fns";
-import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import Link from "next/link";
+import { format } from "date-fns";
 import global from "@/content/global.json";
 
 const currentYear = format(new Date(), "yyyy");
@@ -35,7 +35,7 @@ export default function Footer() {
             )
           )}
         </ul>
-        <p className="pt-8">
+        <p className="pt-8 text-sm">
           This site is powered by Next.js, styled with Tailwind CSS, and hosted
           on Vercel. Content is written in MDX. Headings are set in Degular by
           Ohno type.

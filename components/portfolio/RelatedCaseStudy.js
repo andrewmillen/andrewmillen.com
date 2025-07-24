@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import Tag from "@/components/Tag";
-import Image from "next/image";
 
 export default function RelatedCaseStudy({ postData }) {
   return (
@@ -13,12 +13,12 @@ export default function RelatedCaseStudy({ postData }) {
                 src={postData.frontMatter.og}
                 width="1200"
                 height="630"
-                className="w-full max-w-xl mx-auto lg:max-w-full rounded-xl"
+                className="w-full max-w-xl lg:mx-auto lg:max-w-full rounded-xl"
                 alt=""
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="font-degular text-2xl mb-8 text-neutral-700 dark:text-neutral-400">
+              <div className="font-display text-2xl mb-8 text-neutral-700 dark:text-neutral-400">
                 Related Case Study
               </div>
               <Tag content={postData.frontMatter.tag} />
