@@ -1,52 +1,33 @@
-import { NextArrow, PrevArrow } from "@/components/Arrows";
-
-import Slider from "react-slick";
+import CarouselArrow from "@/components/CarouselArrow";
 import testimonials from "@/content/testimonials.json";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function TestimonialSlider() {
-  // Slick slider settings
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-    dots: false,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          dots: true,
-          arrow: false,
-        },
-      },
-    ],
-  };
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   return (
-    <section>
+    <section className="bg-yellow-200 dark:bg-yellow-300 text-neutral-900 font-display py-12 md:py-16 xl:py-32 ">
       <h2 className="sr-only">Testimonials</h2>
-      <div className="bg-yellow-200 dark:bg-yellow-300 text-neutral-900">
-        <div className="container">
-          <Slider
-            {...settings}
-            className="testimonialSlider py-24 lg:py-36 xl:py-42"
-          >
+      <div className="relative lg:container">
+        <div className="overflow-hidden lg:mx-24" ref={emblaRef}>
+          <div className="flex items-center">
             {testimonials.map((testimonial, index) => (
-              <div key={index}>
-                <blockquote className="text-center max-w-6xl mx-auto lg:px-24">
-                  <span className="block font-display font-bold text-3xl lg:text-4xl mb-4">
+              <div key={index} className="min-w-0 flex-[0_0_100%]">
+                <blockquote className="text-center max-w-6xl mx-auto px-12 lg:px-16">
+                  <span className="block font-bold text-3xl lg:text-4xl mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </span>
-                  <cite className="block not-italic text-neutral-500 dark:text-neutral-600 text-xl lg:text-2xl font-semibold font-display">
+                  <cite className="block not-italic text-neutral-500 dark:text-neutral-600 text-xl lg:text-2xl font-semibold">
                     {testimonial.attribution}
                   </cite>
                 </blockquote>
               </div>
             ))}
-          </Slider>
+          </div>
+        </div>
+        <div className="w-full mt-4 px-12 2xl:px-0 flex space-x-2 justify-center lg:justify-between lg:items-center lg:absolute lg:mt-0 lg:inset-0">
+          <CarouselArrow emblaApi={emblaApi} direction="Previous" />
+          <CarouselArrow emblaApi={emblaApi} direction="Next" />
         </div>
       </div>
     </section>

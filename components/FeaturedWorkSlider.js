@@ -1,4 +1,4 @@
-import { NextArrow, PrevArrow } from "@/components/Arrows";
+// import { NextArrow, PrevArrow } from "@/components/Arrows";
 
 import Image from "next/image";
 import Link from "next/link";
