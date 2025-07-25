@@ -66,65 +66,6 @@
       }
     }
   }
-
-  .workSlider .slick-track,
-  .testimonialSlider .slick-track {
-    display: flex !important;
-    align-items: center;
-  }
-
-  .workSlider .slick-track .slick-slide,
-  .testimonialSlider .stlick-track .slick-slide {
-    display: flex !important;
-    height: auto !important;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .workSlider .slick-dots,
-  .testimonialSlider .slick-dots {
-    bottom: 8% !important;
-  }
-
-  .workSlider .slick-dots li button:before {
-    font-size: 10px;
-    @apply text-black dark:text-white;
-  }
-
-  .workSlider .slick-dots li.slick-active button:before {
-    font-size: 14px;
-    @apply text-black dark:text-white;
-  }
-
-  .testimonialSlider .slick-dots li button:before {
-    font-size: 10px;
-    @apply text-black;
-  }
-
-  .testimonialSlider .slick-dots li.slick-active button:before {
-    font-size: 14px;
-    @apply text-black;
-  }
-
-  .bgSlider {
-    @apply absolute w-full h-full
-  }
-
-  .bgSlider .slick-list {
-    @apply h-full;
-  }
-
-  .bgSlider .slick-list .slick-slider {
-    @apply h-full;
-  }
-
-  .bgSlider .slick-list .slick-slider > div {
-    @apply h-full;
-  }
-
-  .bgSlider .slick-list .slick-slider > div > div {
-      @apply h-full;
-  }
 }
 
 @utility prose {

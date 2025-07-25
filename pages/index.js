@@ -27,7 +27,7 @@ export default function Home({
       <Introduction content={introduction} />
 
       <main>
-        {/* <FeaturedWorkSlider slides={featuredWork} /> */}
+        <FeaturedWorkSlider slides={featuredWork} />
 
         <section>
           <h2 className="sr-only">Featured Links</h2>
