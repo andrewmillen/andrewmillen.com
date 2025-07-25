@@ -1,4 +1,4 @@
-import CarouselArrow from "@/components/CarouselArrow";
+import SliderArrow from "@/components/SliderArrow";
 import testimonials from "@/content/testimonials.json";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -26,8 +26,8 @@ export default function TestimonialSlider() {
           </div>
         </div>
         <div className="w-full mt-4 px-12 2xl:px-0 flex space-x-2 justify-center lg:justify-between lg:items-center lg:absolute lg:mt-0 lg:inset-0">
-          <CarouselArrow emblaApi={emblaApi} direction="Previous" />
-          <CarouselArrow emblaApi={emblaApi} direction="Next" />
+          <SliderArrow emblaApi={emblaApi} direction="Previous" />
+          <SliderArrow emblaApi={emblaApi} direction="Next" />
         </div>
       </div>
     </section>

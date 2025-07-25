@@ -1,41 +1,70 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import CarouselArrow from "@/components/CarouselArrow";
 import Image from "next/image";
 import Link from "next/link";
+import SliderArrow from "@/components/SliderArrow";
 import useEmblaCarousel from "embla-carousel-react";
 
 export default function FeaturedWorkSlider({ slides }) {
   const slideBgColors = [
-    "from-purple-200 to-violet-200", // hlpr
-    "from-moss-200 to-moss-300", // gardening
-    "from-red-200 to-red-200", // meal planner
-    "from-sky-200 to-blue-200", // other
+    "from-violet-200 to-pink-100", // hlpr
+    "from-moss-200 to-amber-50", // gardening
+    "from-salmon-300 to-salmon-100", // meal planner
+    "from-blue-200 to-sky-100", // other
   ];
-  const [slideBg, setSlideBg] = useState(slideBgColors[0]);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [mainRef, mainApi] = useEmblaCarousel({ loop: true });
+  const [bgRef, bgApi] = useEmblaCarousel({ loop: true });
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [fading, setFading] = useState(false);
+  const prevIdxRef = useRef(0);
 
+  // Sync main and background carousels
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!mainApi || !bgApi) return;
 
     const onSelect = () => {
-      const selectedIndex = emblaApi.selectedScrollSnap();
-      setSlideBg(slideBgColors[selectedIndex]);
+      const idx = mainApi.selectedScrollSnap();
+      prevIdxRef.current = currentIdx;
+      setCurrentIdx(idx);
+      setFading(true);
+      bgApi.scrollTo(idx);
+      setFading(false);
     };
 
     onSelect();
-    emblaApi.on("select", onSelect);
-
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi, slideBgColors]);
+    mainApi.on("select", onSelect);
+    return () => mainApi.off("select", onSelect);
+  }, [mainApi, bgApi, currentIdx]);
 
   return (
-    <section className={`py-8 lg:pt-8 bg-linear-to-tl ${slideBg}`}>
+    <section className="py-8 lg:pt-16 relative">
+      {/* Background carousel with crossfade */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+        <div className="w-full h-full relative" ref={bgRef}>
+          <div className="flex w-full h-full">
+            {slideBgColors.map((bg, idx) => (
+              <div
+                key={bg}
+                className={`min-w-0 flex-[0_0_100%] absolute inset-0 transition-opacity duration-300 ${bg} bg-gradient-to-br`}
+                style={{
+                  opacity:
+                    idx === currentIdx
+                      ? fading
+                        ? 0
+                        : 1
+                      : idx === prevIdxRef.current && fading
+                      ? 1
+                      : 0,
+                  zIndex: idx === currentIdx ? 2 : 1,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <h2 className="sr-only">Featured Work</h2>
       <div className="relative mx-auto max-w-5xl lg:max-w-[88rem] lg:px-12">
-        <div className="overflow-hidden lg:mx-28 relative z-20" ref={emblaRef}>
+        <div className="overflow-hidden lg:mx-28 relative z-20" ref={mainRef}>
           <div className="flex items-center">
             {slides.map((slide) => (
               <div key={slide.key} className="min-w-0 flex-[0_0_100%]">
@@ -75,10 +104,9 @@ export default function FeaturedWorkSlider({ slides }) {
             </div>
           </div>
         </div>
-
         <div className="w-full mt-4 px-12 flex space-x-2 justify-center lg:justify-between lg:items-center lg:absolute lg:mt-0 lg:inset-0 lg:z-10">
-          <CarouselArrow emblaApi={emblaApi} direction="Previous" />
-          <CarouselArrow emblaApi={emblaApi} direction="Next" />
+          <SliderArrow emblaApi={mainApi} direction="Previous" />
+          <SliderArrow emblaApi={mainApi} direction="Next" />
         </div>
       </div>
     </section>

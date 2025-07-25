@@ -19,6 +19,18 @@
   --color-moss-900: #2e3d2a;
   --color-moss-950: #171f14;
 
+  --color-salmon-50: #fdf4f3;
+  --color-salmon-100: #fce6e4;
+  --color-salmon-200: #fad2ce;
+  --color-salmon-300: #f6b2ab;
+  --color-salmon-400: #ec786c;
+  --color-salmon-500: #e25f51;
+  --color-salmon-600: #ce4234;
+  --color-salmon-700: #ad3428;
+  --color-salmon-800: #902e24;
+  --color-salmon-900: #782c24;
+  --color-salmon-950: #41130e;
+
   --font-text: system-ui;
   --font-display: degular, system-ui;
 }
