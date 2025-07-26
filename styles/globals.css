@@ -33,6 +33,8 @@
 
   --font-text: system-ui;
   --font-display: degular, system-ui;
+
+  --breakpoint-xs: 30rem;
 }
 
 @layer base {
@@ -41,7 +43,7 @@
   }
 
   .h1 {
-      @apply font-bold leading-none text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl
+      @apply font-bold leading-none text-4xl xs:text-5xl md:text-6xl 2xl:text-7xl
   }
 
   .h2 {

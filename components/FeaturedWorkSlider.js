@@ -12,6 +12,12 @@ export default function FeaturedWorkSlider({ slides }) {
     "from-salmon-300 to-salmon-100", // meal planner
     "from-blue-200 to-sky-100", // other
   ];
+  const dotColors = [
+    "text-violet-900", // hlpr
+    "text-moss-900", // gardening
+    "text-salmon-900", // meal planner
+    "text-blue-900", // other
+  ];
   const [mainRef, mainApi] = useEmblaCarousel({ loop: true });
   const [bgRef, bgApi] = useEmblaCarousel({ loop: true });
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -35,6 +41,16 @@ export default function FeaturedWorkSlider({ slides }) {
     mainApi.on("select", onSelect);
     return () => mainApi.off("select", onSelect);
   }, [mainApi, bgApi, currentIdx]);
+
+  // Handle dot click
+  const scrollTo = (index) => {
+    if (mainApi) {
+      mainApi.scrollTo(index);
+    }
+  };
+
+  // Get total number of slides (including the "other" slide)
+  const totalSlides = slides.length + 1;
 
   return (
     <section className="py-8 lg:pt-16 relative">
@@ -63,7 +79,7 @@ export default function FeaturedWorkSlider({ slides }) {
         </div>
       </div>
       <h2 className="sr-only">Featured Work</h2>
-      <div className="relative mx-auto max-w-5xl lg:max-w-[88rem] lg:px-12">
+      <div className="relative mx-auto max-w-5xl lg:max-w-[88rem] px-2 sm:px-8">
         <div className="overflow-hidden lg:mx-28 relative z-20" ref={mainRef}>
           <div className="flex items-center">
             {slides.map((slide) => (
@@ -104,7 +120,25 @@ export default function FeaturedWorkSlider({ slides }) {
             </div>
           </div>
         </div>
-        <div className="w-full mt-4 px-12 flex space-x-2 justify-center lg:justify-between lg:items-center lg:absolute lg:mt-0 lg:inset-0 lg:z-10">
+
+        <div
+          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-4 mb-2 md:mb-4 lg:hidden`}
+        >
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`size-4 rounded-full border-3 transition-all duration-200 ${
+                index === currentIdx
+                  ? `bg-current border-current opacity-50`
+                  : "border-current opacity-50 hover:cursor-pointer"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="hidden lg:flex w-full px-12 justify-between items-center absolute mt-0 inset-0 z-10">
           <SliderArrow emblaApi={mainApi} direction="Previous" />
           <SliderArrow emblaApi={mainApi} direction="Next" />
         </div>
