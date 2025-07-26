@@ -20,6 +20,7 @@
         "url": "/blog",
         "external": false
       }
-    ]
+    ],
+    "colophon": "This site is powered by Next.js, styled with Tailwind CSS, and hosted on Vercel. Content is written in MDX. Headings are set in Degular by Ohno type."
   }
 }

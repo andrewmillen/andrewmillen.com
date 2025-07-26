@@ -1,7 +1,7 @@
 export default function Video({ src, width, height, caption, autoplay, loop }) {
   const autoplayValues = {
-    playsinline: true,
-    autoplay: "autoplay",
+    playsInline: true,
+    autoPlay: "autoplay",
     muted: true,
   };
 

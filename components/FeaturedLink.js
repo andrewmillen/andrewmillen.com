@@ -3,7 +3,7 @@ import Tag from "@/components/Tag";
 
 export default function FeaturedLink({ content }) {
   return (
-    <li className="py-8 sm:py-12 md:py-116 lg:py-24 border-b border-neutral-200 dark:border-neutral-800">
+    <li className="py-16 lg:py-24 border-b border-neutral-200 dark:border-neutral-800">
       <div className="container">
         <div className="flex items-start flex-col-reverse space-y-reverse space-y-4 lg:flex-row lg:space-y-0 lg:justify-between lg:items-baseline mb-2 xl:mb-4 2xl:mb-6">
           <h3 className="h3">{content.name}</h3>

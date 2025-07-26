@@ -28,7 +28,7 @@ export default function CleanMode() {
             </div>
           </div>
 
-          <div className="absolute left-[50vw] sm:left-[60vw] md:left-[65vw] lg:left-[75vw] top-[50px] rounded-lg bg-white/40 dark:bg-black/70 backdrop-blur-md hidden sm:flex flex-col w-52 p-3 space-y-2 outline outline-1 outline-black/15 dark:outline-black dark:border dark:border-white/20 shadow-lg text-sm text-neutral-700 dark:text-neutral-300">
+          <div className="absolute left-[50vw] sm:left-[60vw] md:left-[65vw] lg:left-[75vw] top-[50px] rounded-lg bg-white/40 dark:bg-black/70 backdrop-blur-md hidden sm:flex flex-col w-52 p-3 space-y-2 outline-solid outline-1 outline-black/15 dark:outline-black dark:border dark:border-white/20 shadow-lg text-sm text-neutral-700 dark:text-neutral-300">
             <div>Lock Keyboard</div>
             <div>Dim Screen</div>
             <hr className="border-neutral-700/20 dark:border-neutral-300/20" />

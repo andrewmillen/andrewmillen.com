@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MoreWorkLinks() {
   return (
@@ -8,7 +8,7 @@ export default function MoreWorkLinks() {
       <div className="flex flex-col sm:flex-row">
         <Link
           href="/portfolio/ui-product"
-          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/ui-reverso-weather.jpg"
@@ -17,8 +17,8 @@ export default function MoreWorkLinks() {
             alt=""
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-              <span className="block font-normal font-degular text-lg lg:text-xl">
+            <h2 className="font-bold font-display text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
+              <span className="block font-normal font-display text-lg lg:text-xl">
                 See More
               </span>
               UI &amp; Product
@@ -27,7 +27,7 @@ export default function MoreWorkLinks() {
         </Link>
         <Link
           href="/portfolio/3d"
-          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/3d-podracer.jpg"
@@ -36,8 +36,8 @@ export default function MoreWorkLinks() {
             alt=""
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-              <span className="block font-normal font-degular text-lg lg:text-xl">
+            <h2 className="font-bold font-display text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
+              <span className="block font-normal font-display text-lg lg:text-xl">
                 See More
               </span>
               3D
@@ -46,7 +46,7 @@ export default function MoreWorkLinks() {
         </Link>
         <Link
           href="/portfolio/graphic-web"
-          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-[4/3] group overflow-hidden"
+          className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
             src="/portfolio-assets/gw-thumbnail.jpg"
@@ -55,8 +55,8 @@ export default function MoreWorkLinks() {
             alt=""
           ></Image>
           <div className="z-30">
-            <h2 className="font-bold font-degular text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-              <span className="block font-normal font-degular text-lg lg:text-xl">
+            <h2 className="font-bold font-display text-4xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
+              <span className="block font-normal font-display text-lg lg:text-xl">
                 See More
               </span>
               Graphic & Web

@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "Andrew Millen Portfolio",
+    "statement": "Design leader with 10 years of expertise in UI/UX and design systems"
+  },
+  "links": [
+    {
+      "title": "Resume",
+      "items": [
+        { "label": "View Online", "href": "/resume" },
+        { "label": "Download", "href": "/andrew-millen-resume.pdf" }
+      ]
+    },
+    {
+      "title": "Contact",
+      "items": [
+        {
+          "label": "Email Me",
+          "href": "mailto:andrewmillen1+portfolio@gmail.com"
+        }
+      ]
+    },
+    {
+      "title": "Find me",
+      "items": [
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/andrew-millen/"
+        },
+        { "label": "Dribbble", "href": "https://dribbble.com/andrewmillen" },
+        { "label": "CodePen", "href": "https://codepen.io/andrewmillen" }
+      ]
+    }
+  ]
+}

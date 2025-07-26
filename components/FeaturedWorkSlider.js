@@ -1,92 +1,120 @@
-import { NextArrow, PrevArrow } from "@/components/Arrows";
+import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import Slider from "react-slick";
-import { useState } from "react";
+import SliderArrow from "@/components/SliderArrow";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function FeaturedWorkSlider({ slides }) {
   const slideBgColors = [
-    "bg-purple-100 dark:bg-purple-900", // hlpr
-    "bg-moss-100 dark:bg-moss-900", // gardening
-    "bg-red-100 dark:bg-red-500", // meal planner
-    "bg-sky-100 dark:bg-blue-900", // other
+    "bg-purple-100", // hlpr
+    "bg-moss-200", // gardening
+    "bg-salmon-200", // meal planner
+    "bg-sky-100", // other
   ];
+  const dotColors = [
+    "text-purple-900", // hlpr
+    "text-moss-900", // gardening
+    "text-salmon-900", // meal planner
+    "text-sky-900", // other
+  ];
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [currentIdx, setCurrentIdx] = useState(0);
 
-  // Set default slide background color for first slide
-  const [slideBg, setSlideBg] = useState(slideBgColors[0]);
+  // Update current index when slide changes
+  useEffect(() => {
+    if (!emblaApi) return;
 
-  // Slick slider settings
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-    dots: false,
-    arrows: true,
-    // Update slideBg by matching the index ("next") of the incoming slide to the object in the Slides array
-    beforeChange: (current, next) => setSlideBg(slideBgColors[next]),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          dots: true,
-          arrow: false,
-        },
-      },
-    ],
+    const onSelect = () => {
+      const idx = emblaApi.selectedScrollSnap();
+      setCurrentIdx(idx);
+    };
+
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi]);
+
+  // Handle dot click
+  const scrollTo = (index) => {
+    if (emblaApi) {
+      emblaApi.scrollTo(index);
+    }
   };
 
+  // Get total number of slides (including the "other" slide)
+  const totalSlides = slides.length + 1;
+
   return (
-    <div
-      className={`sliderWrapper border-b border-neutral-200 dark:border-neutral-800 transition-colors transition-duration-1000 ${slideBg} dark:bg-opacity-80`}
+    <section
+      className={`py-8 sm:py-12 xl:py-16 2xl:py-20 relative transition-colors duration-300 ${slideBgColors[currentIdx]}`}
     >
-      {" "}
-      <div className="container">
-        <Slider
-          {...settings}
-          className="workSlider pt-12 pb-16 lg:pb-8 md:px-8 lg:px-16 2xl:px-0"
-        >
-          {slides.map((slide) => (
-            <div key={slide.key}>
-              <Image
-                className="mx-auto"
-                src={slide.src}
-                priority="true"
-                alt={slide.alt}
-                width={1350}
-                height={932}
-              />
-            </div>
-          ))}
-          <div key="other">
-            <div className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold max-w-md md:max-w-xl lg:max-w-2xl">
-              <p className="text-sky-600 dark:text-blue-300 mb-8">
-                Looking for something more in-depth?
-              </p>{" "}
-              <p>
-                <a
-                  href="mailto:andrewmillen1+website@gmail.com"
-                  target="_blank"
-                  className="textLink text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
-                >
-                  Email me
-                </a>{" "}
-                or{" "}
-                <Link
-                  href="/portfolio"
-                  className="textLink text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
-                >
-                  visit my portfolio
-                </Link>{" "}
-                to learn more about my process.
-              </p>
+      <h2 className="sr-only">Featured Work</h2>
+      <div className="relative mx-auto max-w-4xl lg:max-w-7xl md:px-24 lg:px-32">
+        <div className="overflow-hidden relative z-20" ref={emblaRef}>
+          <div className="flex items-center">
+            {slides.map((slide) => (
+              <div
+                key={slide.key}
+                className="min-w-0 flex-[0_0_100%] px-6 sm:px-12 md:px-0 md:mx-8 lg:mx-16"
+              >
+                <Image
+                  className="mx-auto"
+                  src={slide.src}
+                  priority="true"
+                  alt={slide.alt}
+                  width={1350}
+                  height={932}
+                />
+              </div>
+            ))}
+            <div key="other" className="min-w-0 flex-[0_0_100%] px-12">
+              <div className="text-center mx-auto">
+                <p className="h2 text-sky-800 mb-8 font-display">
+                  Looking for something more in-depth?
+                </p>{" "}
+                <p className="text-xl text-neutral-700">
+                  <a
+                    href="mailto:andrewmillen1+website@gmail.com"
+                    target="_blank"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500"
+                  >
+                    Email me
+                  </a>{" "}
+                  or{" "}
+                  <Link
+                    href="/portfolio"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500"
+                  >
+                    visit my portfolio
+                  </Link>{" "}
+                  to learn more about my process.
+                </p>
+              </div>
             </div>
           </div>
-        </Slider>
+        </div>
+
+        <div
+          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-8 sm:mt-12 md:hidden`}
+        >
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`size-3 rounded-full bg-current border-2 transition-all duration-200 ${
+                index !== currentIdx && "opacity-30 hover:cursor-pointer"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="hidden md:flex w-full px-3 lg:px-5 2xl:px-0 justify-between items-center absolute mt-0 inset-0 z-10">
+          <SliderArrow emblaApi={emblaApi} direction="Previous" />
+          <SliderArrow emblaApi={emblaApi} direction="Next" />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

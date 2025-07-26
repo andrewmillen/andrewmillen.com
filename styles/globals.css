@@ -1,152 +1,113 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-link-light-default: #1867FF;
+  --color-link-light-hover: #0400CD;
+  --color-link-dark-default: #4081FF;
+  --color-link-dark-hover: #68A4FF;
+
+  --color-moss-50: #f6f8f5;
+  --color-moss-100: #e9f1e7;
+  --color-moss-200: #d5e2d0;
+  --color-moss-300: #b3caab;
+  --color-moss-400: #8aa97f;
+  --color-moss-500: #65885a;
+  --color-moss-600: #527148;
+  --color-moss-700: #425a3b;
+  --color-moss-800: #374932;
+  --color-moss-900: #2e3d2a;
+  --color-moss-950: #171f14;
+
+  --color-salmon-50: #fdf4f3;
+  --color-salmon-100: #fce6e4;
+  --color-salmon-200: #fad2ce;
+  --color-salmon-300: #f6b2ab;
+  --color-salmon-400: #ec786c;
+  --color-salmon-500: #e25f51;
+  --color-salmon-600: #ce4234;
+  --color-salmon-700: #ad3428;
+  --color-salmon-800: #902e24;
+  --color-salmon-900: #782c24;
+  --color-salmon-950: #41130e;
+
+  --font-text: system-ui;
+  --font-display: degular, system-ui;
+
+  --breakpoint-xs: 30rem;
+}
 
 @layer base {
-    body {
-        @apply font-system bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white;
-    }
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+      @apply font-display
+  }
 
-    h1, h2, h3, .h1, .h2, .h3 {
-        @apply font-degular
-    }
+  .h1 {
+      @apply font-bold leading-none text-4xl xs:text-5xl md:text-6xl 2xl:text-7xl
+  }
 
-    .h1 {
-        @apply font-bold text-4xl leading-none sm:text-5xl sm:leading-none md:text-6xl md:leading-none 2xl:text-7xl 2xl:leading-none
-    }
+  .h2 {
+      @apply font-bold leading-none text-3xl sm:text-4xl md:text-5xl
+  }
 
-    .h2 {
-        @apply text-3xl leading-none sm:text-4xl sm:leading-none md:text-5xl md:leading-none font-bold
-    }
+  .h3 {
+      @apply font-bold text-2xl lg:text-3xl xl:text-4xl
+  }
 
-    .h3 {
-        @apply font-bold font-degular text-2xl lg:text-3xl xl:text-4xl
-    }
+  .h4 {
+      @apply font-semibold text-sm uppercase tracking-wider text-neutral-600 dark:text-neutral-500;
+  }
+}
 
-    .h4 {
-        @apply uppercase font-degular tracking-wider font-semibold text-neutral-600 dark:text-neutral-500 text-sm;
-    }
-
-    ::selection {
-        @apply bg-neutral-900 text-white dark:bg-white dark:text-neutral-900;
-      }
-    ::-moz-selection {
-        @apply bg-neutral-900 text-white dark:bg-white dark:text-neutral-900;
-    }
-
-    .prose blockquote {
-        @apply my-12 lg:my-16 font-normal not-italic text-neutral-500 dark:text-neutral-400 pl-8 lg:pl-10 border-l-4 border-yellow-300 dark:border-yellow-400;
-    }
-
-    .prose blockquote p {
-        @apply relative;
-    }
-
-    .prose blockquote p:before {
-        @apply absolute -left-2 font-normal;
-    }
-
-    .prose p {
-        @apply leading-relaxed;
-    }
-
-    .prose h2 {
-        @apply text-3xl
-    }
-
-    .prose ul {
-        @apply ml-4;
-    }
-
-    .prose a {
-        @apply text-link-light-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
-    }
-
+@utility container {
+  @apply px-6 sm:px-12 md:px-16 mx-auto max-w-5xl 2xl:px-8 lg:max-w-7xl;
 }
 
 @layer components {
-    .container {
-        @apply px-6 sm:px-12 md:px-16 mx-auto max-w-5xl 2xl:px-8 lg:max-w-7xl
+  .textLink {
+    color: var(--color-link-light-default);
+    @apply underline underline-offset-4;
+
+    @variant hover {
+      color: var(--color-link-light-hover);
     }
 
-    .textLink {
-        @apply text-link-light-default dark:text-link-dark-default underline underline-offset-4;
-    }
+    @variant dark {
+      color: var(--color-link-dark-default);
 
-    .textLink:hover {
-        @apply text-link-light-hover dark:text-link-dark-hover;
-    }
-
-    .workSlider .slick-track,
-    .testimonialSlider .slick-track {
-        display: flex;
-        align-items: center;
+      @variant hover {
+        color: var(--color-link-dark-hover);
       }
-    .workSlider .slick-track .slick-slide,
-    .testimonialSlider .stlick-track .slick-slide {
-        display: flex;
-        height: auto;
-        align-items: center;
-        justify-content: center;
-      }
-
-    .workSlider .slick-dots,
-    .testimonialSlider .slick-dots {
-        bottom: 8% !important;
     }
-
-    .workSlider .slick-dots li button:before {
-        font-size: 10px;
-        @apply text-black dark:text-white;
-    }
-    .workSlider .slick-dots li.slick-active button:before {
-        font-size: 14px;
-        @apply text-black dark:text-white;
-    }
-
-    .testimonialSlider .slick-dots li button:before {
-        font-size: 10px;
-        @apply text-black;
-    }
-    .testimonialSlider .slick-dots li.slick-active button:before {
-        font-size: 14px;
-        @apply text-black;
-    }
-
-    .bgSlider {
-        @apply absolute w-full h-full
-    }
-
-    .bgSlider .slick-list {
-        @apply h-full;
-    }
-
-    .bgSlider .slick-list .slick-slider {
-        @apply h-full;
-    }
-    .bgSlider .slick-list .slick-slider > div {
-        @apply h-full;
-    }
-    .bgSlider .slick-list .slick-slider > div > div {
-        @apply h-full;
-    }
-
-    .callout-list ul li::marker {
-        @apply text-yellow-400
-    }
+  }
 }
 
-@layer utilities {
-    .aspect-16x9 {
-        padding-bottom: 56.25%;
-        @apply relative;
-    }
+@utility prose {
+  blockquote {
+    @apply my-12 lg:my-16 font-normal not-italic text-neutral-600 dark:text-neutral-400 pl-8 lg:pl-10 border-l-4 border-yellow-300 dark:border-yellow-400;
+  }
 
-    .aspect-16x9 iframe {
-        @apply absolute top-0 left-0 w-full h-full;
-    }
+  blockquote p {
+    @apply relative;
+  }
 
-    .scanlines {
-        @apply bg-[repeating-linear-gradient(#F0F0F0,_#F0F0F0_2px,_#FFFFFF_2px,#FFFFFF_4px)] dark:bg-[repeating-linear-gradient(#222222,_#222222_2px,_#000000_2px,#000000_4px)];
-    }
+  blockquote p:before {
+    @apply absolute -left-2 font-normal;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  h2 {
+    @apply text-3xl
+  }
+
+  ul {
+    @apply ml-4;
+  }
+
+  a {
+    @apply text-link-light-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
+  }
 }

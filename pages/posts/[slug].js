@@ -1,14 +1,15 @@
-import Layout from "@/components/Layout";
-import Head from "next/head";
+import { Footnote, ImageWithCaption, YoutubeEmbed } from "@/components/blog";
+import { format, parseISO } from "date-fns";
+import { getAllPostIds, getPostData } from "@/lib/posts";
+
 import AuthorBio from "@/components/blog/AuthorBio";
 import Button from "@/components/Button";
-import Link from "next/link";
+import Head from "next/head";
 import Image from "next/image";
-import { parseISO, format } from "date-fns";
-import { getAllPostIds, getPostData } from "@/lib/posts";
+import Layout from "@/components/Layout";
+import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { YoutubeEmbed, ImageWithCaption, Footnote } from "@/components/blog";
 
 const components = {
   YoutubeEmbed,
@@ -35,12 +36,12 @@ export default function Post({ postData }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 lg:py-20 border-b border-neutral-300 dark:border-neutral-800">
+      <main className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800">
         <article>
           <div className="container">
             <div className="text-left">
               <Link className="textLink text-lg" href={`/posts/`}>
-                <span className="font-degular">←</span> All Posts
+                <span className="font-display">←</span> All Posts
               </Link>
               <h1 className="mt-8 md:mt-16 h1 max-w-3xl lg:max-w-5xl">
                 {postData.title}

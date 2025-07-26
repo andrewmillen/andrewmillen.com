@@ -1,67 +1,52 @@
 import Link from "next/link";
 
-export default function PortfolioLinks() {
+export default function PortfolioLinks({ groups }) {
+  const isInternalLink = (href) => {
+    return href.startsWith("/") || href.startsWith("mailto:");
+  };
+
+  const renderLink = (item, index) => {
+    if (isInternalLink(item.href)) {
+      return (
+        <Link
+          key={index}
+          href={item.href}
+          target="_blank"
+          className="textLink font-semibold lg:text-lg"
+        >
+          {item.label}
+        </Link>
+      );
+    } else {
+      return (
+        <a
+          key={index}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="textLink font-semibold lg:text-lg"
+        >
+          {item.label}
+        </a>
+      );
+    }
+  };
+
   return (
-    <section className="py-12 lg:py-20 xl:py-32 border-b border-neutral-300 dark:border-neutral-800">
+    <section className="py-12 lg:py-20 xl:py-32 border-b border-neutral-200 dark:border-neutral-800">
       <div className="container">
-        <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
-          <div className="flex flex-col space-y-4 lg:text-center lg:w-1/3">
-            <h2 className="h4">Resume</h2>
-            <div className="flex lg:justify-center space-x-8">
-              <Link
-                href="/resume"
-                target="_blank"
-                className="textLink font-semibold lg:text-lg"
-              >
-                View Online
-              </Link>
-              <Link
-                href="/andrew-millen-resume.pdf"
-                target="_blank"
-                className="textLink font-semibold lg:text-lg"
-              >
-                Download PDF
-              </Link>
+        <div className="flex flex-col md:flex-row space-y-8 md:space-y-0">
+          {groups.map((group, index) => (
+            <div
+              key={index}
+              className="flex flex-col space-y-4 md:text-center md:w-1/3"
+            >
+              <h2 className="h4">{group.title}</h2>
+              <div className="flex md:justify-center space-x-4 lg:space-x-8">
+                {group.items.map((item, index) => renderLink(item, index))}
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col space-y-4 lg:text-center lg:w-1/3">
-            <h2 className="h4">Contact</h2>
-            <div className="flex lg:justify-center space-x-8">
-              <Link
-                href="mailto:andrewmillen1+portfolio@gmail.com"
-                target="_blank"
-                className="textLink font-semibold lg:text-lg"
-              >
-                Email Me
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-col space-y-4 lg:text-center lg:w-1/3">
-            <h2 className="h4">Links</h2>
-            <div className="flex lg:justify-center space-x-8">
-              <Link
-                href="https://www.linkedin.com/in/andrew-millen/"
-                target="_blank"
-                className="textLink font-semibold lg:text-lg"
-              >
-                LinkedIn
-              </Link>
-              <Link
-                href="https://dribbble.com/andrewmillen"
-                target="_blank"
-                className="textLink font-semibold lg:text-lg"
-              >
-                Dribbble
-              </Link>
-              <Link
-                href="https://codepen.io/andrewmillen"
-                target="_blank"
-                className="textLink font-semibold lg:text-lg"
-              >
-                CodePen
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
