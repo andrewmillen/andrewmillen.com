@@ -10,13 +10,13 @@ export default function FeaturedWorkSlider({ slides }) {
     "from-violet-200 to-pink-100", // hlpr
     "from-moss-200 to-amber-50", // gardening
     "from-salmon-300 to-salmon-100", // meal planner
-    "from-blue-200 to-sky-100", // other
+    "from-sky-200 to-sky-100", // other
   ];
   const dotColors = [
     "text-violet-900", // hlpr
     "text-moss-900", // gardening
     "text-salmon-900", // meal planner
-    "text-blue-900", // other
+    "text-sky-700", // other
   ];
   const [mainRef, mainApi] = useEmblaCarousel({ loop: true });
   const [bgRef, bgApi] = useEmblaCarousel({ loop: true });
@@ -79,7 +79,7 @@ export default function FeaturedWorkSlider({ slides }) {
         </div>
       </div>
       <h2 className="sr-only">Featured Work</h2>
-      <div className="relative mx-auto max-w-5xl lg:max-w-[88rem] px-2 sm:px-8">
+      <div className="relative mx-auto max-w-5xl lg:max-w-7xl">
         <div className="overflow-hidden lg:mx-28 relative z-20" ref={mainRef}>
           <div className="flex items-center">
             {slides.map((slide) => (
@@ -95,22 +95,22 @@ export default function FeaturedWorkSlider({ slides }) {
               </div>
             ))}
             <div key="other" className="min-w-0 flex-[0_0_100%]">
-              <div className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold max-w-md md:max-w-xl lg:max-w-2xl mx-auto">
-                <p className="text-sky-600 dark:text-blue-300 mb-8">
+              <div className="text-center mx-auto px-12">
+                <p className="h2 text-sky-800 mb-8 font-display">
                   Looking for something more in-depth?
                 </p>{" "}
-                <p>
+                <p className="text-xl text-neutral-700">
                   <a
                     href="mailto:andrewmillen1+website@gmail.com"
                     target="_blank"
-                    className="textLink text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500"
                   >
                     Email me
                   </a>{" "}
                   or{" "}
                   <Link
                     href="/portfolio"
-                    className="textLink text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500"
                   >
                     visit my portfolio
                   </Link>{" "}
@@ -138,7 +138,7 @@ export default function FeaturedWorkSlider({ slides }) {
           ))}
         </div>
 
-        <div className="hidden lg:flex w-full px-12 justify-between items-center absolute mt-0 inset-0 z-10">
+        <div className="hidden lg:flex w-full px-4 justify-between items-center absolute mt-0 inset-0 z-10">
           <SliderArrow emblaApi={mainApi} direction="Previous" />
           <SliderArrow emblaApi={mainApi} direction="Next" />
         </div>
