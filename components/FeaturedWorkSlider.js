@@ -53,7 +53,7 @@ export default function FeaturedWorkSlider({ slides }) {
   const totalSlides = slides.length + 1;
 
   return (
-    <section className="py-8 lg:pt-16 relative">
+    <section className="py-8 md:pb-4 lg:pt-12 lg:pb-4 relative">
       {/* Background carousel with crossfade */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <div className="w-full h-full relative" ref={bgRef}>
@@ -79,11 +79,17 @@ export default function FeaturedWorkSlider({ slides }) {
         </div>
       </div>
       <h2 className="sr-only">Featured Work</h2>
-      <div className="relative mx-auto max-w-5xl lg:max-w-7xl">
-        <div className="overflow-hidden lg:mx-28 relative z-20" ref={mainRef}>
+      <div className="relative mx-auto max-w-4xl lg:max-w-7xl md:px-8">
+        <div
+          className="overflow-hidden md:mx-20 lg:mx-28 relative z-20"
+          ref={mainRef}
+        >
           <div className="flex items-center">
             {slides.map((slide) => (
-              <div key={slide.key} className="min-w-0 flex-[0_0_100%]">
+              <div
+                key={slide.key}
+                className="min-w-0 flex-[0_0_100%] px-3 sm:px-7 md:px-0"
+              >
                 <Image
                   className="mx-auto"
                   src={slide.src}
@@ -94,8 +100,8 @@ export default function FeaturedWorkSlider({ slides }) {
                 />
               </div>
             ))}
-            <div key="other" className="min-w-0 flex-[0_0_100%]">
-              <div className="text-center mx-auto px-12">
+            <div key="other" className="min-w-0 flex-[0_0_100%] px-12">
+              <div className="text-center mx-auto">
                 <p className="h2 text-sky-800 mb-8 font-display">
                   Looking for something more in-depth?
                 </p>{" "}
@@ -122,7 +128,7 @@ export default function FeaturedWorkSlider({ slides }) {
         </div>
 
         <div
-          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-4 mb-2 md:mb-4 lg:hidden`}
+          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-4 mb-2 md:mb-4 md:hidden`}
         >
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
@@ -138,7 +144,7 @@ export default function FeaturedWorkSlider({ slides }) {
           ))}
         </div>
 
-        <div className="hidden lg:flex w-full px-4 justify-between items-center absolute mt-0 inset-0 z-10">
+        <div className="hidden md:flex w-full px-6 justify-between items-center absolute mt-0 inset-0 z-10">
           <SliderArrow emblaApi={mainApi} direction="Previous" />
           <SliderArrow emblaApi={mainApi} direction="Next" />
         </div>
