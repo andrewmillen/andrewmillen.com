@@ -19,7 +19,7 @@ export default function MoreWorkLayout({ title, children }) {
         </div>
       </header>
 
-      <div className="border-b border-neutral-300 dark:border-neutral-800 pt-12 lg:pt-0">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 pt-12 lg:pt-0">
         <div className="container pb-12 xl:pb-32 xl:px-0 flex flex-col items-center lg:items-start lg:flex-row lg:space-x-8">
           {children}
         </div>

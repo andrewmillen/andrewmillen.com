@@ -13,8 +13,8 @@ export default function TestimonialSlider() {
           <div className="flex items-center">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-0 flex-[0_0_100%]">
-                <blockquote className="text-center max-w-6xl mx-auto px-12 lg:px-16">
-                  <span className="block font-bold text-3xl lg:text-4xl mb-4">
+                <blockquote className="text-center max-w-3xl lg:max-w-none mx-auto px-12 lg:px-16">
+                  <span className="block font-bold h3 mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </span>
                   <cite className="block not-italic text-neutral-500 dark:text-neutral-600 text-xl lg:text-2xl font-semibold">

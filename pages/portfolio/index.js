@@ -1,14 +1,21 @@
-import Head from "next/head";
-import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
 import CaseStudyTeaser from "@/components/portfolio/CaseStudyTeaser";
-import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
+import Head from "next/head";
+import Layout from "@/components/Layout";
 import MoreWorkLinks from "@/components/portfolio/MoreWorkLinks";
 import PortfolioLinks from "@/components/portfolio/PortfolioLinks";
-import global from "@/content/global.json";
+import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import { getSortedCaseStudies } from "@/lib/portfolio";
+import global from "@/content/global.json";
+import portfolio from "@/content/portfolio.json";
 
-export default function Portfolio({ caseStudies, meta }) {
+export default function Portfolio({ caseStudies, meta, header, links }) {
+  const thumbnailBgColors = [
+    "bg-sky-100", // design systems
+    "bg-purple-100", // prototyping
+    "bg-moss-200", // innovation
+  ];
+
   return (
     <Layout>
       <Head>
@@ -21,42 +28,45 @@ export default function Portfolio({ caseStudies, meta }) {
         />
       </Head>
 
-      <header className="py-12 lg:py-20 border-b border-neutral-300 dark:border-neutral-800 text-center">
+      <header className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800 text-center">
         <div className="container">
           <div className="inline-flex flex-col space-y-4 items-center mb-4">
             <Breadcrumb url="/" />
-            <h1 className="h1">Andrew Millen Portfolio</h1>
+            <h1 className="h1">{header.title}</h1>
           </div>
 
-          <p className="dark:text-neutral-300 text-xl">
-            Design leader with 10 years of expertise in UI/UX and design systems
+          <p className="text-neutral-600 dark:text-neutral-300 text-xl">
+            {header.statement}
           </p>
         </div>
       </header>
 
       <main>
         <section>
-          <div className="container space-y-24 xl:space-y-32 py-12 lg:py-24 xl:py-32">
-            {caseStudies.map((caseStudy, index) =>
-              caseStudy.frontMatter.unlisted == false ? (
+          {caseStudies.map((caseStudy, index) =>
+            caseStudy.frontMatter.unlisted == false ? (
+              <div
+                className="not-last:border-b not-last:border-neutral-200 not-last:dark:border-neutral-800 py-12 md:py-16 lg:py-20"
+                key={index}
+              >
                 <CaseStudyTeaser
-                  key={index}
                   thumbnail={caseStudy.frontMatter.thumbnail}
                   tag={caseStudy.frontMatter.tag}
                   title={caseStudy.frontMatter.title}
                   summary={caseStudy.frontMatter.summary}
                   slug={caseStudy.slug}
+                  thumbnailBgColor={thumbnailBgColors[index]}
                 />
-              ) : null
-            )}
-          </div>
+              </div>
+            ) : null
+          )}
         </section>
 
         <TestimonialSlider />
 
         <MoreWorkLinks />
 
-        <PortfolioLinks />
+        <PortfolioLinks groups={links} />
       </main>
     </Layout>
   );
@@ -65,11 +75,15 @@ export default function Portfolio({ caseStudies, meta }) {
 export const getStaticProps = async () => {
   const caseStudies = getSortedCaseStudies();
   const meta = global.meta;
+  const header = portfolio.header;
+  const links = portfolio.links;
 
   return {
     props: {
       caseStudies,
       meta,
+      header,
+      links,
     },
     revalidate: 1,
   };
