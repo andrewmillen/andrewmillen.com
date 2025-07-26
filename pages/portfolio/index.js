@@ -28,9 +28,9 @@ export default function Portfolio({ caseStudies, meta, header, links }) {
         />
       </Head>
 
-      <header className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800 text-center">
+      <header className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800 md:text-center">
         <div className="container">
-          <div className="inline-flex flex-col space-y-4 items-center mb-4">
+          <div className="inline-flex flex-col space-y-4 md:items-center mb-4">
             <Breadcrumb url="/" />
             <h1 className="h1">{header.title}</h1>
           </div>

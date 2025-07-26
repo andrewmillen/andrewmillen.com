@@ -1,6 +1,6 @@
 export default function Introduction({ content }) {
   return (
-    <header className="">
+    <header>
       <div className="container py-[8vw] 2xl:py-28 2xl:h-[90vh] 2xl:flex 2xl:flex-col 2xl:justify-between">
         <div>
           <h1 className="h1">{content.name}</h1>
