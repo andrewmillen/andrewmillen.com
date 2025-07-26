@@ -7,45 +7,38 @@ import useEmblaCarousel from "embla-carousel-react";
 
 export default function FeaturedWorkSlider({ slides }) {
   const slideBgColors = [
-    "from-violet-200 to-pink-100", // hlpr
-    "from-moss-200 to-amber-50", // gardening
-    "from-salmon-300 to-salmon-100", // meal planner
-    "from-sky-200 to-sky-100", // other
+    "bg-purple-100", // hlpr
+    "bg-moss-200", // gardening
+    "bg-salmon-200", // meal planner
+    "bg-sky-100", // other
   ];
   const dotColors = [
-    "text-violet-900", // hlpr
+    "text-purple-900", // hlpr
     "text-moss-900", // gardening
     "text-salmon-900", // meal planner
-    "text-sky-700", // other
+    "text-sky-900", // other
   ];
-  const [mainRef, mainApi] = useEmblaCarousel({ loop: true });
-  const [bgRef, bgApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [fading, setFading] = useState(false);
-  const prevIdxRef = useRef(0);
 
-  // Sync main and background carousels
+  // Update current index when slide changes
   useEffect(() => {
-    if (!mainApi || !bgApi) return;
+    if (!emblaApi) return;
 
     const onSelect = () => {
-      const idx = mainApi.selectedScrollSnap();
-      prevIdxRef.current = currentIdx;
+      const idx = emblaApi.selectedScrollSnap();
       setCurrentIdx(idx);
-      setFading(true);
-      bgApi.scrollTo(idx);
-      setFading(false);
     };
 
     onSelect();
-    mainApi.on("select", onSelect);
-    return () => mainApi.off("select", onSelect);
-  }, [mainApi, bgApi, currentIdx]);
+    emblaApi.on("select", onSelect);
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi]);
 
   // Handle dot click
   const scrollTo = (index) => {
-    if (mainApi) {
-      mainApi.scrollTo(index);
+    if (emblaApi) {
+      emblaApi.scrollTo(index);
     }
   };
 
@@ -53,42 +46,17 @@ export default function FeaturedWorkSlider({ slides }) {
   const totalSlides = slides.length + 1;
 
   return (
-    <section className="py-8 md:pb-4 lg:pt-12 lg:pb-4 relative">
-      {/* Background carousel with crossfade */}
-      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <div className="w-full h-full relative" ref={bgRef}>
-          <div className="flex w-full h-full">
-            {slideBgColors.map((bg, idx) => (
-              <div
-                key={bg}
-                className={`min-w-0 flex-[0_0_100%] absolute inset-0 transition-opacity duration-300 ${bg} bg-gradient-to-br`}
-                style={{
-                  opacity:
-                    idx === currentIdx
-                      ? fading
-                        ? 0
-                        : 1
-                      : idx === prevIdxRef.current && fading
-                      ? 1
-                      : 0,
-                  zIndex: idx === currentIdx ? 2 : 1,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+    <section
+      className={`py-8 sm:py-12 xl:py-16 2xl:py-20 relative transition-colors duration-300 ${slideBgColors[currentIdx]}`}
+    >
       <h2 className="sr-only">Featured Work</h2>
-      <div className="relative mx-auto max-w-4xl lg:max-w-7xl md:px-8">
-        <div
-          className="overflow-hidden md:mx-20 lg:mx-28 relative z-20"
-          ref={mainRef}
-        >
+      <div className="relative mx-auto max-w-4xl lg:max-w-7xl md:px-24 lg:px-32">
+        <div className="overflow-hidden relative z-20" ref={emblaRef}>
           <div className="flex items-center">
             {slides.map((slide) => (
               <div
                 key={slide.key}
-                className="min-w-0 flex-[0_0_100%] px-3 sm:px-7 md:px-0"
+                className="min-w-0 flex-[0_0_100%] px-6 sm:px-12 md:px-0 md:mx-8 lg:mx-16"
               >
                 <Image
                   className="mx-auto"
@@ -128,25 +96,23 @@ export default function FeaturedWorkSlider({ slides }) {
         </div>
 
         <div
-          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-4 mb-2 md:mb-4 md:hidden`}
+          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-8 sm:mt-12 md:hidden`}
         >
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
               onClick={() => scrollTo(index)}
-              className={`size-4 rounded-full border-3 transition-all duration-200 ${
-                index === currentIdx
-                  ? `bg-current border-current opacity-50`
-                  : "border-current opacity-50 hover:cursor-pointer"
+              className={`size-3 rounded-full bg-current border-2 transition-all duration-200 ${
+                index !== currentIdx && "opacity-30 hover:cursor-pointer"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
 
-        <div className="hidden md:flex w-full px-6 justify-between items-center absolute mt-0 inset-0 z-10">
-          <SliderArrow emblaApi={mainApi} direction="Previous" />
-          <SliderArrow emblaApi={mainApi} direction="Next" />
+        <div className="hidden md:flex w-full px-3 lg:px-5 2xl:px-0 justify-between items-center absolute mt-0 inset-0 z-10">
+          <SliderArrow emblaApi={emblaApi} direction="Previous" />
+          <SliderArrow emblaApi={emblaApi} direction="Next" />
         </div>
       </div>
     </section>

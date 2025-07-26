@@ -25,17 +25,17 @@
   "featuredWork": [
     {
       "key": "hlpr",
-      "src": "/work-hlpr.png",
+      "src": "/featured-work-hlpr.png",
       "alt": "An app designed to help you give to asset-deprived people."
     },
     {
       "key": "garden",
-      "src": "/work-garden.png",
+      "src": "/featured-work-garden.png",
       "alt": "An augmented reality concept for planning your landscapes."
     },
     {
       "key": "mealplanner",
-      "src": "/work-mealplanner.png",
+      "src": "/featured-work-mealplanner.png",
       "alt": "An app that recommends recipes based on weather patterns and other data."
     }
   ],
