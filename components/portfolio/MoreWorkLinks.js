@@ -13,6 +13,7 @@ export default function MoreWorkLinks() {
           <Image
             src="/portfolio-assets/ui-reverso-weather.jpg"
             fill="true"
+            objectFit="cover"
             className="opacity-30 transition-all duration-300 group-hover:scale-110 group-hover:opacity-40"
             alt=""
           ></Image>
@@ -30,8 +31,9 @@ export default function MoreWorkLinks() {
           className="w-full sm:w-1/3 bg-neutral-900 flex place-items-center relative justify-center text-white text-center aspect-4/3 group overflow-hidden"
         >
           <Image
-            src="/portfolio-assets/3d-podracer.jpg"
+            src="/portfolio-assets/3d-lil-podracer.jpg"
             fill="true"
+            objectFit="cover"
             className="opacity-30 transition-all duration-300 group-hover:scale-110 group-hover:opacity-40"
             alt=""
           ></Image>
@@ -51,6 +53,7 @@ export default function MoreWorkLinks() {
           <Image
             src="/portfolio-assets/gw-thumbnail.jpg"
             fill="true"
+            objectFit="cover"
             className="opacity-30 transition-all duration-300 group-hover:scale-110 group-hover:opacity-40"
             alt=""
           ></Image>
