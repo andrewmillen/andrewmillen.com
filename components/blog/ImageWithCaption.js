@@ -9,24 +9,17 @@ export default function ImageWithCaption({
   attribution,
 }) {
   return (
-    <figure className="lg:my-24">
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className="xl:max-w-5xl"
-      />
+    <figure className="not-prose">
+      <Image src={src} alt={alt} width={width} height={height} />
       {caption && (
-        <figcaption className="prose prose:leading-tight">
+        <figcaption>
           <span
-            className="text-neutral-600 dark:text-neutral-400"
+            className="block mt-2 text-neutral-600 dark:text-neutral-400 text-base"
             dangerouslySetInnerHTML={{ __html: caption }}
           ></span>
           {attribution && (
             <>
-              <br />
-              <span className="uppercase text-neutral-600 dark:text-neutral-400 text-sm">
+              <span className="block mt-1 uppercase text-neutral-500 dark:text-neutral-400 text-xs">
                 {attribution}
               </span>
             </>

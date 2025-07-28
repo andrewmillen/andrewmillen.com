@@ -7,7 +7,7 @@ export default function Video({ src, width, height, caption, autoplay, loop }) {
 
   return (
     <div>
-      <figure>
+      <figure className="not-prose">
         <video
           width={width}
           height={height}
@@ -19,7 +19,9 @@ export default function Video({ src, width, height, caption, autoplay, loop }) {
           <source src={src + ".ogg"} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
-        <figcaption className="prose text-neutral-500">{caption}</figcaption>
+        <figcaption className="mt-2 text-neutral-600 dark:text-neutral-400 text-base">
+          {caption}
+        </figcaption>
       </figure>
     </div>
   );
