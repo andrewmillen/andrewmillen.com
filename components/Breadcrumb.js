@@ -5,7 +5,7 @@ export default function Breadcrumb({ url }) {
     <Link href={url} className="inline-block hover:opacity-80">
       <svg
         viewBox="0 0 172 172"
-        className="w-10 h-10 text-neutral-900 dark:text-white"
+        className="w-10 h-10 text-neutral-800 dark:text-white"
       >
         <path
           fill="currentColor"
