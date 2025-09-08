@@ -22,6 +22,8 @@ const components = {
   CaseStudyChapter,
   CaseStudyCallout,
   CaseStudyBlockquote,
+  Image,
+  Link,
 };
 
 export default function Post({ postData, caseStudies }) {
@@ -56,7 +58,7 @@ export default function Post({ postData, caseStudies }) {
 
             <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
 
-            <div className="py-8 lg:py-16">
+            <div className="py-8 lg:pt-16">
               <p className="text-lg leading-relaxed max-w-[65ch] text-neutral-700 dark:text-neutral-100 mb-8">
                 {postData.summary}
               </p>
@@ -72,7 +74,7 @@ export default function Post({ postData, caseStudies }) {
             />
 
             <div
-              className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-16 prose-blockquote:text-neutral-500
+              className="pt-12 prose prose-neutral prose-lg dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-16 prose-blockquote:text-neutral-500
               prose-p:leading-relaxed
               prose-h2:text-3xl
               prose-a:text-link-light-default
