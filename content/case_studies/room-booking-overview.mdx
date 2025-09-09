@@ -10,67 +10,104 @@ unlisted: true
 related: "Designing for Good"
 ---
 
-<CaseStudyProblemStatement>
-## Without a one-stop calendar view that integrated data from OfficeSpace, Facility Managers had no way of identifying booking inefficiencies.
+<div className="flex flex-col space-y-0 lg:space-y-12 xl:space-y-16 items-center max-w-none py-12 2xl:py-0">
 
-By including some key clients early on in the design process, we ensured that the final product was perfectly suited to the needs of the target user persona.
-</CaseStudyProblemStatement>
 
-<CaseStudyChapter
-src="/portfolio-assets/rbo-1.png"
-alt="Napkin sketch of the feature."
->
+<ProblemStatement
+    label
+    headline="Without a one-stop calendar view that integrated data from OfficeSpace, Facility Managers had no way of identifying booking inefficiencies."
+    content="By including some key clients early on in the design process, we ensured that the final product was perfectly suited to the needs of the target user persona."
+/>
+
+<div className="max-w-2xl">
 ## Starting with a Sketch
 Because we had a decent idea of what the solution would look like, it was tempting to move quickly to final designs. But rather than getting ahead of ourselves, we started with a pencil and paper, listing the core requirements and sketching out a rough idea of the interface.
-</CaseStudyChapter>
+</div>
 
-<CaseStudyChapter
-src="/portfolio-assets/rbo-2.mp4"
-video
-alt=""
-layout="reverse"
->
+<div className="text-center">
+<figure className="my-0! mx-auto max-w-[1000px]">
+<Image src="/portfolio-assets/rbo-1.png" alt="Napkin sketch of the feature." width={1000} height={500} quality="100" />
+</figure>
+</div>
+
+
+<div className="max-w-2xl">
 ## Vetting the Idea
 In a series of one-on-one research calls with clients who had specifically requested this feature, I showed a wireframe prototype of the idea. This stage was crucial, as the feedback we gathered helped us triangulate 1) what unique value proposition we could offer, 2) what would be useful to our users, and 3) what existing solutions the feature would be competing with.
 
 In the end, these interviews helped us ruthlessly prioritize which aspects were required for MVP and which could be added in subsequent phases.
-</CaseStudyChapter>
+</div>
 
-<CaseStudyCallout headline="Key takeaways from preliminary research">
+<div>
+  <figure className="not-prose">
+    <video
+        width="1000"
+        height="500"
+        preload="metadata"
+        playsInline
+        autoPlay="autoplay"
+        muted
+        loop
+    >
+        <source src="/portfolio-assets/rbo-2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+</div>
+
+
+
+<Callout headline="Key takeaways from preliminary research">
 - Even a basic, no-frills version of the feature would be useful to our users as a starting point. Features like reporting and coloring by capacity could be added later.
 - Moving meetings through drag-and-drop was found to be extremely intuitive, and would be our first priority after launching MVP.
 - Meeting privacy settings would need to be taken into consideration. Even seeing the title or the participants might be too sensitive.
-</CaseStudyCallout>
+</Callout>
 
-<CaseStudyChapter
-src="/portfolio-assets/rbo-3.png"
-alt="A mockup of the feature in high fidelity. It resembles a Gantt-style calendar view."
-layout="vertical"
->
+<div className="text-center">
+<figure className="my-0! mx-auto max-w-[1000px]">
+<Image src="/portfolio-assets/rbo-3.png" alt="Napkin sketch of the feature." width={1200} height={750} quality="100" />
+</figure>
+</div>
+
+<div className="max-w-2xl">
 ## Taking it to High Fidelity
 Armed with knowledge and a finalized MVP scope, I now felt comfortable creating high-fidelity designs. Some aspects could utilize existing components from our design system, but there were some interactions, such as the grid layout and timeline scrubber, that were unique to this page. For these new patterns, I borrowed from similar experiences in other products like project management software and even video editing tools.
-</CaseStudyChapter>
+</div>
 
-<CaseStudyChapter
-src="/portfolio-assets/rbo-4.mp4"
-video
-alt=""
-layout="vertical"
->
+<div>
+  <figure className="not-prose">
+    <video
+        width="1000"
+        height="750"
+        preload="metadata"
+        playsInline
+        autoPlay="autoplay"
+        muted
+        loop
+    >
+        <source src="/portfolio-assets/rbo-4.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+  </figure>
+</div>
+
+<div className="max-w-2xl">
 ## Preparing for a Smooth Handoff
 My core deliverable was a few dozen static screen mockups, but I know better than to think that will be enough for an efficient engineering handoff.
 My final Figma file also contained written documentation of our design decisions, links to videos I’d made for certain interactions, and specs for responsiveness, loading states, and screen transitions.
 
 All that meant that the build process was done in less than a quarter, with a minimal amount of back-and-forth and QA tickets.
-</CaseStudyChapter>
+</div>
 
-
-
-<div className="max-w-3xl mx-auto my-12 lg:my-48">
+<div className="max-w-2xl">
 ## Results
-<CaseStudyBlockquote
-    quotation="Ding ding ding!"
-    citation="The exact reaction of one of our clients upon seeing the alpha version of this feature for the first time."/>
-
+<blockquote className="not-prose my-12 pl-4 lg:pl-8 border-l-4 border-l-yellow-200">
+      <span className="block mb-4 font-display text-xl lg:text-2xl font-bold">
+        "Ding ding ding!"
+      </span>
+      <cite className="text-neutral-500">"The exact reaction of one of our clients upon seeing the alpha version of this feature for the first time."</cite>
+    </blockquote>
 We expected this feature to find a dedicated niche in our client base, and it did. Room Booking Overview was launched as an add-on purchase with an attach rate of 25%, exceeding our expectations and immediately driving revenue growth. Since launch, we’ve shipped additional follow-up improvements based on our initial user research, creating a small but ardent set of users whose return rate signals just how well we hit the mark.
+
+</div>
 </div>

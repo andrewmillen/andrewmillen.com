@@ -2,10 +2,8 @@ import * as contentComponents from "@/components/blog";
 
 import { getAllPostIds, getPostData } from "@/lib/portfolio";
 
-import CaseStudyBlockquote from "@/components/portfolio/CaseStudyBlockquote";
-import CaseStudyCallout from "@/components/portfolio/CaseStudyCallout";
-import CaseStudyChapter from "@/components/portfolio/CaseStudyChapter";
-import CaseStudyProblemStatement from "@/components/portfolio/CaseStudyProblemStatement";
+import Callout from "@/components/portfolio/Callout";
+import ProblemStatement from "@/components/portfolio/ProblemStatement";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
@@ -18,10 +16,8 @@ import { getSortedCaseStudies } from "@/lib/portfolio";
 
 const components = {
   contentComponents,
-  CaseStudyProblemStatement,
-  CaseStudyChapter,
-  CaseStudyCallout,
-  CaseStudyBlockquote,
+  ProblemStatement,
+  Callout,
   Image,
   Link,
 };
@@ -56,9 +52,7 @@ export default function Post({ postData, caseStudies }) {
               <h1 className="mt-2 h1">{postData.title}</h1>
             </div>
 
-            <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
-
-            <div className="py-8 lg:pt-16">
+            <div className="py-8">
               <p className="text-lg leading-relaxed max-w-[65ch] text-neutral-700 dark:text-neutral-100 mb-8">
                 {postData.summary}
               </p>
