@@ -71,6 +71,7 @@ export default function Post({ postData, caseStudies }) {
               className="my-0 lg:my-12"
               alt=""
               priority
+              quality="100"
             />
 
             <div

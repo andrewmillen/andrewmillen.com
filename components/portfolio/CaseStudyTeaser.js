@@ -20,6 +20,7 @@ export default function CaseStudyTeaser({
             height="500"
             className={`${thumbnailBgColor} max-w-2xl mx-auto lg:max-w-none w-full p-8 lg:p-12 rounded-3xl lg:rounded-4xl`}
             alt=""
+            quality="100"
           />
         </Link>
       </div>
