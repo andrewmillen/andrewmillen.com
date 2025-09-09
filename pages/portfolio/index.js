@@ -11,7 +11,7 @@ import portfolio from "@/content/portfolio.json";
 
 export default function Portfolio({ caseStudies, meta, header, links }) {
   const thumbnailBgColors = [
-    "bg-sky-100", // design systems
+    "bg-[#E0F1F8]", // design systems
     "bg-purple-100", // prototyping
     "bg-moss-200", // innovation
   ];

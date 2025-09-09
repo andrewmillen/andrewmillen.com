@@ -2,64 +2,91 @@
 order: 1
 tag: "Design Systems"
 title: "Designing for Scale"
-summary: "In my first year at OfficeSpace Software, I led multiple designers and developers in the process of building a design system where none existed, unlocking new sales segments, tripling development velocity, and setting up a bright future for the 15-year-old product. Meet Mariposa."
+summary: "At OfficeSpace Software, I led the creation and rollout of a design system that tripled development velocity, unlocked new sales segments, and is facilitating our growth into a multi-product platform. Meet Mariposa."
 hero: "/portfolio-assets/design-systems-hero.jpg"
-thumbnail: "/portfolio-assets/thumbnail-design-systems.png"
+thumbnail: "/portfolio-assets/thumbnail-design-systems-new.png"
 og: "/portfolio-assets/design-systems-og.jpg"
 unlisted: false
 related: "Employee Dashboard"
 ---
 
-<CaseStudyProblemStatement>
-## Saddled with UX debt, accessibility failures, and a decentralized front end framework, OfficeSpace was in dire need of a design system.
+<div className="flex flex-col space-y-0 lg:space-y-12 xl:space-y-20 items-center max-w-none py-12 2xl:py-0">
 
-Without one, every new design comp and code update was compounding the problem: UI inconsistencies and process inefficiencies that were preventing our teams from doing their best work. And with no way to address global accessibility issues, the business was unable to expand into government and education sectors with strict audit requirements.
-</CaseStudyProblemStatement>
 
-<CaseStudyChapter
-src="/portfolio-assets/design-systems-1.jpg"
-alt="A diagram of how components are built from tokens."
->
-## Establishing the Foundations
-The first order of business was to create a component library in Figma to power every design file. Following the atomic design method, I started by defining our tokens: spacing, text styles, color ramps, box shadows, and so on. I then collaborated with the rest of the design team to build our molecules and organisms, meticulously considering every use case and minimizing disruption to end users by making changes to the existing design language only when necessary to improve consistency and accessibility.
-</CaseStudyChapter>
+<div>
+<p className="h4 mb-2 mt-0!">The Problem</p>
+<div className="flex flex-col max-w-2xl lg:max-w-none lg:flex-row lg:space-x-20">
+<div className="lg:w-1/2">
+<h2 className="mt-0!">Without a centralized Figma library or front-end framework, the user experience of OfficeSpace was fragmenting and process inefficiencies were holding us back.</h2>
+</div>
+<div className="lg:w-1/2">
+<p className="mt-0!">The company was on an ambitious growth plan to expand its product line, but designers and developers were working without the infrastructure needed to execute this strategy. Meanwhile, users were encountering more and more inconsistencies and accessibility failures in our UI, which we had no way to address globally.</p>
+</div>
+</div>
+</div>
 
-<CaseStudyChapter
-src="/portfolio-assets/design-systems-2.jpg"
-alt="A comparison of the property structure of a component in Figma and in code."
-layout="reverse"
->
-## From Figma to Code
-Meanwhile, a new dev team had been formed to build the front-end framework that our design system would utilize. With my background in front-end, I was able to help by writing acceptance criteria, testing each component, even pushing some code changes myself.
+<div className="max-w-2xl">
+## Fortifying the Foundation
+Immediately after joining, I started by building a component library in Figma for our entire team to use. Off-the-rack was not an option; OfficeSpace had its own design language with 15 years of history and a cohort of power users we didn’t want to disrupt.
 
-Crucially, I made sure that the components in Figma and their counterparts in code shared the same property structure, which means that any engineer can look at a Figma file and configure the components it’s built from with ease.
+Following atomic design standards, I started by defining our tokens: typography, color, spacing, and elevation, as well as iconography and responsive breakpoints. From there, I was able to create the core set of molecules and organisms that would power every new design. In workshops with the rest of the team, we talked through the minutiae of every component, with the approach of changing existing patterns only when necessary to improve consistency and accessibility.
+</div>
 
-Together, we built a library of over 50 components in the first 12 months. By the end of that year, we were ready to build and launch the first set of pages in our new framework.
-</CaseStudyChapter>
+<div className="text-center">
+<figure className="my-0! mx-auto max-w-[1000px]">
+<Image src="/portfolio-assets/design-systems-1.png" alt="The atomic tokens that make up the Mariposa design system." width={1000} height={500} />
+</figure>
+</div>
 
-<CaseStudyChapter
-src="/portfolio-assets/design-systems-3.jpg"
-alt="A list of documentation articles written for Mariposa."
->
-## Writing Documentation
-To help streamline adoption of the new library, I helped write thorough documentation for each component and its variants, as well as standards for things like forms, error messaging, loading states, date formatting, and all the little decisions that round out a successful design system. We even gave it a name: Mariposa, Spanish for "butterfly."
-</CaseStudyChapter>
+<div className="max-w-2xl">
+The library soon branched into to a network of sub-libraries for different areas of the product. Even before a single line of code had been written, we saw vast improvements in productivity and design cohesion across the team.
+</div>
 
-<CaseStudyChapter
-src="/portfolio-assets/design-systems-4.svg"
-alt="A chart that lays out the principles on which the design system is built."
-width="900"
-height="600"
-layout="vertical"
->
-## Developing Principles
-Mariposa was created with the long term goal of completely overhauling our UI from the inside out. With that in mind, I created a visual to help everyone on the team understand how the "big idea" of the system is structured. Accessibility and inclusivity are at the core of the experience, and working outward, we layer on our tokens, the interactive layer, and finally the voice and tone in which OfficeSpace communicates to the user.
-</CaseStudyChapter>
+<div className="max-w-2xl">
+## Bridging Figma and Code
+Around the same time, a new engineering team had been formed to build the framework that our design system would utilize. With my background in front-end development, I was able to help by preparing files for handoff, writing acceptance criteria, testing each component, and even pushing code changes myself.
+</div>
 
-<CaseStudyChapter
-src="/portfolio-assets/design-systems-5.jpg"
-alt="A stylized butterfly logo for the Mariposa system."
->
-## Encouraging Adoption
-Anyone who’s worked in design systems knows that just having one doesn’t mean it will take root. Adoption requires vision, patience, and politicking. Throughout the process, I’ve learned to constantly reinforce the business value of our new framework: increased dev velocity, more business opportunities opened up with improved accessibility, and a path towards modernizing our entire UI. As a result, Mariposa is entering its adolescence as a design system as it continues to grow and power more and more of OfficeSpace.
-</CaseStudyChapter>
+<div className="text-center">
+<figure className="my-0! mx-auto max-w-[1000px]">
+<Image src="/portfolio-assets/design-systems-2.png" alt="A view comparing the similar structure of the same component in Figma and React." width={1000} height={500} />
+<figcaption>
+I made sure that the components in Figma shared the same property structure as their counterparts in code, which means that any engineer can look at a Figma file and configure the components it’s built from with ease.
+</figcaption>
+</figure>
+</div>
+
+<div className="max-w-2xl">
+Together, we built a library of over 50 components in the first year. Now we were ready to build and launch the first set of pages in our new framework.
+</div>
+
+<div className="max-w-2xl">
+## Optimizing for Adoption
+For a design system to take root, it needs more than a style guide and some component files. Every decision made along the way, beyond just those in static design artifacts, makes up its DNA, and that record needs to be captured, shared, and maintained over time.
+
+With that in mind, I created documentation for every component, as well as standards for things like forms, error messaging, loading states, and date formatting. To streamline adoption, I developed getting started guides that would enable other engineering teams to realize its value. We even gave it a name: Mariposa, Spanish for "butterfly."
+</div>
+
+<div className="text-center">
+<figure className="my-0! mx-auto max-w-[1000px]">
+<Image src="/portfolio-assets/design-systems-3.jpg" alt="A screenshot of the employee dashboard built with Mariposa components." width={1000} height={700} />
+<figcaption>
+The new employee dashboard was the realization of months of effort building Mariposa.
+</figcaption>
+</figure>
+</div>
+
+<div className="max-w-2xl">
+As expected, adoption started slow, but it soon snowballed. The flagship release of the new <Link href="/portfolio/employee-dashboard">Employee Dashboard</Link> was a huge win – a high-profile opportunity to showcase Mariposa and make it clear that this was the new design standard for all of OfficeSpace.
+</div>
+
+<div className="max-w-2xl">
+## Powering a Platform
+In benchmarks, we found building front-end features with Mariposa to be roughly three times faster than our legacy approach, and it brought accessibility issues down to near zero, empowering field teams to compete in new sectors with strict audit requirements.
+
+Perhaps more importantly, it has laid the groundwork for our design practice to scale. As OfficeSpace transforms from a single app into a multi-product platform, continuity in our user experience has become exponentially more important. Mariposa has defined the look and feel of this new generation, and is being adopted at a blistering pace by AI-enabled engineers. As with any design system, it’s been a long term investment, but a high value payoff.
+</div>
+
+
+
+</div>
