@@ -1,6 +1,6 @@
 export default function ProblemStatement({ headline, content }) {
   return (
-    <div className="pb-0 xl:pb-12 2xl:pb-24">
+    <div className="pt-12 pb-0 xl:pb-12 2xl:pb-24">
       <p className="h4 mb-2 mt-0!">The Problem</p>
       <div className="flex flex-col max-w-2xl lg:max-w-none lg:flex-row lg:space-x-20">
         <div className="lg:w-1/2">

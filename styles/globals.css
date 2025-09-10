@@ -103,10 +103,6 @@
     @apply text-3xl
   }
 
-  ul {
-    @apply ml-4;
-  }
-
   a {
     @apply text-link-light-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
   }

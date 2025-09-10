@@ -1,5 +1,3 @@
-import * as contentComponents from "@/components/blog";
-
 import { getAllPostIds, getPostData } from "@/lib/portfolio";
 
 import Callout from "@/components/portfolio/Callout";
@@ -14,8 +12,7 @@ import Tag from "@/components/Tag";
 import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import { getSortedCaseStudies } from "@/lib/portfolio";
 
-const components = {
-  contentComponents,
+const caseStudyComponents = {
   ProblemStatement,
   Callout,
   Image,
@@ -68,21 +65,11 @@ export default function Post({ postData, caseStudies }) {
               quality="100"
             />
 
-            <div
-              className="pt-12 prose prose-neutral prose-lg dark:prose-invert prose-blockquote:font-normal prose-blockquote:my-16 prose-blockquote:text-neutral-500
-              prose-p:leading-relaxed
-              prose-h2:text-3xl
-              prose-a:text-link-light-default
-              prose-a:hover:text-link-light-hover
-              dark:prose-a:text-link-dark-default
-              dark:prose-a:hover:text-link-dark-hover
-              prose-a:underline-offset-4
-              prose-a:font-normal
-              prose-quoteless
-              max-w-none
-              "
-            >
-              <MDXRemote {...postData.mdxSource} components={components} />
+            <div className="prose prose-neutral prose-lg dark:prose-invert max-w-none flex flex-col space-y-0 lg:space-y-12 xl:space-y-16 items-center pb-12">
+              <MDXRemote
+                {...postData.mdxSource}
+                components={caseStudyComponents}
+              />
             </div>
           </div>
         </article>
