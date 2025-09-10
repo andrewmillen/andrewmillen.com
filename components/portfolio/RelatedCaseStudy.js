@@ -10,7 +10,7 @@ export default function RelatedCaseStudy({ postData }) {
           <div className="flex flex-col-reverse lg:flex-row lg:items-center space-y-reverse space-y-12 lg:space-y-0 lg:space-x-20 px-0">
             <div className="w-full lg:w-1/2">
               <Image
-                src={postData.frontMatter.og}
+                src={postData.frontMatter.hero}
                 width="1200"
                 height="630"
                 className="w-full max-w-xl lg:mx-auto lg:max-w-full rounded-xl"
@@ -18,8 +18,8 @@ export default function RelatedCaseStudy({ postData }) {
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="font-display text-2xl mb-8 text-neutral-700 dark:text-neutral-400">
-                Related Case Study
+              <div className="font-display text-xl mb-8 text-neutral-700 dark:text-neutral-400">
+                Keep Reading
               </div>
               <Tag content={postData.frontMatter.tag} />
               <h2 className="mt-2 mb-4 md:mb-8 h2">
