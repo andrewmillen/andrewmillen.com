@@ -4,17 +4,17 @@ import Link from "next/link";
 export default function MoreWorkLayout({ title, children }) {
   return (
     <div className="overflow-x-hidden">
-      <header className="pt-12 lg:pt-20 text-center">
+      <header className="pt-12 lg:pt-20">
         <div className="container">
           <div className="flex flex-col space-y-2 items-center">
             <div className="inline-flex flex-col items-center mb-4">
-              <Breadcrumb url="/" />
-              <h1 className="h2 mt-2">{title}</h1>
+              <Breadcrumb
+                parentPageUrl="/portfolio"
+                parentPageLabel="Portfolio"
+                activePageLabel="More Work"
+              />
+              <h1 className="h2 mt-6">{title}</h1>
             </div>
-
-            <Link className="textLink text-lg" href={`/portfolio`}>
-              <span className="font-display">←</span> Portfolio
-            </Link>
           </div>
         </div>
       </header>

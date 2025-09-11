@@ -33,7 +33,7 @@ export default function PortfolioPasswordGate({ children }) {
 
   return (
     <div className="flex flex-col items-center h-screen pt-24 bg-neutral-100 dark:bg-neutral-900">
-      <Breadcrumb url="/" />
+      <Breadcrumb />
       <div className="flex flex-col items-center space-y-2 my-8">
         <h1 className="h2">Andrew Millen Portfolio</h1>
         <p className="text-neutral-600 dark:text-neutral-300">

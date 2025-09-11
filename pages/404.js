@@ -20,7 +20,7 @@ export default function ErrorPage({ meta }) {
 
       <main className="pt-12 pb-4 text-center md:pt-16 lg:pt-24">
         <div className="container">
-          <Breadcrumb url="/" />
+          <Breadcrumb />
           <h1 className="h1 mt-4 mb-2 lg:mb-8">404: Page Not Found</h1>
           <p className="text-lg mb-6 max-w-lg mx-auto lg:text-xl leading-relaxed lg:max-w-2xl lg:mb-12">
             The page you're looking for doesn't exist.{" "}

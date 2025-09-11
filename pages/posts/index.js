@@ -22,9 +22,9 @@ export default function Blog({ posts, meta }) {
         />
       </Head>
 
-      <header className="pt-12 md:pt-16 lg:pt-24">
+      <header className="pt-12 lg:pt-20">
         <div className="container">
-          <Breadcrumb url="/" />
+          <Breadcrumb />
           <h1 className="h1 mt-4">Blog</h1>
         </div>
       </header>

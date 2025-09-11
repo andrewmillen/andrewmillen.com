@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from "@/lib/portfolio";
 
+import Breadcrumb from "@/components/Breadcrumb";
 import Callout from "@/components/portfolio/Callout";
 import ProblemStatement from "@/components/portfolio/ProblemStatement";
 import Head from "next/head";
@@ -39,11 +40,13 @@ export default function Post({ postData, caseStudies }) {
       <main className="py-12 2xl:mb-32 lg:pt-20">
         <article>
           <div className="container">
-            <Link className="textLink text-lg" href={`/portfolio`}>
-              <span className="font-display">←</span> All Case Studies
-            </Link>
+            <Breadcrumb
+              parentPageUrl="/portfolio"
+              parentPageLabel="Portfolio"
+              activePageLabel="Case Study"
+            />
 
-            <div className="mt-8 md:mt-16">
+            <div className="mt-12 md:mt-20 lg:mt-28">
               <Tag content={postData.tag} />
 
               <h1 className="mt-2 h1">{postData.title}</h1>
