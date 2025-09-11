@@ -46,7 +46,7 @@ export default function Portfolio({ caseStudies, meta, header, links }) {
           {caseStudies.map((caseStudy, index) =>
             caseStudy.frontMatter.unlisted == false ? (
               <div
-                className="not-last:border-b not-last:border-neutral-200 not-last:dark:border-neutral-800 py-12 md:py-16 lg:py-20"
+                className="not-last:border-b not-last:border-neutral-200 not-last:dark:border-neutral-800"
                 key={index}
               >
                 <CaseStudyTeaser
