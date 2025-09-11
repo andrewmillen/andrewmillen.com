@@ -12,10 +12,12 @@ import RelatedCaseStudy from "@/components/portfolio/RelatedCaseStudy";
 import Tag from "@/components/Tag";
 import TestimonialSlider from "@/components/portfolio/TestimonialSlider";
 import { getSortedCaseStudies } from "@/lib/portfolio";
+import DesignSystemDemo from "@/components/portfolio/DesignSystemDemo";
 
 const caseStudyComponents = {
   ProblemStatement,
   Callout,
+  DesignSystemDemo,
   Image,
   Link,
 };
