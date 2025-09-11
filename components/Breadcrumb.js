@@ -8,8 +8,8 @@ export default function Breadcrumb({
   return (
     <div className="inline-flex items-center gap-3 font-display font-bold text-2xl">
       <Link
-        href="/"
-        className="inline-flex text-neutral-900 hover:text-neutral-700 dark:text-white dark:hover:text-neutral-200"
+        href={parentPageUrl || "/"}
+        className="inline-flex items-center gap-3 text-neutral-900 hover:text-neutral-700 dark:text-white dark:hover:text-neutral-200"
       >
         <svg viewBox="0 0 172 172" className="w-10 h-10">
           <path
@@ -18,24 +18,13 @@ export default function Breadcrumb({
 H53.7z M89.7,126L61.6,46h20l16.5,47L89.7,126z M128.9,126h-18.6V46h18.6V126z"
           />
         </svg>
+        {parentPageUrl && <span>{parentPageLabel}</span>}
       </Link>
-      {parentPageUrl && (
-        <span className="inline-flex items-center gap-3">
-          <span>
-            <Link
-              href={parentPageUrl}
-              className="text-neutral-900 hover:text-neutral-600 dark:text-white dark:hover:text-neutral-200"
-            >
-              {parentPageLabel}
-            </Link>
-          </span>
-          {activePageLabel && (
-            <>
-              <span className="font-normal text-lg">/</span>
-              <span className="opacity-70 font-normal ">{activePageLabel}</span>
-            </>
-          )}
-        </span>
+      {activePageLabel && (
+        <>
+          <span className="font-normal text-lg">/</span>
+          <span className="opacity-70 font-normal ">{activePageLabel}</span>
+        </>
       )}
     </div>
   );
