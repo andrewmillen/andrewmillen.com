@@ -17,7 +17,7 @@ export default function TestimonialSlider() {
                   <span className="block font-bold text-2xl sm:text-3xl mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </span>
-                  <cite className="block not-italic font-semibold text-neutral-600 dark:text-yellow-200 text-xl">
+                  <cite className="block not-italic font-semibold text-yellow-700 dark:text-yellow-200 text-xl">
                     {testimonial.attribution}
                   </cite>
                 </blockquote>
