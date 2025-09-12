@@ -47,7 +47,7 @@ export default function FeaturedWorkSlider({ slides }) {
 
   return (
     <section
-      className={`py-8 sm:py-12 xl:py-16 2xl:py-20 relative transition-colors duration-300 ${slideBgColors[currentIdx]}`}
+      className={`py-8 sm:py-12 xl:py-16 2xl:py-20 relative transition-colors duration-300 ${slideBgColors[currentIdx]} dark:bg-neutral-800`}
     >
       <h2 className="sr-only">Featured Work</h2>
       <div className="relative mx-auto max-w-4xl lg:max-w-7xl md:px-24 lg:px-32">
@@ -70,21 +70,21 @@ export default function FeaturedWorkSlider({ slides }) {
             ))}
             <div key="other" className="min-w-0 flex-[0_0_100%] px-12">
               <div className="text-center mx-auto">
-                <p className="h2 text-sky-800 mb-8 font-display">
+                <p className="h2 text-sky-800 dark:text-white mb-8 font-display">
                   Looking for something more in-depth?
                 </p>{" "}
-                <p className="text-xl text-neutral-700">
+                <p className="text-xl text-neutral-700 dark:text-neutral-300">
                   <a
                     href="mailto:andrewmillen1+website@gmail.com"
                     target="_blank"
-                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500 dark:text-link-dark-default dark:hover:text-link-dark-hover"
                   >
                     Email me
                   </a>{" "}
                   or{" "}
                   <Link
                     href="/portfolio"
-                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500 dark:text-link-dark-default dark:hover:text-link-dark-hover"
                   >
                     visit my portfolio
                   </Link>{" "}
@@ -96,7 +96,7 @@ export default function FeaturedWorkSlider({ slides }) {
         </div>
 
         <div
-          className={`${dotColors[currentIdx]} flex justify-center space-x-4 mt-8 sm:mt-12 md:hidden`}
+          className={`${dotColors[currentIdx]} dark:text-white flex justify-center space-x-4 mt-8 sm:mt-12 md:hidden`}
         >
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
