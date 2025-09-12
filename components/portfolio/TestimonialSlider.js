@@ -6,7 +6,7 @@ export default function TestimonialSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   return (
-    <section className="bg-yellow-200 text-neutral-900 font-display py-12 md:py-16 xl:py-32 ">
+    <section className="bg-yellow-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-200 font-display py-12 md:py-16 xl:py-32 ">
       <h2 className="sr-only">Testimonials</h2>
       <div className="relative lg:container">
         <div className="overflow-hidden lg:mx-24" ref={emblaRef}>
@@ -14,10 +14,10 @@ export default function TestimonialSlider() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-0 flex-[0_0_100%]">
                 <blockquote className="text-center max-w-3xl lg:max-w-none mx-auto px-12 lg:px-16">
-                  <span className="block font-bold h3 mb-4">
+                  <span className="block font-bold text-2xl sm:text-3xl mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
                   </span>
-                  <cite className="block not-italic text-neutral-500 text-xl lg:text-2xl font-semibold">
+                  <cite className="block not-italic font-semibold text-neutral-600 dark:text-yellow-200 text-xl">
                     {testimonial.attribution}
                   </cite>
                 </blockquote>
