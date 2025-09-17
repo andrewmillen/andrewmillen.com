@@ -18,18 +18,17 @@ export default function Resume({ meta, resume }) {
         />
       </Head>
 
-      <header className="pt-6 pb-12 md:py-12 xl:py-20">
+      <header className="py-12 xl:py-20">
         <div className="container max-w-3xl">
           <Breadcrumb />
           <h1 className="h1 mt-8">{resume.header.name}</h1>
-          <p className="h2 mt-2">{resume.header.title}</p>
         </div>
       </header>
       <main className="pb-12 xl:pb-20">
         <div className="container max-w-3xl">
           <div className="mb-16">
             <h2 className="h4 mb-4">About Me</h2>
-            <p>{resume.header.statement}</p>
+            <p className="text-xl font-semibold">{resume.header.about}</p>
           </div>
           <div className="mb-16">
             <h2 className="h4 mb-4">Experience</h2>
