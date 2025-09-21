@@ -67,10 +67,10 @@ export default function GraphicsWeb() {
       <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-12 xl:space-x-24">
         <div className="lg:w-1/2 flex flex-col items-center lg:items-end space-y-12 xl:space-y-24">
           <ImageWithCaption
-            src="/portfolio-assets/gw-mlk.jpg"
+            src="/portfolio-assets/gw-march.jpg"
             alt="A website for the March Against Fear 50-year anniversary service"
             width="600"
-            height="850"
+            height="800"
             caption="Microsite celebrating the <a class='textLink' href='https://andrewmillen.github.io/a-call-to-courage/' target='blank'>50th anniversary of the March Against Fear</a>"
           />
         </div>
