@@ -15,7 +15,7 @@ export default function UIProduct() {
             caption="Travel app concept"
           />
           <ImageWithCaption
-            src="/portfolio-assets/ui-zignyl.jpg"
+            src="/portfolio-assets/ui-rms.jpg"
             alt="Dashboard showing timers and reminders for a restaurant"
             width="600"
             height="450"
