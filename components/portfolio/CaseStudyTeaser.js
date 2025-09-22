@@ -12,7 +12,7 @@ export default function CaseStudyTeaser({
 }) {
   return (
     <Link href={"/portfolio/" + slug}>
-      <div className="container flex flex-col-reverse space-y-reverse space-y-12 min-[56rem]:flex-row min-[56rem]:items-center min-[56rem]:space-y-0 min-[56rem]:space-x-10 lg:space-x-20 py-12 md:py-16 lg:py-20">
+      <div className="container flex flex-col-reverse space-y-reverse space-y-4 min-[56rem]:flex-row min-[56rem]:items-center min-[56rem]:space-y-0 min-[56rem]:space-x-10 lg:space-x-20 py-12 md:py-16 lg:py-20">
         <div className="w-full lg:w-1/2">
           <Image
             src={thumbnail}
