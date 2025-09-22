@@ -29,7 +29,7 @@ export default function CaseStudyTeaser({
             {title}
           </h2>
           <h3 className="sr-only">Summary</h3>
-          <p className="mb-8">{summary}</p>
+          <p className="mb-8 lg:text-lg">{summary}</p>
         </div>
       </div>
     </Link>
