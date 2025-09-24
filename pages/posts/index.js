@@ -60,7 +60,7 @@ export default function Blog({ posts, meta }) {
           <h2 className="h4 mb-4 lg:mb-6">Previous Posts</h2>
           <ul className="max-w-4xl mb-20">
             {posts.slice(1).map((post, index) => (
-              <li key={index} className="my-2 lg:my-4">
+              <li key={index} className="my-4 lg:my-6">
                 <Link
                   className="inline-block font-semibold hover:underline hover:underline-offset-2 lg:text-lg"
                   href={"/posts/" + post.slug}

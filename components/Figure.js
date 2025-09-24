@@ -48,10 +48,10 @@ export default function Figure({
       {caption && (
         <figcaption
           style={{ maxWidth: width }}
-          className={`${centered ? "text-center px-4" : ""}`}
+          className={`mt-2 lg:mt-4 ${centered ? "text-center px-4" : ""}`}
         >
           <span
-            className="block mt-4 text-neutral-600 dark:text-neutral-400 text-base"
+            className="block text-neutral-600 dark:text-neutral-400 text-base"
             dangerouslySetInnerHTML={{ __html: caption }}
           ></span>
           {attribution && (

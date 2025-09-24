@@ -41,7 +41,7 @@ export default function UIProduct() {
             ambient
           />
         </div>
-        <div className="lg:w-1/2 mt-12 lg:mt-24 xl:mt-48 flex flex-col items-center lg:items-start space-y-12 xl:space-y-24">
+        <div className="lg:w-1/2 lg:mt-24 xl:mt-48 flex flex-col items-center lg:items-start space-y-12 xl:space-y-24">
           <Figure
             type="image"
             src="/portfolio-assets/ui-hellohome.jpg"

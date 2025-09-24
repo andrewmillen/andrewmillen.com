@@ -86,7 +86,7 @@
   }
 
   .caseStudyFigure {
-    @apply my-2 md:my-8 lg:mt-0 lg:mb-16
+    @apply max-w-full my-2! sm:my-8! md:my-12! lg:mt-0! lg:mb-16!
   }
 }
 
