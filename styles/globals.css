@@ -64,7 +64,7 @@
 }
 
 @layer components {
-  .textLink {
+  .textLink, figcaption a {
     color: var(--color-link-light-default);
     @apply underline underline-offset-4;
 
@@ -79,6 +79,14 @@
         color: var(--color-link-dark-hover);
       }
     }
+  }
+
+  .caseStudyText {
+    @apply max-w-2xl
+  }
+
+  .caseStudyFigure {
+    @apply my-2 md:my-8 lg:mt-0 lg:mb-16
   }
 }
 

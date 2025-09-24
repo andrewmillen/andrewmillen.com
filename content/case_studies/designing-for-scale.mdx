@@ -11,65 +11,78 @@ related: "Employee Dashboard"
 ---
 
 <ProblemStatement
-    eyebrow="The Problem"
-    headline="Without a centralized Figma library or front-end framework, the user experience of OfficeSpace was fragmenting and process inefficiencies were holding us back."
-    content="The company was on an ambitious growth plan to expand its product line, but designers and developers were working without the infrastructure needed to execute this strategy. Meanwhile, users were encountering more and more inconsistencies and accessibility failures in our UI, which we had no way to address globally."
+  eyebrow="The Problem"
+  headline="Without a centralized Figma library or front-end framework, the user experience of OfficeSpace was fragmenting and process inefficiencies were holding us back."
+  content="The company was on an ambitious growth plan to expand its product line, but designers and developers were working without the infrastructure needed to execute this strategy. Meanwhile, users were encountering more and more inconsistencies and accessibility failures in our UI, which we had no way to address globally."
 />
 
-<div className="max-w-2xl">
-## Fortifying the Foundation
-Immediately after joining, I started by building a component library in Figma for our entire team to use. Off-the-rack was not an option; OfficeSpace had its own design language with 15 years of history and a cohort of power users we didn’t want to disrupt.
+<div className="caseStudyText">
+  ## Fortifying the Foundation
+  Immediately after joining, I started by building a component library in Figma for our entire team to use. Off-the-rack was not an option; OfficeSpace had its own design language with 15 years of history and a cohort of power users we didn’t want to disrupt.
 
-Following atomic design standards, I started by defining our tokens: typography, color, spacing, and elevation, as well as iconography and responsive breakpoints. From there, I was able to create the core set of molecules and organisms that would power every new design. In workshops with the rest of the team, we talked through the minutiae of every component, with the approach of changing existing patterns only when necessary to improve consistency and accessibility.
+  Following atomic design standards, I started by defining our tokens: typography, color, spacing, and elevation, as well as iconography and responsive breakpoints. From there, I was able to create the core set of molecules and organisms that would power every new design. In workshops with the rest of the team, we talked through the minutiae of every component, with the approach of changing existing patterns only when necessary to improve consistency and accessibility.
 </div>
 
-<div className="text-center">
-<figure className="my-0! mx-auto max-w-[1000px]">
-<Image src="/portfolio-assets/design-systems-1.png" alt="The atomic tokens that make up the Mariposa design system." width={1000} height={500} quality="100" />
-</figure>
+<div className="caseStudyFigure">
+  <Figure
+    type="image"
+    src="/portfolio-assets/design-systems-1.png"
+    alt="The atomic tokens that make up the Mariposa design system."
+    width={1000}
+    height={500}
+    quality={100}
+  />
 </div>
 
-<div className="max-w-2xl">
-The library soon branched into a network of sub-libraries for different areas of the product. Even before a single line of code had been written, we saw vast improvements in productivity and design cohesion across the team.
+<div className="caseStudyText">
+  The library soon branched into a network of sub-libraries for different areas of the product. Even before a single line of code had been written, we saw vast improvements in productivity and design cohesion across the team.
 </div>
 
-<div className="max-w-2xl">
-## Bridging Figma and Code
-Around the same time, a new engineering team had been formed to build the framework that our design system would utilize. With my background in front-end development, I was able to help by preparing files for handoff, writing acceptance criteria, testing each component, and even pushing code changes myself.
+<div className="caseStudyText">
+  ## Bridging Figma and Code
+  Around the same time, a new engineering team had been formed to build the framework that our design system would utilize. With my background in front-end development, I was able to help by preparing files for handoff, writing acceptance criteria, testing each component, and even pushing code changes myself.
 
-To ensure fidelity between Figma and code, I made sure (when possible) that the components in our design files shared the same property structure as their React counterparts. This made it easy for designers to understand how components would behave in the product, and faster for developers to translate designs into code.
+  To ensure fidelity between Figma and code, I made sure (when possible) that the components in our design files shared the same property structure as their React counterparts. This made it easy for designers to understand how components would behave in the product, and faster for developers to translate designs into code.
 </div>
 
-<figure className="my-0! mx-auto w-full max-w-[1000px]">
-<DesignSystemDemo />
-<figcaption className="text-center">
-Interactive: Modify the properties in Figma to see the changes reflected in code.
-</figcaption>
-</figure>
-
-<div className="max-w-2xl">
-## Optimizing for Adoption
-For a design system to take root, it needs more than a style guide and some component files. Every decision made along the way, beyond just those in static design artifacts, makes up its DNA, and that record needs to be captured, shared, and maintained over time.
-
-With that in mind, I created documentation for every component, as well as standards for things like forms, error messaging, loading states, and date formatting. To streamline adoption, I developed Getting Started guides that would enable other engineering teams to realize its value. We even gave it a name: Mariposa, Spanish for "butterfly."
+<div className="caseStudyFigure">
+  <Figure
+    type="custom"
+    centered
+    caption="Interactive: Modify the properties in Figma to see the changes reflected in code."
+    width={1000}
+    >
+    <DesignSystemDemo />
+  </Figure>
 </div>
 
-<div className="text-center">
-<figure className="my-0! mx-auto max-w-[1000px]">
-<Image src="/portfolio-assets/design-systems-3.jpg" alt="A screenshot of the employee dashboard built with Mariposa components." width={1000} height={700} quality="100" />
-<figcaption>
-The new employee dashboard was the realization of months of effort building Mariposa.
-</figcaption>
-</figure>
+<div className="caseStudyText">
+  ## Optimizing for Adoption
+  For a design system to take root, it needs more than a style guide and some component files. Every decision made along the way, beyond just those in static design artifacts, makes up its DNA, and that record needs to be captured, shared, and maintained over time.
+
+  With that in mind, I created documentation for every component, as well as standards for things like forms, error messaging, loading states, and date formatting. To streamline adoption, I developed Getting Started guides that would enable other engineering teams to realize its value. We even gave it a name: Mariposa, Spanish for "butterfly."
 </div>
 
-<div className="max-w-2xl">
-As expected, adoption started slow, but it soon snowballed. The flagship release of the new <Link href="/portfolio/employee-dashboard">Employee Dashboard</Link> was a huge win – a high-profile opportunity to showcase Mariposa and make it clear that this was the new design standard for all of OfficeSpace.
+<div className="caseStudyFigure">
+  <Figure
+    type="image"
+    centered
+    src="/portfolio-assets/design-systems-3.jpg"
+    alt="A screenshot of the employee dashboard built with Mariposa components."
+    caption="The new employee dashboard was the realization of months of effort building Mariposa."
+    width={1000}
+    height={500}
+    quality={100}
+  />
 </div>
 
-<div className="max-w-2xl">
-## Powering a Platform
-In benchmarks, we found building front-end features with Mariposa to be roughly three times faster than our legacy approach, and it brought accessibility issues down to near zero, empowering field teams to compete in new sectors with strict audit requirements.
+<div className="caseStudyText">
+  As expected, adoption started slow, but it soon snowballed. The flagship release of the new <Link href="/portfolio/employee-dashboard">Employee Dashboard</Link> was a huge win – a high-profile opportunity to showcase Mariposa and make it clear that this was the new design standard for all of OfficeSpace.
+</div>
 
-Perhaps more importantly, it has laid the groundwork for our design practice to scale. As OfficeSpace transforms from a single app into a multi-product platform, continuity in our user experience has become exponentially more important. Mariposa has defined the look and feel of this new generation, and is being adopted at a blistering pace by AI-enabled engineers. As with any design system, it’s been a long term investment, but a high value payoff.
+<div className="caseStudyText">
+  ## Powering a Platform
+  In benchmarks, we found building front-end features with Mariposa to be roughly three times faster than our legacy approach, and it brought accessibility issues down to near zero, empowering field teams to compete in new sectors with strict audit requirements.
+
+  Perhaps more importantly, it has laid the groundwork for our design practice to scale. As OfficeSpace transforms from a single app into a multi-product platform, continuity in our user experience has become exponentially more important. Mariposa has defined the look and feel of this new generation, and is being adopted at a blistering pace by AI-enabled engineers. As with any design system, it’s been a long term investment, but a high value payoff.
 </div>

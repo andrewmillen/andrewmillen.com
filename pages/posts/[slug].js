@@ -1,22 +1,19 @@
-import { Footnote, ImageWithCaption, YoutubeEmbed } from "@/components/blog";
 import { format, parseISO } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
-
+import Figure from "@/components/Figure";
 import AuthorBio from "@/components/blog/AuthorBio";
+import Footnote from "@/components/blog/Footnote";
 import Button from "@/components/Button";
 import Head from "next/head";
-import Image from "next/image";
 import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-const components = {
-  YoutubeEmbed,
-  ImageWithCaption,
+const blogComponents = {
+  Figure,
   Footnote,
   SyntaxHighlighter,
-  Image,
 };
 
 export default function Post({ postData }) {
@@ -39,7 +36,7 @@ export default function Post({ postData }) {
       <main className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800">
         <article>
           <div className="container">
-            <div className="text-left">
+            <header className="text-left">
               <Breadcrumb parentPageUrl="/blog" parentPageLabel="Blog" />
               <h1 className="mt-8 md:mt-16 h1 max-w-3xl lg:max-w-5xl">
                 {postData.title}
@@ -52,13 +49,12 @@ export default function Post({ postData }) {
                   </time>
                 }
               </div>
-            </div>
+            </header>
 
             <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
-          </div>
-          <div className="container">
+
             <div className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert">
-              <MDXRemote {...postData.mdxSource} components={components} />
+              <MDXRemote {...postData.mdxSource} components={blogComponents} />
             </div>
           </div>
         </article>

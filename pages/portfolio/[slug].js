@@ -1,6 +1,7 @@
 import { getAllPostIds, getPostData } from "@/lib/portfolio";
 
 import Breadcrumb from "@/components/Breadcrumb";
+import Figure from "@/components/Figure";
 import Callout from "@/components/portfolio/Callout";
 import ProblemStatement from "@/components/portfolio/ProblemStatement";
 import Head from "next/head";
@@ -18,8 +19,8 @@ const caseStudyComponents = {
   ProblemStatement,
   Callout,
   DesignSystemDemo,
-  Image,
   Link,
+  Figure,
 };
 
 export default function Post({ postData, caseStudies }) {

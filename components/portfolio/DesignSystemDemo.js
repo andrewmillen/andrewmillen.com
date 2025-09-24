@@ -39,7 +39,7 @@ export default function DesignSystemDemo() {
   const codeLines = generateReactCode();
 
   return (
-    <div className="not-prose mt-8 lg:mt-0 flex flex-col md:flex-row gap-4 lg:gap-8 w-[400px] max-w-full md:w-full mx-auto">
+    <div className="not-prose mt-8 lg:mt-0 flex flex-col md:flex-row gap-4 lg:gap-8 w-[400px] max-w-full md:w-[1000px] mx-auto">
       {/* Figma Panel */}
       <div className="w-full md:w-1/2 md:aspect-square p-8 lg:p-0 bg-white border border-gray-300 rounded-2xl flex items-center justify-center text-sm lg:text-base relative">
         <Image
