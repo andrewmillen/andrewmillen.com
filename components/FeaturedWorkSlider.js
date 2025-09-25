@@ -8,14 +8,14 @@ import useEmblaCarousel from "embla-carousel-react";
 export default function FeaturedWorkSlider({ slides }) {
   const slideBgColors = [
     "bg-purple-100", // hlpr
-    "bg-moss-200", // gardening
-    "bg-salmon-200", // meal planner
+    "bg-[#d5e2d0]", // gardening
+    "bg-[#fad2ce]", // meal planner
     "bg-sky-100", // other
   ];
   const dotColors = [
     "text-purple-900", // hlpr
-    "text-moss-900", // gardening
-    "text-salmon-900", // meal planner
+    "text-[#2e3d2a]", // gardening
+    "text-[#782c24]", // meal planner
     "text-sky-900", // other
   ];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });

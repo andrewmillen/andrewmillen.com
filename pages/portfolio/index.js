@@ -13,7 +13,7 @@ export default function Portfolio({ caseStudies, meta, header, links }) {
   const thumbnailBgColors = [
     "bg-[#E0F1F8]", // design systems
     "bg-purple-100", // prototyping
-    "bg-moss-200", // innovation
+    "bg-[#d5e2d0]", // innovation
   ];
 
   return (
