@@ -6,9 +6,9 @@
   "footer": {
     "links": [
       {
-        "title": "Dribbble",
-        "url": "https://dribbble.com/andrewmillen",
-        "external": true
+        "title": "Portfolio",
+        "url": "portfolio",
+        "external": false
       },
       {
         "title": "GitHub",
