@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 
-import Breadcrumb from "@/components/Breadcrumb";
-
 export default function PortfolioPasswordGate({
   password,
   setPassword,
