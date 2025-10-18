@@ -73,24 +73,24 @@ export default function Post({ postData, caseStudies }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      {postData.protected && !isAuthenticated ? (
-        <PortfolioPasswordGate
-          password={password}
-          setPassword={setPassword}
-          error={error}
-          onSubmit={handleSubmit}
-        />
-      ) : (
-        <>
-          <main className="py-12 2xl:mb-32 lg:pt-20">
-            <article>
-              <div className="container">
-                <Breadcrumb
-                  parentPageUrl="/portfolio"
-                  parentPageLabel="Portfolio"
-                  activePageLabel="Case Study"
-                />
+      <main className="py-12 2xl:mb-32 lg:pt-20">
+        <article>
+          <div className="container">
+            <Breadcrumb
+              parentPageUrl="/portfolio"
+              parentPageLabel="Portfolio"
+              activePageLabel="Case Study"
+            />
 
+            {postData.protected && !isAuthenticated ? (
+              <PortfolioPasswordGate
+                password={password}
+                setPassword={setPassword}
+                error={error}
+                onSubmit={handleSubmit}
+              />
+            ) : (
+              <>
                 <div className="mt-12 md:mt-20 lg:mt-28">
                   <Tag content={postData.tag} />
 
@@ -112,26 +112,24 @@ export default function Post({ postData, caseStudies }) {
                   priority
                   quality="100"
                 />
-
                 <div className="prose prose-neutral prose-lg dark:prose-invert max-w-none flex flex-col space-y-0 lg:space-y-12 xl:space-y-16 items-center pb-12">
                   <MDXRemote
                     {...postData.mdxSource}
                     components={caseStudyComponents}
                   />
                 </div>
-              </div>
-            </article>
-          </main>
+              </>
+            )}
+          </div>
+        </article>
+      </main>
 
-          {caseStudies.map((caseStudy, index) =>
-            caseStudy.frontMatter.title == postData.related ? (
-              <RelatedCaseStudy key={index} postData={caseStudy} />
-            ) : null
-          )}
-
-          <TestimonialSlider />
-        </>
+      {caseStudies.map((caseStudy, index) =>
+        caseStudy.frontMatter.title == postData.related ? (
+          <RelatedCaseStudy key={index} postData={caseStudy} />
+        ) : null
       )}
+      <TestimonialSlider />
     </Layout>
   );
 }

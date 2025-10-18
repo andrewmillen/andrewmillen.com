@@ -54,64 +54,52 @@ export default function PortfolioPasswordGate({
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="flex flex-col pt-12 xl:pt-20 absolute inset-0 z-50 overflow-hidden bg-neutral-100 dark:bg-neutral-900"
-    >
-      <div className="container">
-        <Breadcrumb
-          parentPageUrl="/portfolio"
-          parentPageLabel="Portfolio"
-          activePageLabel="Case Study"
-        />
-        <div className="flex flex-col mt-24 xl:mt-32">
-          <h1 className="h4 flex flex-row items-center space-x-2 mb-4">
-            <svg
-              width="16"
-              height="18"
-              viewBox="0 0 16 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.5 11.5V3L7.75 2.2L2 3V11.5L7.75 15.5L13.5 11.5Z"
-                stroke="currentColor"
-                stroke-width="2.5"
-              />
-              <path
-                d="M7.75 5.5V10.5"
-                stroke="currentColor"
-                stroke-width="2.5"
-              />
-            </svg>
-            <span>This case study is protected</span>
-          </h1>
-          <form onSubmit={onSubmit} className="relative w-80">
-            <label htmlFor="password" className="sr-only">
-              Enter Password
-            </label>
-            <input
-              ref={passwordInputRef}
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter password"
-              autocomplete="off"
-              data-1p-ignore
-              data-lpignore="true"
-              data-protonpass-ignore="true"
-              className="w-80 border bg-white dark:bg-black border-neutral-300 dark:border-neutral-800 rounded-md p-4 pr-14 outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 placeholder:text-neutral-700 dark:placeholder:text-neutral-400"
+    <div ref={containerRef} className="flex flex-col py-12 xl:py-20">
+      <div className="flex flex-col mt-12">
+        <h1 className="h4 flex flex-row items-center space-x-2 mb-4">
+          <svg
+            width="16"
+            height="18"
+            viewBox="0 0 16 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.5 11.5V3L7.75 2.2L2 3V11.5L7.75 15.5L13.5 11.5Z"
+              stroke="currentColor"
+              stroke-width="2.5"
             />
-            <button
-              ref={submitButtonRef}
-              type="submit"
-              className={`font-display absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-xs text-2xl font-semibold outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 cursor-pointer transition-opacity duration-100 ${
-                password ? "opacity-100" : "opacity-40"
-              }`}
-            >
-              <span className="sr-only">Submit</span>→
-            </button>
-          </form>
+            <path d="M7.75 5.5V10.5" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+          <span>This case study is protected</span>
+        </h1>
+        <form onSubmit={onSubmit} className="relative w-80">
+          <label htmlFor="password" className="sr-only">
+            Enter Password
+          </label>
+          <input
+            ref={passwordInputRef}
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter password"
+            autocomplete="off"
+            data-1p-ignore
+            data-lpignore="true"
+            data-protonpass-ignore="true"
+            className="w-80 border bg-white dark:bg-black border-neutral-300 dark:border-neutral-800 rounded-md p-4 pr-14 outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 placeholder:text-neutral-700 dark:placeholder:text-neutral-400"
+          />
+          <button
+            ref={submitButtonRef}
+            type="submit"
+            className={`font-display absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-xs text-2xl font-semibold outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 cursor-pointer transition-opacity duration-100 ${
+              password ? "opacity-100" : "opacity-40"
+            }`}
+          >
+            <span className="sr-only">Submit</span>→
+          </button>
+        </form>
+        <div className="h-6">
           {error && (
             <p className="text-red-700 dark:text-red-400 text-sm mt-2">
               {error}
