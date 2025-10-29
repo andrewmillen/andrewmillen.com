@@ -1,8 +1,7 @@
 {
   "introduction": {
-    "name": "Andrew Millen",
-    "title": "Sr. Product Designer",
-    "summary": "Hi! I’m a product designer and front-end developer with experience in React, 3D modeling, and copywriting. I’ve done a little bit of everything, but my wheelhouse is building robust, scalable design systems for digital products.",
+    "lead": "Hi, I'm Andrew Millen!",
+    "summary": "I’m a product designer with a generalist background that includes front-end dev, design systems, and copywriting.",
     "cta": "<a className=\"inline-block textLink\" target=\"_blank\" href=\"mailto:andrewmillen1+website@gmail.com\">Shoot me an email</a> or visit me on <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://dribbble.com/andrewmillen\" rel=\"nofollow noreferrer\">Dribbble</a>, <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://github.com/andrewmillen\" target=\"_blank\" rel=\"nofollow noreferrer\">GitHub</a>, or my <a className=\"inline-block textLink\" href=\"/posts\">blog</a>.",
     "quickLinks": [
       {
@@ -19,7 +18,7 @@
         "type": "mailto",
         "url": "mailto:andrewmillen1+website@gmail.com",
         "title": "Contact",
-        "emoji": "📥"
+        "emoji": "📨"
       }
     ]
   },
