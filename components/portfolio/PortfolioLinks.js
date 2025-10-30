@@ -33,7 +33,7 @@ export default function PortfolioLinks({ groups }) {
   };
 
   return (
-    <section className="py-12 lg:py-20 xl:py-32 border-b border-neutral-200 dark:border-neutral-800">
+    <section className="py-12 lg:py-20 xl:py-32 border-b border-border">
       <div className="container">
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0">
           {groups.map((group, index) => (

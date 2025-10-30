@@ -11,7 +11,7 @@ export default function AuthorBio() {
         alt="Andrew looking suave in a leather jacket"
         className="rounded-full"
       />
-      <p className="text-base 2xl:text-lg leading-normal text-neutral-800 dark:text-neutral-400 max-w-xl">
+      <p className="text-base 2xl:text-lg leading-normal max-w-xl">
         Andrew Millen is a product designer and front-end developer specializing
         in design systems.{" "}
         <Link href="/" className="textLink">

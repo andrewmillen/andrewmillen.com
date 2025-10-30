@@ -28,16 +28,14 @@ export default function Portfolio({ caseStudies, meta, header, links }) {
         />
       </Head>
 
-      <header className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800 md:text-center">
+      <header className="py-12 lg:py-20 border-b border-border md:text-center">
         <div className="container">
           <div className="inline-flex flex-col space-y-4 md:items-center mb-4">
             <Breadcrumb />
             <h1 className="h1">{header.title}</h1>
           </div>
 
-          <p className="text-neutral-600 dark:text-neutral-300 text-xl">
-            {header.statement}
-          </p>
+          <p className="text-muted text-xl">{header.statement}</p>
         </div>
       </header>
 
@@ -46,7 +44,7 @@ export default function Portfolio({ caseStudies, meta, header, links }) {
           {caseStudies.map((caseStudy, index) =>
             caseStudy.frontMatter.unlisted == false ? (
               <div
-                className="not-last:border-b not-last:border-neutral-200 not-last:dark:border-neutral-800"
+                className="not-last:border-b not-last:border-border"
                 key={index}
               >
                 <CaseStudyTeaser

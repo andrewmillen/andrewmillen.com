@@ -3,7 +3,7 @@ import MoreWorkHeader from "@/components/portfolio/MoreWorkHeader";
 
 export default function D3() {
   return (
-    <div className="flex flex-col gap-16 sm:gap-24 xl:gap-32 border-b border-neutral-200 dark:border-neutral-800 py-12 lg:py-20 px-6 sm:px-12 2xl:px-0">
+    <div className="flex flex-col gap-16 sm:gap-24 xl:gap-32 border-b border-border py-12 lg:py-20 px-6 sm:px-12 2xl:px-0">
       <MoreWorkHeader title="3D" />
       <main className="flex flex-col items-center gap-12 lg:gap-16">
         <Figure

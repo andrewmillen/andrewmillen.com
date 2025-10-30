@@ -98,7 +98,7 @@ export default function Post({ postData, caseStudies }) {
                 </div>
 
                 <div className="py-8">
-                  <p className="text-lg leading-relaxed max-w-[65ch] text-neutral-700 dark:text-neutral-100 mb-8">
+                  <p className="text-lg leading-relaxed max-w-[65ch] mb-8">
                     {postData.summary}
                   </p>
                 </div>

@@ -1,12 +1,13 @@
 import { format, parseISO } from "date-fns";
 import { getAllPostIds, getPostData } from "@/lib/posts";
-import Figure from "@/components/Figure";
+
 import AuthorBio from "@/components/blog/AuthorBio";
-import Footnote from "@/components/blog/Footnote";
+import Breadcrumb from "@/components/Breadcrumb";
 import Button from "@/components/Button";
+import Figure from "@/components/Figure";
+import Footnote from "@/components/blog/Footnote";
 import Head from "next/head";
 import Layout from "@/components/Layout";
-import Breadcrumb from "@/components/Breadcrumb";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
@@ -33,7 +34,7 @@ export default function Post({ postData }) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
       </Head>
-      <main className="py-12 lg:py-20 border-b border-neutral-200 dark:border-neutral-800">
+      <main className="py-12 lg:py-20 border-b border-border">
         <article>
           <div className="container">
             <header className="text-left">
@@ -51,7 +52,7 @@ export default function Post({ postData }) {
               </div>
             </header>
 
-            <hr className="max-w-sm mt-8 lg:mt-16 border-neutral-200 dark:border-neutral-800" />
+            <hr className="max-w-sm mt-8 lg:mt-16 border-border" />
 
             <div className="pt-12 prose prose-neutral prose-lg 2xl:prose-xl dark:prose-invert">
               <MDXRemote {...postData.mdxSource} components={blogComponents} />

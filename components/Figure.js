@@ -51,12 +51,12 @@ export default function Figure({
           className={`mt-2 lg:mt-4 ${centered ? "text-center px-4" : ""}`}
         >
           <span
-            className="block text-neutral-600 dark:text-neutral-400 text-base"
+            className="block text-muted text-base"
             dangerouslySetInnerHTML={{ __html: caption }}
           ></span>
           {attribution && (
             <>
-              <span className="block mt-1 uppercase text-neutral-500 dark:text-neutral-400 text-xs">
+              <span className="block mt-1 uppercase text-xs">
                 {attribution}
               </span>
             </>

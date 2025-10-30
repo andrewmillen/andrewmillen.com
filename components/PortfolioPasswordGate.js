@@ -85,7 +85,7 @@ export default function PortfolioPasswordGate({
             data-1p-ignore
             data-lpignore="true"
             data-protonpass-ignore="true"
-            className="w-80 border bg-white dark:bg-black border-neutral-300 dark:border-neutral-800 rounded-md p-4 pr-14 outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 placeholder:text-neutral-700 dark:placeholder:text-neutral-400"
+            className="w-80 border bg-white dark:bg-black border-neutral-300 dark:border-neutral-800 rounded-md p-4 pr-14 outline-hidden focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-800 focus:ring-offset-2 placeholder:text-muted"
           />
           <button
             ref={submitButtonRef}

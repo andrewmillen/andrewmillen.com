@@ -2,10 +2,12 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --color-link-light-default: #1867FF;
-  --color-link-light-hover: #0400CD;
-  --color-link-dark-default: #4081FF;
-  --color-link-dark-hover: #68A4FF;
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-neutral-900);
+  --color-muted: var(--color-neutral-600);
+  --color-link: var(--color-blue-600);
+  --color-link-hover: var(--color-blue-800);
+  --color-border: var(--color-neutral-200);
 
   --font-text: system-ui;
   --font-display: degular, system-ui;
@@ -14,6 +16,17 @@
 }
 
 @layer base {
+  @variant dark {
+    :root {
+      --color-background: var(--color-neutral-900);
+      --color-foreground: var(--color-white);
+      --color-muted: var(--color-neutral-400);
+      --color-link: var(--color-blue-500);
+      --color-link-hover: var(--color-blue-400);
+      --color-border: var(--color-neutral-800);
+    }
+  }
+
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
       @apply font-display
   }
@@ -31,8 +44,10 @@
   }
 
   .h4 {
-      @apply font-semibold text-sm uppercase tracking-wider text-neutral-600 dark:text-neutral-500;
+      @apply font-semibold text-sm uppercase tracking-wider text-muted;
   }
+
+
 }
 
 @utility container {
@@ -41,19 +56,11 @@
 
 @layer components {
   .textLink, figcaption a {
-    color: var(--color-link-light-default);
+    color: var(--color-link);
     @apply underline underline-offset-4;
 
     @variant hover {
-      color: var(--color-link-light-hover);
-    }
-
-    @variant dark {
-      color: var(--color-link-dark-default);
-
-      @variant hover {
-        color: var(--color-link-dark-hover);
-      }
+      color: var(--color-link-hover);
     }
   }
 
@@ -88,6 +95,6 @@
   }
 
   a {
-    @apply text-link-light-default hover:text-link-light-hover dark:text-link-dark-default dark:hover:text-link-dark-hover underline-offset-4 font-normal;
+    @apply text-link hover:text-link-hover underline-offset-4 font-normal;
   }
 }

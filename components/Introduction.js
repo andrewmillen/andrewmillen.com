@@ -10,7 +10,7 @@ export default function Introduction({ content }) {
             <h1 className="font-bold leading-tight text-2xl sm:text-3xl md:text-4xl inline">
               {content.lead}
             </h1>
-            <p className="font-bold font-display leading-tight text-2xl sm:text-3xl md:text-4xl inline text-neutral-600 dark:text-neutral-400 mb-0">
+            <p className="font-bold font-display leading-tight text-2xl sm:text-3xl md:text-4xl inline text-muted mb-0">
               {` `}
               {content.summary}
             </p>

@@ -29,7 +29,7 @@ export default function Blog({ posts, meta }) {
         </div>
       </header>
 
-      <main className="pb-12 md:pb-20 lg:pb-24 border-b border-neutral-200 dark:border-neutral-800">
+      <main className="pb-12 md:pb-20 lg:pb-24 border-b border-border">
         <div className="container">
           <div className="my-12 lg:my-24 lg:flex lg:gap-8 lg:items-center">
             <Image

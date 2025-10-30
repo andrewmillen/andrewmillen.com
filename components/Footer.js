@@ -7,7 +7,7 @@ export default function Footer() {
   const colophon = global.footer.colophon;
 
   return (
-    <footer className="py-8 md:py-12 lg:py-24 text-neutral-900 dark:text-neutral-300">
+    <footer className="py-8 md:py-12 lg:py-24 text-muted">
       <div className="container">
         <Breadcrumb />
         <ul className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:space-x-4 mt-8">

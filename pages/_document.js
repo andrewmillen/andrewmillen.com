@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://use.typekit.net/arm2wka.css" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <body className="font-text bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+        <body className="font-text text-foreground bg-background">
           <Main />
           <NextScript />
         </body>
