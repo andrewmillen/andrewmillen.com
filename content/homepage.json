@@ -7,18 +7,21 @@
       {
         "url": "/portfolio",
         "title": "Portfolio",
-        "emoji": "🎨"
+        "emoji": "🎨",
+        "external": false
       },
       {
         "url": "https://github.com/andrewmillen",
         "title": "GitHub",
-        "emoji": "🐙"
+        "emoji": "🐙",
+        "external": true
       },
       {
         "type": "mailto",
         "url": "mailto:andrewmillen1+website@gmail.com",
         "title": "Contact",
-        "emoji": "📨"
+        "emoji": "📨",
+        "external": false
       }
     ]
   },

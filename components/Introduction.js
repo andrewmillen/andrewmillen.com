@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/Breadcrumb";
+import Link from "next/link";
 
 export default function Introduction({ content }) {
   return (
@@ -18,14 +19,26 @@ export default function Introduction({ content }) {
         </div>
         <ul className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-8 mb-4">
           {content.quickLinks.map((link, index) => (
-            <li key={index}>
-              {link.emoji && <span className="text-xl mr-2">{link.emoji}</span>}
-              <a
-                href={link.url}
-                className="textLink font-display font-semibold text-xl"
-              >
-                {link.title}
-              </a>
+            <li key={index} className="text-xl">
+              <span className="mr-2">{link.emoji}</span>
+              {link.external ? (
+                <a
+                  href={link.url}
+                  className="textLink font-display font-semibold"
+                  nofollow="true"
+                  noreferrer="true"
+                  target="_blank"
+                >
+                  {link.title}
+                </a>
+              ) : (
+                <Link
+                  className="textLink font-display font-semibold"
+                  href={link.url}
+                >
+                  {link.title}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

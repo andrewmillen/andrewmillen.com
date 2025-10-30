@@ -7,7 +7,7 @@
     "links": [
       {
         "title": "Portfolio",
-        "url": "portfolio",
+        "url": "/portfolio",
         "external": false
       },
       {
