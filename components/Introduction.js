@@ -3,14 +3,18 @@ import Breadcrumb from "@/components/Breadcrumb";
 export default function Introduction({ content }) {
   return (
     <header>
-      <div className="container min-h-[90vh] flex flex-col py-12 xl:py-20 gap-24">
-        <Breadcrumb />
-        <div className="flex flex-col justify-center flex-1">
-          <h1 className="h2 font-bold font-display">{content.lead}</h1>
-          <p className="h2 font-bold font-display text-neutral-600 dark:text-neutral-400 mb-0">
-            {` `}
-            {content.summary}
-          </p>
+      <div className="container xl:h-[95vh] max-h-[800px] flex flex-col xl:justify-between py-12 lg:py-24 xl:py-32">
+        <div className="flex flex-col gap-12 mb-[24vw] xl:mb-0">
+          <Breadcrumb />
+          <div className="max-w-3xl">
+            <h1 className="font-bold leading-tight text-2xl sm:text-3xl md:text-4xl inline">
+              {content.lead}
+            </h1>
+            <p className="font-bold font-display leading-tight text-2xl sm:text-3xl md:text-4xl inline text-neutral-600 dark:text-neutral-400 mb-0">
+              {` `}
+              {content.summary}
+            </p>
+          </div>
         </div>
         <ul className="flex flex-col space-y-4 xs:flex-row xs:space-y-0 xs:space-x-8 mb-4">
           {content.quickLinks.map((link, index) => (
