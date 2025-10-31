@@ -8,10 +8,10 @@ export default function Introduction({ content }) {
         <div className="flex flex-col gap-12 mb-[24vw] xl:mb-0">
           <Breadcrumb />
           <div className="max-w-3xl">
-            <h1 className="font-bold leading-tight text-2xl sm:text-3xl md:text-4xl inline">
+            <h1 className="font-bold leading-[1.2] text-2xl sm:text-3xl md:text-4xl inline">
               {content.lead}
             </h1>
-            <p className="font-bold font-display leading-tight text-2xl sm:text-3xl md:text-4xl inline text-muted mb-0">
+            <p className="font-bold font-display leading-[1.2] text-2xl sm:text-3xl md:text-4xl inline text-muted mb-0">
               {` `}
               {content.summary}
             </p>
