@@ -5,9 +5,14 @@
   },
   "experiences": [
     {
+      "organization": "Boost My School",
+      "role": "Lead Product Designer",
+      "dates": "Nov 2025 – Present"
+    },
+    {
       "organization": "OfficeSpace Software",
       "role": "Senior Product Designer",
-      "dates": "November 2021 – Present",
+      "dates": "Nov 2021 – Nov 2025",
       "description": [
         "Lead design and implementation of new design system that triples dev velocity, reduces accessibility issues by 70%, and unlocks thousands in new ARR",
         "Work across multiple teams to ship new product features and enhancements, including a suite of business intelligence dashboards that has directly increased NRR and revolutionized data workflows for WEX teams",
@@ -16,22 +21,13 @@
     },
     {
       "organization": "Simple Focus",
-      "role": "Senior UI/UX Designer",
+      "role": "Senior User Interface Designer",
       "dates": "Oct 2015 – Oct 2021",
       "description": [
         "Oversaw design and dev teams in the production of websites, apps, and real-world experiences, including the implementation of creative growth programs",
         "Designed and built responsive, performant websites and apps on a variety of platforms using React/JS, HTML/CSS, and PHP",
         "Developed additional skills in motion graphics, 3D, and projection mapping to create rich interactive experiences that earned 2 Gold and 4 Silver Addy’s",
         "Worked directly with clients ranging from local non-profits to Fortune-500s"
-      ]
-    },
-    {
-      "organization": "HelloHome",
-      "role": "Product Designer (Freelance)",
-      "dates": "June 2017 – July 2018",
-      "description": [
-        "Worked directly with startup founder and CTO to bring their vision of an end-to-end real estate sales platform to life from scratch",
-        "Created a design system, dozens of user flows, and innovative user interface concepts for initial product launch"
       ]
     },
     {
@@ -65,11 +61,6 @@
       "name": "AIGA Memphis",
       "role": "Executive Board Member, Director of Communications",
       "date": "2017-2018"
-    },
-    {
-      "name": "Designation",
-      "role": "Design Mentor",
-      "date": "2016-2017"
     }
   ],
   "education": {

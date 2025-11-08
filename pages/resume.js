@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
 import Button from "@/components/Button";
+import Head from "next/head";
+import Layout from "@/components/Layout";
 import global from "@/content/global.json";
 import resume from "@/content/resume.json";
 
@@ -39,13 +39,15 @@ export default function Resume({ meta, resume }) {
                 </h3>
                 <p>{experience.role}</p>
                 <p>{experience.dates}</p>
-                <ul className="mt-4 list-disc ml-4">
-                  {experience.description.map((content, index) => (
-                    <li className="mb-1" key={index}>
-                      {content}
-                    </li>
-                  ))}
-                </ul>
+                {experience.description && (
+                  <ul className="mt-4 list-disc ml-4">
+                    {experience.description.map((content, index) => (
+                      <li className="mb-1" key={index}>
+                        {content}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
