@@ -7,7 +7,7 @@ export default function GraphicsWeb() {
       <MoreWorkHeader title="Graphic &amp; Web" />
 
       <main>
-        <div className="flex flex-col gap-12 md:flex-row xl:gap-24">
+        <div className="flex flex-col gap-12 md:flex-row lg:gap-24">
           <div className="lg:w-1/2 flex flex-col items-center lg:items-end gap-12 xl:gap-24">
             <Figure
               type="image"
