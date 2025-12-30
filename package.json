@@ -16,7 +16,7 @@
     "dateformat": "^5.0.3",
     "embla-carousel-react": "^8.6.0",
     "gray-matter": "^4.0.3",
-    "next": "^15.1.7",
+    "next": "15.1.11",
     "postcss-preset-env": "^6.7.0",
     "react": "^19.0.0",
     "react-compare-slider": "^3.1.0",
