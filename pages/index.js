@@ -1,3 +1,4 @@
+import CurrentRole from "@/components/CurrentRole";
 import FeaturedLink from "@/components/FeaturedLink.js";
 import FeaturedWorkSlider from "@/components/FeaturedWorkSlider";
 import Head from "next/head";
@@ -37,6 +38,8 @@ export default function Home({
             ))}
           </ul>
         </section>
+
+        <CurrentRole />
       </main>
     </Layout>
   );
