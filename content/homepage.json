@@ -1,8 +1,7 @@
 {
   "introduction": {
     "lead": "Hi, I'm Andrew Millen!",
-    "summary": "I’m a product designer with a generalist background that includes front-end dev, design systems, and copywriting.",
-    "cta": "<a className=\"inline-block textLink\" target=\"_blank\" href=\"mailto:andrewmillen1+website@gmail.com\">Shoot me an email</a> or visit me on <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://dribbble.com/andrewmillen\" rel=\"nofollow noreferrer\">Dribbble</a>, <a target=\"_blank\" className=\"inline-block textLink\" href=\"https://github.com/andrewmillen\" target=\"_blank\" rel=\"nofollow noreferrer\">GitHub</a>, or my <a className=\"inline-block textLink\" href=\"/posts\">blog</a>.",
+    "summary": "I’m a product design lead with experience in front-end dev, design systems, and copywriting.",
     "quickLinks": [
       {
         "url": "/portfolio",

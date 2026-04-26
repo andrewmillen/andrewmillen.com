@@ -56,7 +56,7 @@ export default function Portfolio({ caseStudies, meta, header, links }) {
                   thumbnailBgColor={thumbnailBgColors[index]}
                 />
               </div>
-            ) : null
+            ) : null,
           )}
         </section>
 
