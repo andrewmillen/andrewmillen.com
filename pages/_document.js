@@ -10,7 +10,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="stylesheet" href="https://use.typekit.net/arm2wka.css" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body className="font-text text-foreground bg-background">

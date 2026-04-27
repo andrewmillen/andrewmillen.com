@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "degular";
+  src: url("/fonts/Degular-Regular.woff2") format("woff2"),
+       url("/fonts/Degular-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "degular";
+  src: url("/fonts/Degular-Italic.woff2") format("woff2"),
+       url("/fonts/Degular-Italic.woff") format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "degular";
+  src: url("/fonts/Degular-Semibold.woff2") format("woff2"),
+       url("/fonts/Degular-Semibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "degular";
+  src: url("/fonts/Degular-Bold.woff2") format("woff2"),
+       url("/fonts/Degular-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
