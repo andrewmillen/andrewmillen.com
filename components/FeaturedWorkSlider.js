@@ -77,14 +77,14 @@ export default function FeaturedWorkSlider({ slides }) {
                   <a
                     href="mailto:andrewmillen1+website@gmail.com"
                     target="_blank"
-                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500 dark:text-link-dark-default dark:hover:text-link-dark-hover"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500 dark:text-link dark:hover:text-link-hover"
                   >
                     Email me
                   </a>{" "}
                   or{" "}
                   <Link
                     href="/portfolio"
-                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500 dark:text-link-dark-default dark:hover:text-link-dark-hover"
+                    className="textLink font-semibold text-neutral-700 hover:text-neutral-500 dark:text-link dark:hover:text-link-hover"
                   >
                     visit my portfolio
                   </Link>{" "}

@@ -1,6 +1,6 @@
 export default function CurrentRole() {
   return (
-    <section className="py-8 md:py-12 lg:py-24 border-b border-border bg-gray-50">
+    <section className="py-8 md:py-12 lg:py-24 border-b border-border bg-gray-50 dark:bg-neutral-800">
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-center gap-6">
           <svg
