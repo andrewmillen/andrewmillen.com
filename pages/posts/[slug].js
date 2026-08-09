@@ -9,12 +9,10 @@ import Footnote from "@/components/blog/Footnote";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import { MDXRemote } from "next-mdx-remote";
-import SyntaxHighlighter from "react-syntax-highlighter";
 
 const blogComponents = {
   Figure,
   Footnote,
-  SyntaxHighlighter,
 };
 
 export default function Post({ postData }) {

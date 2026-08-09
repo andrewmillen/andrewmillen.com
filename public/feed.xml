@@ -4,11 +4,18 @@
         <description><![CDATA[Short posts about design, life.]]></description>
         <link>https://andrewmillen.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 27 Apr 2026 19:15:43 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 Aug 2026 15:45:28 GMT</lastBuildDate>
         <atom:link href="https://andrewmillen.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 27 Apr 2026 19:15:43 GMT</pubDate>
+        <pubDate>Sun, 09 Aug 2026 15:45:28 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2026, Andrew Millen]]></copyright>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Building a CRT display with linear-gradient and mix-blend-mode]]></title>
+            <description><![CDATA[Why do things properly when you could use CSS instead?]]></description>
+            <link>https://andrewmillen.com/posts/crt-style-rgb-using-css</link>
+            <guid isPermaLink="true">https://andrewmillen.com/posts/crt-style-rgb-using-css</guid>
+            <pubDate>Sat, 08 Aug 2026 12:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Scrabble Scramble]]></title>
             <description><![CDATA[A modest proposal to enliven my favorite board game.]]></description>
